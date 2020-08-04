@@ -1,0 +1,24 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=375,initial-scale=1")
+		meta(name="keywords" content="")
+		meta(name="description" content="описание, ключевые слова")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+	body
+		include ../modules/header/header-unauthorized
+		.content
+			block content
+		include ../modules/footer/footer
+		include ../modules/header/header-mob
+		script(src="static/js/jquery.min.js")
+		script(src="static/js/main.js")
+		block script

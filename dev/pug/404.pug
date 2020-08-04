@@ -1,0 +1,20 @@
+extends layout/main
+
+block variables
+	-var title = 'Вход'
+
+block content
+	.bg-gray
+		a.logo.logo-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+			
+		.d-flex.align-items-center.back 
+			a(href="#").btn-back(type="button")
+		section.section-error
+			h1.fs-42.fw-bold Упс... Ваша страница 
+				span.nowrap не найдена
+			p.fs-16.c-black.d-md-hide Вернуться на 
+				a.c-red.text-underline(href="#") главную страницу
+			.section-error__img
+	
+

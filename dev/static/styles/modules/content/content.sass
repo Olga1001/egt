@@ -1,0 +1,314 @@
+.home
+  min-height: calc(100vh - 190px)
+  display: flex 
+  flex-direction: column 
+  align-items: center
+  position: relative
+  padding: 100px 24px 65px
+  h1 
+    margin-bottom: 32px
+    line-height: 56px
+  h4 
+    line-height: 27px
+  .logo
+    display: none
+  .logo-img
+    height: 20px
+    margin-bottom: 20px
+
+.home__type
+  margin-top: 103px
+  margin-bottom: 72px
+
+.home-bg
+  background: linear-gradient(rgba(0,0,0,0.5)), url("../../static/images/img.jpg") no-repeat center 16% / cover
+  width: calc(100% - 24px)
+  height: 495px
+  position: absolute
+  left: 12px
+  top: 0
+  z-index: -1
+  border-radius: 0px 0px 100% 100% / 0px 0px 200% 200%
+
+.box-red  
+  background: linear-gradient(245.17deg, #EA5642 0%, #E3270E 100%)
+  border-radius: 4px
+  width: 320px
+  height: 161px
+  position: relative
+  z-index: 1
+  margin: 0 10px
+  display: flex
+  flex-direction: column
+  justify-content: center 
+  align-items: center
+  padding: 10px 24px
+  margin-top: 14px
+  &:before 
+    content: ''
+    position: absolute
+    left: 0 
+    top: 0 
+    width: 100% 
+    height: 100%
+    background: rgba(255, 255, 255, 0.12)
+    border-radius: 4px 170px 4px 4px
+    z-index: 1
+    pointer-events: none
+  &:after 
+    content: ''
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -30px
+    width: 100%
+    height: 170px
+    background: url("../../static/images/blur-shadow.svg") no-repeat center / contain
+    pointer-events: none
+  &:last-child
+    background: linear-gradient(-245.17deg, #EA5642 0%, #E3270E 100%)
+    &:before 
+      border-radius: 170px 4px 4px 4px 
+  p, img 
+    position: relative 
+    z-index: 2  
+  img 
+    margin-top: 18px
+
+.box-gray 
+  background: linear-gradient(180deg, #D1D1D1 0%, #7D7D82 100%)
+  border-radius: 4px
+  width: 268px
+  height: 176px
+  padding: 20px 40px
+  display: flex 
+  flex-direction: column
+  justify-content: center 
+  align-items: center
+  position: relative
+  z-index: 1
+  margin: 40px 10px 0
+  line-height: 26px
+  overflow: hidden
+  img 
+    width: 62px
+    height: 62px 
+    margin-bottom: 16px
+  &:before,  &:after 
+    content: ''
+    position: absolute
+    top: 50%
+    transform: translateY(-50%) rotate(-45deg)
+    pointer-events: none
+  &:before 
+    width: 16.93px
+    height: 274.21px
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%)
+    right: 50px
+  &:after 
+    right: -23px
+    width: 42px
+    height: 288.81px
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
+
+.search 
+  margin-top: 92px
+  margin-bottom: 226px
+  max-width: 620px
+  width: 100%
+  position: relative
+  background: #FFFFFF
+  box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.08)
+  border-radius: 4px
+  &-input 
+      padding-right: 140px
+
+.menu-search
+  position: relative
+  height: 100%
+  .btn-search 
+    background: none
+.menu-search_input
+  background: linear-gradient(217.5deg, #EA5642 0%, #E3270E 100%)
+  font-style: normal
+  font-weight: 600
+  font-size: 16px
+  line-height: 21px
+  color: #FFFFFF
+  padding: 23px 67px 23px 24px
+  &::-webkit-input-placeholder
+    color: #fff
+    line-height: 21px
+  &:-moz-placeholder
+    color: #fff
+    line-height: 21px
+  &::-moz-placeholder
+    color: #fff
+    line-height: 21px
+  &:-ms-input-placeholder
+    color: #fff
+    line-height: 21px
+
+.bg-content
+  background: linear-gradient(rgba(0, 0, 0, 0.52)), url("../../static/images/img.jpg") no-repeat center / cover
+  width: 100%
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+  pointer-events: none
+
+.container__sign_in-up  
+  min-height: calc(100vh - 90px)
+  padding-top: 80px
+
+.logo-mobile 
+  display: none
+
+.section-search 
+  display: flex
+  justify-content: space-between
+  &__half
+    max-width: 620px 
+    width: 100%
+    &:last-child
+      margin-left: 30px
+      margin-top: 25px
+  .search
+    margin: 24px 0 35px
+
+.result
+  &-item
+    margin-top: 16px
+    background: #FFFFFF
+    border-radius: 4px
+    border-left: 4px solid #EEEEEE
+    padding: 8px 30px
+  &-link
+    display: flex
+    align-items: center
+    .flex-wrap 
+      align-items: center
+  &-img
+    width: 131px
+    height: 131px
+    object-fit: contain 
+    margin-right: 32px 
+    flex-shrink: 0
+  &-info 
+    .fs-20 
+      margin-top: 8px
+      margin-right: 15px
+
+.notregistered 
+  margin-top: 8px
+  background: #FFF9F0
+  border: 1px solid #FF9F0A
+  padding: 0 8px
+  border-radius: 2px
+  font-weight: 600
+  font-size: 12px
+  line-height: 22px
+  width: fit-content
+  color: #FF9F0A
+  &-mobile
+    display: none
+
+.bg-gray__search 
+    background: #FAFAFA  
+    min-height: calc(100vh - 190px)
+
+.notification
+  &__search
+    background: #FFFFFF
+    border-radius: 4px
+    padding: 24px 42px 24px 32px
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    margin-top: 40px
+    .fs-16 
+      color: rgba(255, 255, 255, 0.72)
+      margin-top: 9px
+      padding-right: 10px
+      max-width: 380px
+      &.c-gray 
+        margin-top: 17px
+  &__block
+    background: rgba(255, 255, 255, 0.32)
+    border-radius: 2px
+    padding: 4px 8px 
+    font-weight: 600
+    font-size: 12px
+    line-height: 150%
+    color: #FFFFFF
+    margin-bottom: 4px
+    display: block
+    width: fit-content
+  
+.back
+  padding: 17px 24px 0
+  display: none
+
+.section-error
+  min-height: calc(100vh - 190px)
+  padding: 98px 0
+  text-align: center
+  .fs-42
+    margin-bottom: 32px
+
+.section-error__img
+  background: url("../../static/images/404.svg") no-repeat center / contain
+  margin: 55px auto 0
+  width: 680px
+  height: 458.58px
+
+.logo-md-mobile
+  display: none
+  padding: 24px 24px 0 24px
+
+.accordions 
+  padding: 65px 0
+
+.accordion 
+  border-top: 2px solid #EEEEEE
+  cursor: pointer
+  &-drop
+    display: none
+  &-item 
+    padding: 14px 0
+
+.plus 
+  background: #FFFFFF
+  border: 1px solid #EEEEEE
+  border-radius: 4px
+  position: relative
+  width: 32px 
+  height: 32px
+  cursor: pointer
+  &:before, &:after 
+    content: ''
+    position: absolute 
+    left: 50%
+    top: 50% 
+    transform: translate(-50%,-50%)
+    width: 14px 
+    height: 2px
+    background: #E3270E
+  &:after 
+    width: 2px 
+    height: 14px
+
+.container-small
+  max-width: 760px
+
+.article 
+  &-img
+    margin-bottom: 32px
+  h1.fs-42
+    margin-bottom: 80px
+  p 
+    margin-bottom: 32px
+  h2.fs-26
+    padding: 24px 0

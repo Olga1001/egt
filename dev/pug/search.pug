@@ -1,0 +1,54 @@
+extends layout/main
+
+block variables
+	-var title = 'Вход'
+
+block content
+	.bg-gray__search
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop 
+			button.btn-back(type="button")
+			p.fs-16.c-gray Поиск продукта
+		.container
+			nav 
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Поиск
+			section.section-search
+				.section-search__half
+					h2.fs-32.c-dark.fw-semi.d-md-hide Поиск продукта
+					form.search
+						input.search-input(type="text", placeholder="Серийный номер продукта", value="C02VF0Y1HGE8", required)
+						button.btn-search(type="submit") 
+							span Поиск
+							img.btn-search_icon(src="static/images/icon-magnifier.svg", alt="magnifier")
+					.result 
+						p.fs-16.c-gray.fw-medium Результаты поиска:
+						ul 
+							li.result-item 	
+								a.result-link(href="#")
+									img.result-img(src="static/images/img-result.jpg", alt="image result") 
+									.result-info 
+										p.fs-16.c-gray Смарт телевизор
+										p.fs-26.fw-semi.c-dark SHIVAKI D24TV4K
+										.flex-wrap
+											p.fs-20.fw-semi.c-gray C02VF0Y1HGE8
+											.notregistered Не зарегистрирован
+								.notregistered.notregistered-mobile Не зарегистрирован
+				.section-search__half
+					a.notification__search.bg-red-gradient 
+						div
+							span.notification__block Рекомендуется
+							p.fs-20.fw-semi.c-white На телефонjpgе еще быстрее!
+							p.fs-16 Сканируйте QR code чека на телефоне </br> для быстрой регистрации продукта.
+						img.notification__icon(src="static/images/icon_2.svg", type="icon")
+					a.notification__search
+						div
+							p.fs-20.fw-semi Нашли свой приобретенный продукт?
+							p.fs-16.c-gray Зарегистрируйте его в свой личный аккаунт и отслеживайте гарантию своего продукта, а также пользуйтесь дополнительными функциями в вашем личном аккаунте.
+						img.notification__icon(src="static/images/icon_1.svg", type="icon")
+
+

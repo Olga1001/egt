@@ -1,0 +1,113 @@
+.btn-arrow
+    background: #FFFFFF
+    border: 1px solid #EEEEEE
+    border-radius: 4px
+    width: 32px
+    height: 32px
+    display: block
+    cursor: pointer
+    padding: 0
+    &_img 
+        width: 12px
+        height: 100%
+        object-fit: contain 
+        transform: scale(1,-1)
+        transition: all 0.3s ease
+        margin: 0 auto
+
+.btn-notification
+    background: #FFFFFF
+    border: 1px solid #EEEEEE
+    border-radius: 4px
+    width: 32px
+    height: 32px
+    position: relative
+    padding: 0
+    &_icon
+        width: 16px 
+        height: 100%
+        margin: 0 auto 
+    &_point
+        background: #FF3B30
+        width: 10px
+        height: 10px 
+        border-radius: 50%
+        position: absolute
+        right: -3px
+        top: -3px
+
+.btn-search
+    position: absolute
+    right: 0
+    top: 0
+    height: 100%
+    background: #E3270E
+    text-align: center
+    padding: 0 26px
+    display: flex 
+    align-items: center
+    color: #fff
+    font-style: normal
+    font-weight: 600
+    font-size: 16px
+    line-height: 21px
+    border: none
+    &_icon 
+        width: 16px 
+        height: 16px 
+        margin-left: 16px
+
+.btn-red 
+    background: #E3270E
+    box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.08)
+    border-radius: 4px
+    font-weight: 600
+    font-size: 16px
+    line-height: 60px
+    text-align: center
+    color: #FFFFFF
+    display: block 
+    width: 100%
+    border: 1px solid #E3270E
+    transition: all 0.3s ease
+    &:hover 
+        box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.24)
+        background: #fff
+        color: #E3270E
+
+.btn-date
+    background: #FFFFFF
+    border: 1px solid #EEEEEE
+    border-radius: 4px
+    width: 32px 
+    height: 32px
+    position: absolute
+    top: calc(50% + 8px)
+    transform: translateY(-50%)
+    right: 12px
+    &_icon
+        width: 18px 
+        height: 100%
+        margin: 0 auto
+
+.btn-back 
+    background: #FFFFFF url("../../static/images/arrow-back.svg") no-repeat center / 16px
+    border: 1px solid #EEEEEE
+    border-radius: 4px
+    width: 32px 
+    height: 32px
+    display: none
+    margin-right: 16px
+    flex-shrink: 0
+
+.btn-next
+    background: #FFFFFF
+    border: 1px solid #EEEEEE
+    border-radius: 4px
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    color: #202020
+    padding: 6px 12px
+    margin: 0 24px
+    height: fit-content

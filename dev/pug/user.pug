@@ -1,0 +1,145 @@
+extends layout/main-sign-in
+
+block variables
+	-var title = 'Вход'
+
+
+block content
+	.bg-content.d-lg-hide 
+	.container.flex-center-between.container__sign_in-up 
+		div.d-lg-hide 
+			a.logo.mb-3(href="#")
+				img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+			p.c-white.fs-20.fw-semi Гарантийная платформа
+		.form
+			.form-sing_in-up
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				.flex-between.form-head
+					button.btn-back(type="button")
+					ul.d-flex 
+						li.tab.active Вход
+						li.tab Регистрация
+					button.close
+				div 
+					form.form-item.active 
+						.form-content
+							label.label
+								input.input-form(type="text", placeholder="Ваш E-mail*", required)
+								span.error-message error-message
+							label.label
+								input.input-form(type="password", placeholder="Пароль*", required)
+								span.error-message error-message
+							button.btn-red(type="submit") Войти
+							a.link.link-forgot(href="#") Забыли пароль?
+							p.fs-16.c-gray.text-center Быстрый доступ через соц-сети
+							.flex-wrap.justify-content-center
+								a.messenger(href="#")
+									img.messenger-icon(src="static/images/login-users/google.svg", alt="google")
+								a.messenger(href="#")
+									img.messenger-icon(src="static/images/login-users/facebook.svg", alt="facebook")
+								a.messenger(href="#")
+									img.messenger-icon(src="static/images/login-users/vk.svg", alt="vk")
+								a.messenger(href="#")
+									img.messenger-icon(src="static/images/login-users/apple.svg", alt="apple")
+								a.messenger(href="#")
+									img.messenger-icon(src="static/images/login-users/odnoklassniki.svg", alt="odnoklassniki")
+						.form-bottom 
+							p.fs-20.fw-semi.c-dark.text-center Вход для сервисных центров
+					form.form-item 
+						.form-content
+							label.label.error
+								input.input-form(type="text", placeholder="Ваш E-mail*", required)
+								span.error-message error-message
+							label.label
+								input.input-form(type="password", placeholder="Пароль*", required)
+								span.error-message error-message
+							.flex-wrap 
+								label.label.input-form_half
+									input.input-form(type="text", placeholder="Имя*", required)
+									span.error-message error-message
+								label.label.input-form_half
+									input.input-form(type="text", placeholder="Фамилия*", required)
+									span.error-message error-message
+							.date
+								label.label
+									input.input-form(type="text", placeholder="Дата рождения*", required)
+									span.error-message error-message
+								button.btn-date(type="button")
+									img.btn-date_icon(src="static/images/calendar.svg", alt="calendar")
+
+							.select
+								.select__header
+									.select__current 
+										span Город проживания*
+										button.btn-arrow(type="button")
+											img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+								ul.select__body
+									li.select__item Город 1
+									li.select__item Город 2
+									li.select__item Город 3
+									li.select__item Город 4
+									li.select__item Город 5
+									li.select__item Город 6 
+									li.select__item Город
+									li.select__item Город
+									li.select__item Город 
+							input.input-form(type="text", placeholder="Номер телефона")
+							p.fs-16.c-gray.form-text 
+								|Нажимая «Создать учетную запись», вы подтверждаете, что прочитали и 
+								span.nowrap согласны с 
+									a.link.c-red(href="#") Правилами пользователя 
+								|и 
+								a.link.c-red.nowrap(href="#") Политикой конфиденциальности.
+							button.btn-red.btn-sign-up(type="submit") Создать учётную запись
+			.form-forgot
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				.flex-between.form-head
+					.d-flex
+						button.btn-back.back-form(type="button")
+						h4.fs-20.fw-semi Смена пароля
+					button.close.back-form
+				form.form-content
+					p.fs-16.c-gray Выберите новый пароль для вашего аккаунта 
+					a.link.c-red user@google.com
+					label.label
+						input.input-form(type="password", placeholder="Новый пароль*", required)
+						span.error-message error-message
+					label.label
+						input.input-form(type="password", placeholder="Повторите пароль*", required)
+						span.error-message error-message
+					button.btn-red(type="submit") Сохранить
+			.form-contract
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				.flex-between.form-head
+					.d-flex
+						button.btn-back(type="button")
+						h4.tab.active Вход
+					.d-flex
+						button.btn-next(type="button") Пропустить
+						button.close#close__forgot(type="button")
+				form.form-content
+					.select
+						.select__header
+							.select__current 
+								span Компания сервисного центра*
+								button.btn-arrow(type="button")
+									img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+						ul.select__body
+							li.select__item Компания 1
+							li.select__item Компания 2
+							li.select__item Компания 3
+							li.select__item Компания 4
+							li.select__item Компания 5
+							li.select__item Компания 6 
+					label.label
+						input.input-form(type="text", placeholder="Номер контракта*", required)
+						span.error-message error-message
+					button.btn-red(type="submit") Войти
+					a.link.c-red.link-forgot_contract(href="#") Незнаете номер контракта?
+					p.fs-16.c-gray Войдите в аккаунт своей компании, чтобы получить доступ к 
+						a.link.c-red(href="#") информации для специалистов.
+				.form-bottom 
+					p.fs-20.fw-semi.c-dark.text-center Вход для пользователей

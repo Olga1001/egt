@@ -1,0 +1,63 @@
+extends layout/main-sign-in
+
+block variables
+	-var title = 'Главная страница'
+
+
+block content
+	.bg-content.d-lg-hide 
+	.container.flex-center-between.container__sign_in-up 
+		div.d-lg-hide 
+			a.logo.mb-3(href="#")
+				img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+			p.c-white.fs-20.fw-semi Гарантийная платформа
+		.form
+			.form-forgot
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				.flex-between.form-head
+					.d-flex
+						button.btn-back.back-form(type="button")
+						h4.fs-20.fw-semi Смена пароля
+					button.close.back-form
+				form.form-content
+					p.fs-16.c-gray Выберите новый пароль для вашего аккаунта 
+					a.link.c-red user@google.com
+					label.label
+						input.input-form(type="password", placeholder="Новый пароль*", required)
+						span.error-message error-message
+					label.label
+						input.input-form(type="password", placeholder="Повторите пароль*", required)
+						span.error-message error-message
+					button.btn-red(type="submit") Сохранить
+			.form-contract.active
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				.flex-between.form-head
+					.d-flex
+						button.btn-back(type="button")
+						h4.tab.active Вход
+					.d-flex
+						button.btn-next(type="button") Пропустить
+						button.close#close__forgot(type="button")
+				form.form-content
+					.select
+						.select__header
+							.select__current 
+								span Компания сервисного центра*
+								button.btn-arrow(type="button")
+									img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+						ul.select__body
+							li.select__item Компания 1
+							li.select__item Компания 2
+							li.select__item Компания 3
+							li.select__item Компания 4
+							li.select__item Компания 5
+							li.select__item Компания 6 
+					input.input-form(type="text", placeholder="Номер контракта*")
+					button.btn-red(type="submit") Войти
+					a.link.c-red.link-forgot_contract(href="#") Незнаете номер контракта?
+					p.fs-16.c-gray Войдите в аккаунт своей компании, чтобы получить доступ к 
+						a.link.c-red(href="#") информации для специалистов.
+				.form-bottom 
+					p.fs-20.fw-semi.c-dark.text-center Вход для пользователей
