@@ -1,62 +1,63 @@
-extends layout/main
+extends layout/main-sign-in
 
 block variables
-	-var title = 'Вход'
+	-var title = 'Главная страница'
+
 
 block content
-	.bg-gray
-		a.logo.logo-md-mobile(href="#")
-			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
-		.d-flex.align-items-center.back.d-none-desktop 
-			button.btn-back(type="button")
-			p.fs-16.c-gray Информация
-
-		.container
-			nav 
-				ul.breadcrumbs
-					li.breadcrumbs__item
-						a.breadcrumbs__link(href="#") Главная /
-					li.breadcrumbs__item
-						a.breadcrumbs__link(href="#") Поиск
-			.container-small
-				article.article
-					h1.fs-42.fw-bold Пример страницы контента 
-					img.article-img(src="static/images/image.jpg", alt="image")
-					.article-content
-						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
-						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
-
-						h2.fs-26.fw-semi Что мы предлагаем
-						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
-						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
-
-						h2.fs-26.fw-semi Преимущества
-						p.fs-16.c-gray Phasellus maximus suscipit lacus vel gravida. Suspendisse rutrum ut neque non elementum. In eu semper purus. Pellentesque lorem nisl, faucibus sit amet mi id, tempus pulvinar felis. Vivamus consectetur efficitur posuere. Donec vitae rutrum lacus, vel volutpat massa. Curabitur sed ex vel sapien tincidunt pellentesque ac ac orci. Phasellus neque neque, lobortis ultricies pretium quis, dignissim eu metus. Suspendisse vel gravida sapien, sit amet scelerisque massa. Duis congue lacus in diam semper, a elementum nunc fermentum. Mauris ut finibus felis.
-					
-						h2.fs-26.fw-semi Часто задаваемые вопросы
-						p.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
-
-				ul.accordions
-					li.accordion
-						.flex-center-between.accordion-item
-							p.fs-20.fw-semi Как пользоваться
-							.plus 
-						ul.accordion-drop
-							li.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
-					li.accordion
-						.flex-center-between.accordion-item
-							p.fs-20.fw-semi Возможности аккаунта
-							.plus 
-						ul.accordion-drop
-							li.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
-					li.accordion
-						.flex-center-between.accordion-item
-							p.fs-20.fw-semi Дополнительная информация
-							.plus 
-						ul.accordion-drop
-							li.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
-
-
-
-				
-
+	.bg-content.d-lg-hide 
+	.container.flex-center-between.container__sign_in-up 
+		div.d-lg-hide 
+			a.logo.mb-3(href="#")
+				img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+			p.c-white.fs-20.fw-semi Гарантийная платформа
+		.form
+			.form-forgot
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				.flex-between.form-head
+					.d-flex
+						button.btn-back.back-form(type="button")
+						h4.fs-20.fw-semi.fw-bold Смена пароля
+					button.close.back-form
+				form.form-content
+					p.fs-16.c-gray Выберите новый пароль для вашего аккаунта 
+					a.link.c-red user@google.com
+					label.label
+						input.input-form(type="password", placeholder="Новый пароль*", required)
+						span.error-message error-message
+					label.label
+						input.input-form(type="password", placeholder="Повторите пароль*", required)
+						span.error-message error-message
+					button.btn-red(type="submit") Сохранить
+			.form-contract.active
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				.flex-between.form-head
+					.d-flex
+						button.btn-back(type="button")
+						h4.tab.active Вход
+					.d-flex
+						button.btn-next(type="button") Пропустить
+						button.close#close__forgot(type="button")
+				form.form-content
+					.select
+						.select__header
+							.select__current 
+								span Компания сервисного центра*
+								button.btn-arrow(type="button")
+									img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+						ul.select__body
+							li.select__item Компания 1
+							li.select__item Компания 2
+							li.select__item Компания 3
+							li.select__item Компания 4
+							li.select__item Компания 5
+							li.select__item Компания 6 
+					input.input-form(type="text", placeholder="Номер контракта*" required)
+					button.btn-red(type="submit") Войти
+					a.link.c-red.link-forgot_contract(href="#") Незнаете номер контракта?
+					p.fs-16.c-gray Войдите в аккаунт своей компании, чтобы получить доступ к 
+						a.link.c-red(href="#") информации для специалистов.
+				button.form-bottom 
+					span.fs-20.fw-semi.c-dark.text-center(type="button") Вход для пользователей

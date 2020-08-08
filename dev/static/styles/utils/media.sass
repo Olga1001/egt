@@ -2,6 +2,16 @@
 @media only screen and (min-width: 768px)
     .d-none-desktop
         display: none
+@media only screen and (max-width: 1366px)
+    .profile-left
+        max-width: 50%
+    .profile-right
+        max-width: 45%
+@media only screen and (max-width: 1024px)
+    .product-left
+        max-width: 50%
+    .product-right
+        width: calc(50% - 40px)
 
 @media only screen and (max-width: 991px)
     .logo-img
@@ -16,6 +26,8 @@
     .sign-in
         height: 75px
         padding: 0 0 0 15px
+    .profile
+        min-height: calc(100vh - 90px - 75px)
     .home
         min-height: calc(100vh - 80px - 75px)
         padding: 55px 24px 45px
@@ -65,7 +77,7 @@
         width: 100%
         background: #FFFFFF
         box-shadow: 0px 0px 42px rgba(0, 0, 0, 0.08)
-        p
+        span.c-dark
             font-size: 14px
             line-height: 19px
             color: #E3270E
@@ -129,6 +141,16 @@
         width: 80px 
         height: 80px
         margin-right: 8px 
+    .product
+        padding-top: 24px
+    .product-left
+        max-width: 30%
+        margin-right: 24px
+    .product-right
+        width: calc(70% - 24px)
+    .product-left
+        min-height: auto
+        height: fit-content
 @media only screen and (max-width: 767px)
     .bottombar
         display: block
@@ -247,4 +269,59 @@
         background-image: url("../../static/images/404-mobile.svg")
     .logo-md-mobile
         display: block
+    .article h1.fs-42
+        font-size: 20px
+        margin-bottom: 20px
+    .article
+        padding-top: 27px
+        p 
+            padding-bottom: 20px
+    .article h2.fs-26, .article .fs-20
+        font-size: 16px
+        line-height: 19px;
+        padding: 15px 0
+    .accordion-item .fs-20 
+        font-size: 16px
+    .content
+        padding-bottom: 50px
+    .col-half
+        width: 100%
+        margin: 0
+    .block-gray
+        margin: 25px -24px
+        padding: 24px
+    .product-left
+        max-width: 32vw
+        margin-right: 2.1vw
+    .product-right
+        width: calc(100% - 32vw - 2.1vw)
+        padding-top: 16px
+        .c-gray
+            font-size: 14px
+            line-height: 19px
+        .fs-42
+            font-size: 20px
+            line-height: 27px
+            margin-bottom: 2px
         
+        .product-name
+            font-size: 12px
+            margin-bottom: 0
+            line-height: 1
+    .content-product .accordions
+        padding-top: 42px
+    .d-md-show
+        display: block
+    .system-message
+        margin-top: 8px
+    .download span 
+        font-size: 12px
+    .download .c-gray
+        margin: 0 12px
+    .profile-left, .profile-right
+        max-width: 100%
+        margin-top: 24px
+    .notification-list 
+      padding: 24px
+      li 
+          padding-right: 29px

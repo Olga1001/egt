@@ -1,0 +1,50 @@
+extends layout/main-logged
+
+block variables
+	-var title = 'Вход'
+
+block content
+	.bg-gray.profile
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop 
+			button.btn-back(type="button")
+			p.fs-16.c-gray.fw-bold Поиск продукта
+		.container
+			nav 
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Аккаунт /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Профиль
+			.flex-between.d-md-hide
+				ul.tabs
+					li.tab-item
+						img.tab-item__img(src="static/images/profile.svg", alt="icon user")
+						p.fs-14.fw-semi.c-red Профиль
+				a.logout(href="#")
+					span.fs-14.fw-semi.c-gray Выйти
+					img.logout__icon(src="static/images/icon-exit.svg", alt="logout icon")
+			.flex-between.flex-wrap
+				.profile-left 
+					h4.fs-20.fw-semi Данные вашего сервиса
+					form
+						input.input-form(type="text" value="ООО «ВидеоТехника – Сервис»" disabled)
+						input.input-form(type="text" value="Абакан" disabled)
+						input.input-form(type="text" value="Ул. Баумана, д.3" disabled)
+						input.input-form(type="email" placeholder="E-mail" required)
+						input.input-form(type="text" value="+79506597454" required)
+						button.btn-red(type="submit") Сохранить изменения
+				.profile-right.d-md-hide 
+					h4.fs-20.fw-semi Оповещения
+						img(src="static/images/notification.svg", alt="notification icon")
+					ul.notification-list 
+						li.bg-gray_2
+							p.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+							p.fs-12.fw-semi.c-gray 3 д	
+						li 
+							p.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+							p.fs-12.fw-semi.c-gray 3 д	
+

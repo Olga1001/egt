@@ -1,0 +1,93 @@
+extends layout/main-logged
+
+block variables
+	-var title = 'Вход'
+
+block content
+	.bg-gray.content-product
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop 
+			button.btn-back(type="button")
+			p.fs-16.c-gray.fw-bold Ваш продукт
+		.container
+			.container-product
+				nav 
+					ul.breadcrumbs
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная /
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Поиск /
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Продукт
+				.product
+					.product-left
+						img.product-img(src="static/images/product.jpg", alt="image product")
+					.product-right
+						div
+							p.fs-16.c-gray.product-name Смарт телевизор
+							h1.fs-42.fw-bold SHIVAKI D24TV4K
+							h3.fs-20.fw-semi.c-gray C02VF0Y1HGE8
+
+							.system-message.system__green
+								p.fs-12.fw-semi Гарантия до 24.07.2022
+							
+							//- .system-message.system__orange
+							//- 	p.fs-12.fw-semi Продукт еще не зарегистрирован не одним пользователем. Если вы владелец данного продукта, то зарегистрируйте его в свой линый аккаунт
+							.product-text.d-md-hide
+								p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
+						.d-flex.justify-content-end.d-md-hide
+							a.btn-red(href="#") Зарегистрировать продукт
+					.product-text.d-md-show
+						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
+						
+				ul.accordions
+					li.accordion
+						.flex-center-between.accordion-item
+							p.fs-20.fw-semi Документация
+							.plus 
+						ul.accordion-drop
+							li
+								.download.flex-center-between(href="" download)
+									span.fs-14.fw-semi.c-dark Руководство пользователя
+									span.d-flex.align-items-center 
+										span.fs-14.fw-semi.c-gray 19 kb 
+										img(src="static/images/download.svg", alt="download icon")
+							li
+								a.download.flex-center-between(href="#" download)
+									span.fs-14.fw-semi.c-dark Дополнительные возможности
+									span.d-flex.align-items-center 
+										span.fs-14.fw-semi.c-gray 19 kb 
+										img(src="static/images/download.svg", alt="download icon")
+							li
+								a.download.flex-center-between(href="#" download)
+									span.fs-14.fw-semi.c-dark Установочник дополнительного ПО
+									span.d-flex.align-items-center 
+										span.fs-14.fw-semi.c-gray 19 kb 
+										img(src="static/images/download.svg", alt="download icon")
+					li.accordion
+						.flex-center-between.accordion-item
+							p.fs-20.fw-semi Документация для сервиса
+							.plus 
+						ul.accordion-drop
+							li
+								.download.flex-center-between(href="" download)
+									span.fs-14.fw-semi.c-dark Доступы к системе
+									span.d-flex.align-items-center 
+										span.fs-14.fw-semi.c-gray 19 kb 
+										img(src="static/images/download.svg", alt="download icon")
+							li
+								a.download.flex-center-between(href="#" download)
+									span.fs-14.fw-semi.c-dark Инструкции по прошивке
+									span.d-flex.align-items-center 
+										span.fs-14.fw-semi.c-gray 19 kb 
+										img(src="static/images/download.svg", alt="download icon")
+					li.accordion
+						.flex-center-between.accordion-item
+							p.fs-20.fw-semi Гарантия
+							.plus 
+						ul.accordion-drop.pt-2
+							li.fs-16.c-gray Продукт не зарегистрирован. При покупке действует стандартная гарантия в 3 года от производителя. Вы владелец продукта? Зарегистрируйте его в </br>
+								a.c-red(href="#") личном аккаунте.
+					
+		

@@ -18,7 +18,7 @@ block content
 				.flex-between.form-head
 					.d-flex
 						button.btn-back.back-form(type="button")
-						h4.fs-20.fw-semi Смена пароля
+						h4.fs-20.fw-semi.fw-bold Смена пароля
 					button.close.back-form
 				form.form-content
 					p.fs-16.c-gray Выберите новый пароль для вашего аккаунта 
@@ -54,10 +54,10 @@ block content
 							li.select__item Компания 4
 							li.select__item Компания 5
 							li.select__item Компания 6 
-					input.input-form(type="text", placeholder="Номер контракта*")
+					input.input-form(type="text", placeholder="Номер контракта*" required)
 					button.btn-red(type="submit") Войти
 					a.link.c-red.link-forgot_contract(href="#") Незнаете номер контракта?
 					p.fs-16.c-gray Войдите в аккаунт своей компании, чтобы получить доступ к 
 						a.link.c-red(href="#") информации для специалистов.
-				.form-bottom 
-					p.fs-20.fw-semi.c-dark.text-center Вход для пользователей
+					button.form-bottom(type="button") 
+						span.fs-20.fw-semi.c-dark.text-center Вход для пользователей

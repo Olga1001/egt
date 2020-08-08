@@ -7,23 +7,19 @@ $(document).ready(function () {
   })
 
   // select logo
-  if (window.matchMedia('(min-width: 768px)').matches) {
-    $('.logos-dropdown_item').click(function () {
-      const srcImg = $(this).find('.logo-img').attr('src');
-      $('.logos-item').find('.logo-img').attr('src', srcImg);
-      $('.logos-dropdown').slideUp(300);
-      $('.logos-item').removeClass('active');
-      $(this).addClass('hide').siblings().removeClass('hide');
-    })
-  } else {
-    $('.logos-dropdown_item').click(function () {
-      const srcImg = $(this).find('.logo-img').attr('src');
-      $('.selected-logo').find('.logo-img').attr('src', srcImg);
-      $('.logos-dropdown').slideUp(300);
-      $('.logos-item').removeClass('active');
-      $(this).addClass('hide').siblings().removeClass('hide');
-    })
-  }
+
+  $('.logos-dropdown_item').click(function () {
+    const srcImg = $(this).find('.logo-img').attr('src');
+    $('.logo .logo-img').attr('src', srcImg);
+    $('.logos-dropdown').slideUp(300);
+    $('.logos-item').removeClass('active');
+    $(this).addClass('hide').siblings().removeClass('hide');
+
+    let attrColor = $(this).attr('data-color');
+    $("body").removeAttr('class');
+    $('body').addClass(attrColor);
+
+  });
 
   $('body, html').click(function () {
     $('.logos-dropdown').slideUp(300);
@@ -88,6 +84,15 @@ $(document).ready(function () {
   })
   $(".accordion-item").click(function () {  
     $(this).closest(".accordion").toggleClass('active').siblings().removeClass('active');
+    $(this).siblings(".accordion-drop").slideToggle(300).closest(".accordion").siblings().find(".accordion-drop").slideUp(300);
+  })
+
+  // notification
+  $(".btn-notification").click(function () {
+    $(".notification-popup").addClass('active');
+  })
+  $(".notification-popup .btn-back").click(function () {
+    $(".notification-popup").removeClass('active');
   })
 })
 

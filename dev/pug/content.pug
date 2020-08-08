@@ -1,0 +1,62 @@
+extends layout/main
+
+block variables
+	-var title = 'Вход'
+
+block content
+	.bg-gray
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop 
+			button.btn-back(type="button")
+			p.fs-16.c-gray.fw-bold Информация
+
+		.container
+			nav 
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Поиск
+			.container-small
+				article.article
+					h1.fs-42.fw-bold Пример страницы контента 
+					img.article-img.d-md-hide(src="static/images/image.jpg", alt="image")
+					.article-content
+						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
+						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
+
+						h2.fs-26.fw-semi Что мы предлагаем
+						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
+						p.fs-16.c-gray Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie. Donec et aliquam leo. Cras rutrum purus at leo sagittis, eu efficitur velit egestas. Integer non viverra metus, ut varius est. 
+
+						h2.fs-26.fw-semi Преимущества
+						p.fs-16.c-gray Phasellus maximus suscipit lacus vel gravida. Suspendisse rutrum ut neque non elementum. In eu semper purus. Pellentesque lorem nisl, faucibus sit amet mi id, tempus pulvinar felis. Vivamus consectetur efficitur posuere. Donec vitae rutrum lacus, vel volutpat massa. Curabitur sed ex vel sapien tincidunt pellentesque ac ac orci. Phasellus neque neque, lobortis ultricies pretium quis, dignissim eu metus. Suspendisse vel gravida sapien, sit amet scelerisque massa. Duis congue lacus in diam semper, a elementum nunc fermentum. Mauris ut finibus felis.
+					
+						h2.fs-26.fw-semi Часто задаваемые вопросы
+						p.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
+
+				ul.accordions
+					li.accordion
+						.flex-center-between.accordion-item
+							p.fs-20.fw-semi Как пользоваться
+							.plus 
+						ul.accordion-drop
+							li.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
+					li.accordion
+						.flex-center-between.accordion-item
+							p.fs-20.fw-semi Возможности аккаунта
+							.plus 
+						ul.accordion-drop
+							li.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
+					li.accordion
+						.flex-center-between.accordion-item
+							p.fs-20.fw-semi Дополнительная информация
+							.plus 
+						ul.accordion-drop
+							li.fs-16.c-gray Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida ac risus ut pellentesque. Cras id sem id nisi sodales auctor sed vel felis. Etiam ullamcorper tortor odio, nec maximus nisi vulputate eu. Phasellus et sapien in sapien auctor maximus et nec elit. Duis non nisi nec mauris pretium fringilla. Duis nec suscipit odio. Aenean a dui ac mauris sagittis elementum vitae id justo. In urna sapien, lobortis sed urna in, sagittis ornare elit. Curabitur convallis orci eu blandit finibus. Nulla ornare pretium lacus, sed tristique augue dignissim a. Etiam ac purus non lectus facilisis tincidunt. Aliquam maximus ac leo eu auctor.
+
+
+
+				
+
