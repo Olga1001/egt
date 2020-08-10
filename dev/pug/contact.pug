@@ -1,0 +1,57 @@
+extends layout/main-logged
+
+block variables
+    -var title = 'Главная страница'
+
+block content
+    .request
+        a.logo.logo-md-mobile(href="#")
+            img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+        .d-flex.align-items-center.back.d-none-desktop
+            a.btn-back(href="#")
+            p.fs-16.c-gray.fw-bold Отправить запрос
+        .container
+            nav 
+                ul.breadcrumbs
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="#") Главная /
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="#") Аккаунт /
+                    li.breadcrumbs__item
+                        a.breadcrumbs__link(href="#") Профиль
+            .flex-between.flex-wrap
+                .request-left
+                    h4.fs-32.fw-semi.d-md-hide Отправить запрос
+                    .p.fs-16.c-gray Если вы столкнулись с определенными трудностями на платформе, пожалуйста выберите ниже тему обращения и опишите детально вашу проблему.
+                    .select
+                        .select__header
+                            .select__current 
+                                span Выберите тему 
+                                    span.d-md-hide вашего обращения
+                                button.btn-arrow(type="button")
+                                    img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+                        ul.select__body
+                            li.select__item темa
+                            li.select__item темa 2
+                            li.select__item темa 3
+                            li.select__item темa 4
+                            li.select__item темa 5
+                .request-right
+                    .notification__question
+                        div
+                            p.fs-20.fw-semi Часто задаваемые вопросы
+                                img.notification__icon.d-md-show(src="static/images/question.svg", alt="question")
+                            p.fs-16.c-gray 
+                                |Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
+                                a.c-red(href="#") Vestibulum mattis 
+                                |eget neque a molestie. Integer non viverra metus.
+                        img.notification__icon.d-md-hide(src="static/images/question.svg", alt="question")
+                    .notification__question
+                        div
+                            p.fs-20.fw-semi Информация о ремонте и гарантии
+                                img.notification__icon.d-md-show(src="static/images/test.svg", alt="test")
+                            p.fs-16.c-gray 
+                                |Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
+                                a.c-red(href="#") Vestibulum mattis 
+                                |eget neque a molestie. Integer non viverra metus.
+                        img.notification__icon.d-md-hide(src="static/images/test.svg", alt="test")

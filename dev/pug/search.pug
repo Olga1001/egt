@@ -39,16 +39,18 @@ block content
 											.notregistered Не зарегистрирован
 								.notregistered.notregistered-mobile Не зарегистрирован
 				.section-search__half
-					a.notification__search.bg-gradient 
+					a.notification__question.bg-gradient(href="#")
 						div
 							span.notification__block Рекомендуется
-							p.fs-20.fw-semi.c-white На телефонjpgе еще быстрее!
+							p.fs-20.fw-semi.c-white На телефоне еще быстрее!
+								img.notification__icon.d-md-show(src="static/images/icon_2.svg", alt="question")
 							p.fs-16 Сканируйте QR code чека на телефоне </br> для быстрой регистрации продукта.
-						img.notification__icon(src="static/images/icon_2.svg", type="icon")
-					a.notification__search
+						img.notification__icon.d-md-hide(src="static/images/icon_2.svg", type="icon")
+					a.notification__question(href="#")
 						div
-							p.fs-20.fw-semi Нашли свой приобретенный продукт?
+							p.fs-20.fw-semi.c-dark Нашли свой приобретенный продукт?
+								img.notification__icon.d-md-show(src="static/images/icon_1.svg", alt="question")
 							p.fs-16.c-gray Зарегистрируйте его в свой личный аккаунт и отслеживайте гарантию своего продукта, а также пользуйтесь дополнительными функциями в вашем личном аккаунте.
-						img.notification__icon(src="static/images/icon_1.svg", type="icon")
+						img.notification__icon.d-md-hide(src="static/images/icon_1.svg", type="icon")
 
 

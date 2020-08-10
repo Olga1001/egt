@@ -5,3 +5,11 @@ mixin icon(name,mod)
 	else
 		svg(class="svg-" + name)
 			use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+
+//- mixin breadcrumbs-item(text,href)
+//- 	li.breadcrumbs__item
+//- 		if(href)
+//- 			a.breadcrumbs__link(href=href)=text
+//- 		else
+//- 			p.breadcrumbs__link=text
+

@@ -44,7 +44,7 @@ block content
 									img.messenger-icon(src="static/images/login-users/apple.svg", alt="apple")
 								a.messenger(href="#")
 									img.messenger-icon(src="static/images/login-users/odnoklassniki.svg", alt="odnoklassniki")
-						button.form-bottom 
+						button.form-bottom.btn__next-services(type="button")
 							span.fs-20.fw-semi.c-dark.text-center Вход для сервисных центров
 					form.form-item 
 						.form-content
@@ -119,7 +119,7 @@ block content
 						h4.tab.active Вход
 					.d-flex
 						button.btn-next(type="button") Пропустить
-						button.close#close__forgot(type="button")
+						button.close#close__forgot.back-form(type="button")
 				form.form-content
 					.select
 						.select__header
@@ -141,5 +141,5 @@ block content
 					a.link.c-red.link-forgot_contract(href="#") Незнаете номер контракта?
 					p.fs-16.c-gray Войдите в аккаунт своей компании, чтобы получить доступ к 
 						a.link.c-red(href="#") информации для специалистов.
-				.form-bottom 
+				button.form-bottom.back-form(type="button")
 					p.fs-20.fw-semi.c-dark.text-center Вход для пользователей

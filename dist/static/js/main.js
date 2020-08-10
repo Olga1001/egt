@@ -62,12 +62,19 @@ $(document).ready(function () {
 
   $(".link-forgot").click(function (e) {
     e.preventDefault();
+    $(".form-contract").hide();
     $(".form-sing_in-up, .form-contract").hide();
     $(".form-forgot").show();
+  });
+  $(".btn__next-services").click(function (e) {
+    $(".form-forgot").hide();
+    $(".form-sing_in-up").hide();
+    $(".form-contract").show();
   });
   $(".back-form").click(function (e) {
     e.preventDefault();
     $(".form-forgot").hide();
+    $(".form-contract").hide();
     $(".form-sing_in-up").show();
   });
   $(".accordion-item").click(function () {
@@ -95,21 +102,7 @@ $(document).ready(function () {
     $(".text-change").text(text);
     $(this).closest(".tabs-mob").addClass('left');
     $('[data-settings-dropdown=' + thisData + ']').addClass('active');
-  }); // $(".settings-tab_data").click(function () {
-  //   let text = $(this).text();
-  //   $(this).closest(".tabs-mob").addClass('left');
-  //   $(".profile__data").addClass('active');
-  //   $(".text-change").text(text);
-  //   $(".btn-back__products").addClass('active-settings');
-  // })
-  // $(".settings-tab_share").click(function () {
-  //   let text = $(this).text();
-  //   $(this).closest(".tabs-mob").addClass('left');
-  //   $(".profile__share").addClass('active');
-  //   $(".text-change").text(text);
-  //   $(".btn-back__products").addClass('active-settings');
-  // })
-
+  });
   $(".btn-back__settings").click(function (e) {
     e.preventDefault();
     $(".settings-tab ").removeClass('active');

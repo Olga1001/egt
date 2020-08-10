@@ -3,12 +3,13 @@
     .d-none-desktop
         display: none
 @media only screen and (max-width: 1400px)
-    .profile-left, .profile-left_v2
+    .profile-left, .profile-left_v2, .request-left
         max-width: 50%
-    .profile-right, .profile-right_v2
+    .profile-right, .profile-right_v2, .request-right
         max-width: 45%
     .footer__fixed
         position: inherit
+
 @media only screen and (max-width: 1024px)
     .product-left
         max-width: 50%
@@ -28,7 +29,7 @@
     .sign-in
         height: 75px
         padding: 0 0 0 15px
-    .profile
+    .profile, .request
         min-height: calc(100vh - 90px - 75px)
     .home
         min-height: calc(100vh - 80px - 75px)
@@ -111,10 +112,9 @@
         padding: 12px 24px 93px
     .btn-next
         margin-right: 0
-    .notification__search
-        padding: 15px 10px
-    .notification__icon 
-        transform: scale(0.8)
+    .notification__question
+        padding: 16px 20px
+        margin: 0 0 30px 0
     .result-item
         padding: 12px 15px
     .result-link
@@ -158,6 +158,8 @@
         max-width: 100%
     .profile-left_v2 form 
         max-width: 100%     
+    .request-right, .request-left
+        max-width: 100%
 @media only screen and (max-width: 767px)
     .bottombar
         display: block
@@ -259,8 +261,6 @@
         display: none
     .notregistered
         margin-top: 14px
-    .notification__search
-        display: none
     .section-error
         padding: 29px 24px 90px
     .section-error .fs-42
@@ -367,3 +367,15 @@
         padding-bottom: 0
     #map
         height: calc(100vh - 172px)
+    .request-left 
+        padding-top: 24px
+    .notification__icon 
+        width: 52px 
+        height: 52px
+    .notification__question .fs-20 
+        display: flex 
+        justify-content: space-between
+    .notification__question .fs-16
+        max-width: 100% 
+        padding-right: 0
+    
