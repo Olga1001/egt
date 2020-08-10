@@ -6,8 +6,8 @@ block variables
 
 block content
 	.bg-content.d-lg-hide 
-	.container.flex-center-between.container__sign_in-up 
-		div.d-lg-hide 
+	.container.justify-content-end.container__sign_in-up 
+		div.d-lg-hide.fixed__align-center 
 			a.logo.mb-3(href="#")
 				img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
 			p.c-white.fs-20.fw-semi Гарантийная платформа
@@ -16,7 +16,7 @@ block content
 				a.logo.mb-3.logo-mobile(href="#")
 					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
 				.flex-between.form-head
-					button.btn-back(type="button")
+					a.btn-back(href="#")
 					ul.d-flex 
 						li.tab.active Вход
 						li.tab Регистрация
@@ -97,7 +97,7 @@ block content
 					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
 				.flex-between.form-head
 					.d-flex
-						button.btn-back.back-form(type="button")
+						a.btn-back.back-form(href="#")
 						h4.fs-20.fw-semi Смена пароля
 					button.close.back-form
 				form.form-content
@@ -115,7 +115,7 @@ block content
 					img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
 				.flex-between.form-head
 					.d-flex
-						button.btn-back(type="button")
+						a.btn-back(href="#")
 						h4.tab.active Вход
 					.d-flex
 						button.btn-next(type="button") Пропустить

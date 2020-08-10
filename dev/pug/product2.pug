@@ -1,14 +1,14 @@
 extends layout/main-logged
 
 block variables
-	-var title = 'Вход'
+	-var title = 'Ваш продукт'
 
 block content
-	.bg-gray.content-product
+	.content-product
 		a.logo.logo-md-mobile(href="#")
 			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop 
-			button.btn-back(type="button")
+			a.btn-back(href="#")
 			p.fs-16.c-gray.fw-bold Ваш продукт
 		.container
 			.container-product
@@ -89,5 +89,11 @@ block content
 						ul.accordion-drop.pt-2
 							li.fs-16.c-gray Продукт не зарегистрирован. При покупке действует стандартная гарантия в 3 года от производителя. Вы владелец продукта? Зарегистрируйте его в </br>
 								a.c-red(href="#") личном аккаунте.
-					
+	.d-md-show
+		.transfer-product
+			button.btn-transfer-product(type="button") 
+				span.fs-14.fw-semi Передать продукт 
+				img(src="static/images/account-24px.svg", alt="icon")
+			button.btn-delete__transfer(type="button")
+				+icon("delete")
 		

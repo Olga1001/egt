@@ -1,0 +1,164 @@
+extends layout/not-mobile-header
+
+block variables
+	-var title = 'Профиль'
+
+block content
+	.profile
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop 
+			a.btn-back.btn-back__products(href="#")
+			p.fs-16.c-gray.fw-bold Ваши продукты: 2
+		.container
+			nav 
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Аккаунт /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Профиль
+			.flex-between.d-md-hide
+				ul.tabs
+					li.tab-item.active
+						+icon("profile", "tab-item__img")
+						p.fs-14.fw-semi Профиль
+					li.tab-item
+						+icon("icon-map", "tab-item__img")
+						p.fs-14.fw-semi Карта сервисов
+					li.tab-item
+						+icon("icon-settings", "tab-item__img")
+						p.fs-14.fw-semi Настройки
+				a.logout(href="#")
+					span.fs-14.fw-semi.c-gray Выйти
+					+icon("icon-exit", "logout__icon")
+			ul.drops
+				li.drops__item.active
+					.flex-between.flex-wrap
+						.profile-left_v2 
+							h4.fs-20.fw-semi.d-md-hide Ваши продукты: 2
+							p.fs-16.c-gray.d-md-show Выберите продукт для дополнительных опции взаимодействия.
+							ul.products 
+								li.product-item 
+									.d-flex
+										img.result-img(src="static/images/img-result.jpg", alt="image result") 
+										.result-info 
+											p.fs-16.c-gray Смарт телевизор
+											p.fs-26.fw-semi.c-dark SHIVAKI D24TV4K
+											.result-info__row
+												p.fs-20.fw-semi.c-gray C02VF0Y1HGE8
+												.system-message.system__green.d-md-hide
+													p.fs-12.fw-semi Гарантия до 24.07.2022
+									.flex-center-between 
+										button.btn-delete.d-md-hide(type="button") 
+											img.btn-delete__icon(src="static/images/delete.svg", alt="delete icon")
+											span.fs-14.fw-semi Удалить
+										.flex-wrap.align-items-center  
+											button.btn-receipt(type="button")
+												img.btn-receipt__icon(src="static/images/receipt.svg", alt="receipt icon")
+											button.btn-transfer.d-md-hide(type="button") 
+												span.fs-14.fw-semi Передать продукт
+												img.btn-transfer__icon(src="static/images/account-24px.svg", alt="icon sign-in")
+											.system-message.system__green.d-md-show
+												p.fs-12.fw-semi Гарантия до 24.07.2022
+								li.product-item 
+									.d-flex
+										img.result-img(src="static/images/product_2.jpg", alt="image result") 
+										.result-info 
+											p.fs-16.c-gray Холодильник
+											p.fs-26.fw-semi.c-dark SHIVAKI B802-TY
+											.result-info__row 
+												p.fs-20.fw-semi.c-gray HTY354VC5551
+												.system-message.system__red.d-md-hide
+													p.fs-12.fw-semi Гарантия Истекла
+									.flex-center-between 
+										button.btn-delete.d-md-hide(type="button") 
+											img.btn-delete__icon(src="static/images/delete.svg", alt="delete icon")
+											span.fs-14.fw-semi Удалить
+										.flex-wrap.align-items-center  
+											button.btn-receipt(type="button")
+												img.btn-receipt__icon(src="static/images/receipt.svg", alt="receipt icon")
+											button.btn-transfer.d-md-hide(type="button") 
+												span.fs-14.fw-semi Передать продукт
+												img.btn-transfer__icon(src="static/images/account-24px.svg", alt="icon sign-in")
+											.system-message.system__red.d-md-show
+												p.fs-12.fw-semi Гарантия Истекла
+						.profile-right_v2.d-md-hide 
+							h4.fs-20.fw-semi Оповещения
+								img(src="static/images/notification.svg", alt="notification icon")
+							ul.notification-list 
+								li.bg-gray_2
+									a(href="#")
+										span.fs-16 Поздравляем! Ваш продукт был успешно добавлен. Теперь вы можете отслеживать статус на странице профиля
+										span.fs-12.fw-semi.c-gray Сег	
+								li 
+									a(href="#")
+										span.fs-16 Обновление карты гарантийных сервисов. Теперь вы сможете увидеть больше точек обращения
+										span.fs-12.fw-semi.c-gray 3 д	
+								li 
+									a(href="#")
+										span.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+										span.fs-12.fw-semi.c-gray 4 д	
+								li 
+									a(href="#")
+										span.fs-16 Ваш аккаунт был успешно подтвержден. Теперь вам доступны все функции нашей платформы.
+										span.fs-12.fw-semi.c-gray 4 д	
+				li.drops__item
+					.profile-left_v2 
+						h4.fs-20.fw-semi.d-md-hide Карта сервисных центров
+					#map
+				li.drops__item
+					ul.d-md-show.tabs-mob
+						li.settings-tab.settings-tab_data Ваши данные
+							img(src="static/images/icon_4.svg", alt="icon") 	
+						li.settings-tab.settings-tab_share Рассылка
+							img(src="static/images/icon_3.svg", alt="icon") 	
+					.flex-between.flex-wrap
+						.profile-left_v2.profile__data 
+							h4.fs-20.fw-semi.d-md-hide Ваши данные
+							form
+								label.label
+									input.input-form(type="text", placeholder="Ваш E-mail*", value="user@google.com" required)
+									span.error-message error-message
+								.flex-wrap 
+									label.label.input-form_half
+										input.input-form(type="text", placeholder="Имя*", value="Алексей" required)
+										span.error-message error-message
+									label.label.input-form_half
+										input.input-form(type="text", placeholder="Фамилия*", value="Фамильный" required)
+										span.error-message error-message
+								.date
+									label.label
+										input.input-form(type="text", placeholder="Дата рождения*", value="12.03.1978" required)
+										span.error-message error-message
+									button.btn-date(type="button")
+										img.btn-date_icon(src="static/images/calendar.svg", alt="calendar")
+
+								.select
+									.select__header
+										.select__current 
+											span.active Москва
+											button.btn-arrow(type="button")
+												img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+									ul.select__body
+										li.select__item Москва
+										li.select__item Город 2
+										li.select__item Город 3
+										li.select__item Город 4
+										li.select__item Город 5
+										li.select__item Город 6 
+										li.select__item Город
+										li.select__item Город
+										li.select__item Город 
+								input.input-form(type="text", placeholder="Номер телефона" value="8-800-123-45-67")
+								button.btn-red.btn-save-settings(type="submit") Сохранить изменения
+						.profile-right_v2.profile__share
+							h4.fs-20.fw-semi.d-md-hide Разрешение на рассылку
+							.d-flex 
+								label 
+									input.checkbox(type="checkbox")
+									span.switch
+								p.fs-16.c-gray.switch__text Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie.
+
+

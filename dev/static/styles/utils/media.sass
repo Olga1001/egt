@@ -2,11 +2,13 @@
 @media only screen and (min-width: 768px)
     .d-none-desktop
         display: none
-@media only screen and (max-width: 1366px)
-    .profile-left
+@media only screen and (max-width: 1400px)
+    .profile-left, .profile-left_v2
         max-width: 50%
-    .profile-right
+    .profile-right, .profile-right_v2
         max-width: 45%
+    .footer__fixed
+        position: inherit
 @media only screen and (max-width: 1024px)
     .product-left
         max-width: 50%
@@ -54,6 +56,7 @@
         max-width: 100%
         border-radius: 0
         min-height: 100vh
+        box-shadow: none
         .close 
             display: none
     .form-head 
@@ -151,6 +154,10 @@
     .product-left
         min-height: auto
         height: fit-content
+    .profile-left_v2, .profile-right_v2
+        max-width: 100%
+    .profile-left_v2 form 
+        max-width: 100%     
 @media only screen and (max-width: 767px)
     .bottombar
         display: block
@@ -323,5 +330,40 @@
         margin-top: 24px
     .notification-list 
       padding: 24px
-      li 
+      li a
           padding-right: 29px
+    .btn-receipt
+        margin-left: 0
+        margin-right: 15px
+    .product-item 
+        button, .system-message 
+            margin-top: 12px
+    .profile-left_v2
+        margin-top: 24px
+    .product-item
+        padding: 11px 16px
+    .product-item .result-info
+        padding-top: 10px
+    .result-info__row .fs-20, .result-info__row .system-message
+        margin-top: 2px !important
+    .btn-save-settings
+        width: 100%
+        margin-top: 24px
+    .profile__data, .profile__share
+        transition: all 0.3s ease
+        position: absolute 
+        top: 0 
+        left: 100%
+        width: 0
+        min-height: 00%
+        margin-top: 120px
+        padding: 0 0 90px 0
+        overflow-y: auto
+        &.active 
+            width: 100% 
+            padding: 0 24px 90px
+            left: 0
+    .profile-map
+        padding-bottom: 0
+    #map
+        height: calc(100vh - 172px)

@@ -33,7 +33,6 @@ $(document).ready(function () {
     $('.nav-mobile_menu').show();
   });
   $('#open_account').click(function () {
-    // eslint-disable-next-line no-undef
     $('.nav-mobile').hide();
     $('.nav-mobile_account').show();
   });
@@ -81,5 +80,41 @@ $(document).ready(function () {
   });
   $(".notification-popup .btn-back").click(function () {
     $(".notification-popup").removeClass('active');
+  }); // tabs
+
+  $(".tab-item").click(function () {
+    $(this).addClass('active').siblings().removeClass('active');
+    var index = $(this).index();
+    $(".drops__item").eq(index).addClass('active').siblings().removeClass('active');
+  }); // tabs mobile share and data
+
+  var textChange = $(".text-change").text();
+  $(".settings-tab ").click(function () {
+    var thisData = $(this).attr("data-settings-tab");
+    var text = $(this).text();
+    $(".text-change").text(text);
+    $(this).closest(".tabs-mob").addClass('left');
+    $('[data-settings-dropdown=' + thisData + ']').addClass('active');
+  }); // $(".settings-tab_data").click(function () {
+  //   let text = $(this).text();
+  //   $(this).closest(".tabs-mob").addClass('left');
+  //   $(".profile__data").addClass('active');
+  //   $(".text-change").text(text);
+  //   $(".btn-back__products").addClass('active-settings');
+  // })
+  // $(".settings-tab_share").click(function () {
+  //   let text = $(this).text();
+  //   $(this).closest(".tabs-mob").addClass('left');
+  //   $(".profile__share").addClass('active');
+  //   $(".text-change").text(text);
+  //   $(".btn-back__products").addClass('active-settings');
+  // })
+
+  $(".btn-back__settings").click(function (e) {
+    e.preventDefault();
+    $(".settings-tab ").removeClass('active');
+    $(".profile__data, .profile__share").removeClass('active');
+    $(".tabs-mob").removeClass('left');
+    $(this).siblings(".text-change").text(textChange);
   });
 });

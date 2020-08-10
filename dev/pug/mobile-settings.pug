@@ -1,0 +1,66 @@
+extends layout/not-mobile-header
+
+block variables
+	-var title = 'Профиль'
+
+block content
+	.profile
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop 
+			a.btn-back.btn-back__settings(href="#")
+			p.fs-16.c-gray.fw-bold.text-change Настройки
+		.container
+			ul.d-md-show.tabs-mob
+				li.settings-tab(data-settings-tab="settings-data") Ваши данные
+					img(src="static/images/icon_4.svg", alt="icon") 	
+				li.settings-tab(data-settings-tab="settings-share") Рассылка
+					img(src="static/images/icon_3.svg", alt="icon") 	
+			.flex-between.mobile-settings__drops
+				.profile-left_v2.profile__data(data-settings-dropdown="settings-data")
+					h4.fs-20.fw-semi.d-md-hide Ваши данные
+					form
+						label.label
+							input.input-form(type="text", placeholder="Ваш E-mail*", value="user@google.com" required)
+							span.error-message error-message
+						.flex-wrap 
+							label.label.input-form_half
+								input.input-form(type="text", placeholder="Имя*", value="Алексей" required)
+								span.error-message error-message
+							label.label.input-form_half
+								input.input-form(type="text", placeholder="Фамилия*", value="Фамильный" required)
+								span.error-message error-message
+						.date
+							label.label
+								input.input-form(type="text", placeholder="Дата рождения*", value="12.03.1978" required)
+								span.error-message error-message
+							button.btn-date(type="button")
+								img.btn-date_icon(src="static/images/calendar.svg", alt="calendar")
+
+						.select
+							.select__header
+								.select__current 
+									span.active Москва
+									button.btn-arrow(type="button")
+										img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+							ul.select__body
+								li.select__item Москва
+								li.select__item Город 2
+								li.select__item Город 3
+								li.select__item Город 4
+								li.select__item Город 5
+								li.select__item Город 6 
+								li.select__item Город
+								li.select__item Город
+								li.select__item Город 
+						input.input-form(type="text", placeholder="Номер телефона" value="8-800-123-45-67")
+						button.btn-red.btn-save-settings(type="submit") Сохранить изменения
+				.profile-right_v2.profile__share(data-settings-dropdown="settings-share")
+					h4.fs-20.fw-semi.d-md-hide Разрешение на рассылку
+					.d-flex 
+						label 
+							input.checkbox(type="checkbox")
+							span.switch
+						p.fs-16.c-gray.switch__text Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie.
+
+

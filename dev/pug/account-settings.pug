@@ -1,15 +1,15 @@
 extends layout/main-logged
 
 block variables
-	-var title = 'Вход'
+	-var title = 'Профиль'
 
 block content
-	.bg-gray.profile
+	.profile
 		a.logo.logo-md-mobile(href="#")
 			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop 
-			button.btn-back(type="button")
-			p.fs-16.c-gray.fw-bold Поиск продукта
+			a.btn-back(href="#")
+			p.fs-16.c-gray.fw-bold Ваши данные
 		.container
 			nav 
 				ul.breadcrumbs
@@ -21,7 +21,7 @@ block content
 						a.breadcrumbs__link(href="#") Профиль
 			.flex-between.d-md-hide
 				ul.tabs
-					li.tab-item
+					li.tab-item.active
 						img.tab-item__img(src="static/images/profile.svg", alt="icon user")
 						p.fs-14.fw-semi.c-red Профиль
 				a.logout(href="#")
@@ -42,9 +42,11 @@ block content
 						img(src="static/images/notification.svg", alt="notification icon")
 					ul.notification-list 
 						li.bg-gray_2
-							p.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
-							p.fs-12.fw-semi.c-gray 3 д	
+							a(href="#")
+								span.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+								span.fs-12.fw-semi.c-gray 3 д	
 						li 
-							p.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
-							p.fs-12.fw-semi.c-gray 3 д	
+							a(href="#")
+								span.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+								span.fs-12.fw-semi.c-gray 3 д	
 

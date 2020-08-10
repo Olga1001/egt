@@ -1,14 +1,14 @@
-extends layout/main
+extends layout/main-logged
 
 block variables
-	-var title = 'Вход'
+	-var title = 'Ваш продукт'
 
 block content
-	.bg-gray.content-product
+	.content-product
 		a.logo.logo-md-mobile(href="#")
 			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop 
-			button.btn-back(type="button")
+			a.btn-back(href="#")
 			p.fs-16.c-gray.fw-bold Ваш продукт
 		.container
 			.container-product
@@ -48,7 +48,7 @@ block content
 							.plus 
 						ul.accordion-drop
 							li
-								a.download.flex-center-between(href="" download)
+								.download.flex-center-between(href="" download)
 									span.fs-14.fw-semi.c-dark Руководство пользователя
 									span.d-flex.align-items-center 
 										span.fs-14.fw-semi.c-gray 19 kb 
@@ -67,9 +67,34 @@ block content
 										img(src="static/images/download.svg", alt="download icon")
 					li.accordion
 						.flex-center-between.accordion-item
+							p.fs-20.fw-semi Документация для сервиса
+							.plus 
+						ul.accordion-drop
+							li
+								.download.flex-center-between(href="" download)
+									span.fs-14.fw-semi.c-dark Доступы к системе
+									span.d-flex.align-items-center 
+										span.fs-14.fw-semi.c-gray 19 kb 
+										img(src="static/images/download.svg", alt="download icon")
+							li
+								a.download.flex-center-between(href="#" download)
+									span.fs-14.fw-semi.c-dark Инструкции по прошивке
+									span.d-flex.align-items-center 
+										span.fs-14.fw-semi.c-gray 19 kb 
+										img(src="static/images/download.svg", alt="download icon")
+					li.accordion
+						.flex-center-between.accordion-item
 							p.fs-20.fw-semi Гарантия
 							.plus 
 						ul.accordion-drop.pt-2
 							li.fs-16.c-gray Продукт не зарегистрирован. При покупке действует стандартная гарантия в 3 года от производителя. Вы владелец продукта? Зарегистрируйте его в </br>
 								a.c-red(href="#") личном аккаунте.
+	.d-md-show
+		.transfer-product
+			button.btn-transfer-product(type="button") 
+				span.fs-14.fw-semi Передать продукт 
+				img(src="static/images/account-24px.svg", alt="icon")
+			button.btn-delete__transfer(type="button")
+				+icon("delete")
+					
 		

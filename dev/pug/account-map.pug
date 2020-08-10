@@ -1,0 +1,18 @@
+extends layout/not-mobile-header
+
+block variables
+	-var title = 'Профиль'
+
+block content
+	.profile.profile-map
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop
+			a.btn-back.btn-back__products(href="#")
+			p.fs-16.c-gray.fw-bold Карта сервисов
+		.container
+			.profile-left_v2 
+				h4.fs-20.fw-semi.d-md-hide Карта сервисных центров
+			#map
+		
+

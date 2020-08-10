@@ -110,14 +110,18 @@ header
             transform: translateY(-12px)
             &:before 
                 opacity: 1
-            svg path 
+            svg 
                 stroke: #E3270E
             .bottombar-text
                 color: #E3270E
         svg 
-            height: 20px
+            stroke: #909090
+            fill: none
+            height: 24px
+            width: 24px
             margin: 0 auto 6px
             display: block
+            stroke-width: 2
     &-box
         border-radius: 4px
         background: #FFFFFF
@@ -175,6 +179,12 @@ header
         align-items: center
         width: 100%
         justify-content: space-between
+.menu-link svg 
+    width: 24px 
+    height: 24px
+    fill: #909090
+    &.svg-icon-exit 
+        fill: #E3270E
 
 
 

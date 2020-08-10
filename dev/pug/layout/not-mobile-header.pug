@@ -14,15 +14,11 @@ html(lang="ru-RU")
 		meta(name="description" content="описание, ключевые слова")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
 	body
+		include ../modules/header/header
 		.content
 			block content
-		footer.footer.bg-none.d-lg-hide.footer__fixed 
-			.container
-				.d-flex
-					p.fs-16.c-white © SHIVAKI 2020 
-					a.fs-16.c-white(href="#") Политика конфиденциальности
-					a.fs-16.c-white(href="#") Правила использования
-					a.fs-16.c-white(href="#") Контакт
+		include ../modules/footer/footer
+				
 		script(src="static/js/jquery.min.js")
 		script(src="static/js/main.js")
 		block script
