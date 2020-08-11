@@ -115,6 +115,8 @@
     .notification__question
         padding: 16px 20px
         margin: 0 0 30px 0
+        div 
+            width: 100%
     .result-item
         padding: 12px 15px
     .result-link
@@ -160,6 +162,10 @@
         max-width: 100%     
     .request-right, .request-left
         max-width: 100%
+    .request-right 
+        padding-top: 24px
+    textarea
+        padding: 12px 
 @media only screen and (max-width: 767px)
     .bottombar
         display: block
@@ -201,7 +207,7 @@
         justify-content: space-between
         height: 75px
         &:after
-            background: url(/static/images/blur-shadow-long.svg) no-repeat center bottom/cover
+            background: url(/images/blur-shadow-long.svg) no-repeat center bottom/cover
             height: 99px
             width: 100%
             bottom: -24px
@@ -273,7 +279,7 @@
         margin-top: 0
         width: 327px
         height: 239px
-        background-image: url("../../static/images/404-mobile.svg")
+        background-image: url("..images/404-mobile.svg")
     .logo-md-mobile
         display: block
     .article h1.fs-42
@@ -378,4 +384,3 @@
     .notification__question .fs-16
         max-width: 100% 
         padding-right: 0
-    

@@ -6,7 +6,7 @@ block variables
 block content
     .request
         a.logo.logo-md-mobile(href="#")
-            img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+            img.logo-img(src="images/logo-shivaki.svg", alt="logo")
         .d-flex.align-items-center.back.d-none-desktop
             a.btn-back(href="#")
             p.fs-16.c-gray.fw-bold Отправить запрос
@@ -16,12 +16,10 @@ block content
                     li.breadcrumbs__item
                         a.breadcrumbs__link(href="#") Главная /
                     li.breadcrumbs__item
-                        a.breadcrumbs__link(href="#") Аккаунт /
-                    li.breadcrumbs__item
-                        a.breadcrumbs__link(href="#") Профиль
+                        a.breadcrumbs__link(href="#") Контакт
             .flex-between.flex-wrap
                 .request-left
-                    h4.fs-32.fw-semi.d-md-hide Отправить запрос
+                    h4.fs-20.fw-semi.d-md-hide Отправить запрос
                     .p.fs-16.c-gray Если вы столкнулись с определенными трудностями на платформе, пожалуйста выберите ниже тему обращения и опишите детально вашу проблему.
                     .select
                         .select__header
@@ -29,29 +27,37 @@ block content
                                 span Выберите тему 
                                     span.d-md-hide вашего обращения
                                 button.btn-arrow(type="button")
-                                    img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+                                    img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
                         ul.select__body
-                            li.select__item темa
-                            li.select__item темa 2
-                            li.select__item темa 3
-                            li.select__item темa 4
-                            li.select__item темa 5
+                            li.select__item Проблема при регистрации продукта
+                    form.drop-form
+                        textarea.textarea(name="", cols="30", rows="12", placeholder="Пожалуйста опишите детально ваш вопрос.")
+                        label.btn-download(for="file-download") 
+                            input#file-download(type="file", name="files[]", multiple="", value="Загрузить файлы")
+                            span.fs-14.fw-semi Прикрепить файл
+                            img(src="images/attach_file.svg", alt="file download")
+                        p.fs-16.c-gray 
+                            |Нажимая «Отправить», Вы подтверждаете, что прочитали и согласны с 
+                            a.c-red(href="#") Правилами пользователя 
+                            |и 
+                            a.c-red(href="#") Политикой конфиденциальности.
+                        button.btn-red.btn__drop-form(type="submit") Отправить
                 .request-right
                     .notification__question
                         div
                             p.fs-20.fw-semi Часто задаваемые вопросы
-                                img.notification__icon.d-md-show(src="static/images/question.svg", alt="question")
+                                img.notification__icon.d-md-show(src="images/question.svg", alt="question")
                             p.fs-16.c-gray 
                                 |Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
                                 a.c-red(href="#") Vestibulum mattis 
                                 |eget neque a molestie. Integer non viverra metus.
-                        img.notification__icon.d-md-hide(src="static/images/question.svg", alt="question")
+                        img.notification__icon.d-md-hide(src="images/question.svg", alt="question")
                     .notification__question
                         div
                             p.fs-20.fw-semi Информация о ремонте и гарантии
-                                img.notification__icon.d-md-show(src="static/images/test.svg", alt="test")
+                                img.notification__icon.d-md-show(src="images/test.svg", alt="test")
                             p.fs-16.c-gray 
                                 |Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
                                 a.c-red(href="#") Vestibulum mattis 
                                 |eget neque a molestie. Integer non viverra metus.
-                        img.notification__icon.d-md-hide(src="static/images/test.svg", alt="test")
+                        img.notification__icon.d-md-hide(src="images/test.svg", alt="test")

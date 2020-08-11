@@ -6,8 +6,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp --prod",
-    "style:lint": "stylelint ./dev/static/styles/**/*.scss --syntax scss",
-    "style:fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix"
+    "style:lint": "stylelint ./dev/styles/**/*.scss --syntax scss",
+    "style:fix": "stylelint './dev/styles/**/*.scss' --syntax scss --fix"
   },
   "author": "Саламатин Анатолий",
   "license": "ISC",

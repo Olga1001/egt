@@ -10,7 +10,7 @@ const gulpif = require('gulp-if');
 // Работаем со стилями
 
 module.exports = function styles() {
-  return gulp.src('dev/static/styles/styles.sass')
+  return gulp.src('dev/styles/styles.sass')
     .pipe(plumber())
     .pipe(gulpif(!argv.prod, sourcemaps.init()))
     .pipe(sass())
@@ -25,5 +25,5 @@ module.exports = function styles() {
      console.log(`${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`)
     })))
     .pipe(gulpif(!argv.prod, sourcemaps.write()))
-    .pipe(gulp.dest('dist/static/css'));
+    .pipe(gulp.dest('dist/css'));
 };

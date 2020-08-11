@@ -7,7 +7,7 @@ const replace = require('gulp-replace');
 // Делаем SVG спрайт
 
 module.exports = function spriteSVG() {
-  return gulp.src('dev/static/images/sprite/svg/*.svg')
+  return gulp.src('dev/images/sprite/svg/*.svg')
     .pipe(svgmin({
       js2svg: {
         pretty: true
@@ -29,5 +29,5 @@ module.exports = function spriteSVG() {
         }
       }
     }))
-    .pipe(gulp.dest('dist/static/images/sprite'));
+    .pipe(gulp.dest('dist/images/sprite'));
 };

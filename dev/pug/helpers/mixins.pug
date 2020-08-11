@@ -1,10 +1,10 @@
 mixin icon(name,mod)
 	if(mod)
 		svg(class="svg-" + name + ' ' + mod)
-			use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+			use(xlink:href="images/sprite/symbol/sprite.svg#" + name)
 	else
 		svg(class="svg-" + name)
-			use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+			use(xlink:href="images/sprite/symbol/sprite.svg#" + name)
 
 //- mixin breadcrumbs-item(text,href)
 //- 	li.breadcrumbs__item

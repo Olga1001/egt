@@ -58,6 +58,7 @@ $(document).ready(function () {
     $(this).closest(".select__body").slideUp(300);
     $(".select__header").removeClass('active');
     $(this).closest(".select").find(".select__current span").addClass('active').text(selected);
+    $(".drop-form").slideDown(300);
   }); // forgot password popup 
 
   $(".link-forgot").click(function (e) {
@@ -109,5 +110,10 @@ $(document).ready(function () {
     $(".profile__data, .profile__share").removeClass('active');
     $(".tabs-mob").removeClass('left');
     $(this).siblings(".text-change").text(textChange);
+  }); // file download
+
+  $('#file-download').on('change', function () {
+    var fileName = this.files[0].name;
+    $(".btn-download span").html(fileName);
   });
 });

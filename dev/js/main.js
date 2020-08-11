@@ -58,8 +58,9 @@ $(document).ready(function () {
     e.stopPropagation();
     $(this).toggleClass('active').parents().siblings().removeClass('active');
     $(this).closest(".select").find(".select__body").slideToggle(300);
+   
   })
-
+  
   $(".select__item").click(function (e) {
     e.stopPropagation();
     let selected = $(this).text();
@@ -67,6 +68,7 @@ $(document).ready(function () {
     $(this).closest(".select__body").slideUp(300);
     $(".select__header").removeClass('active');
     $(this).closest(".select").find(".select__current span").addClass('active').text(selected);
+    $(".drop-form").slideDown(300); 
   })
 
   // forgot password popup 
@@ -128,5 +130,10 @@ $(document).ready(function () {
     $(this).siblings(".text-change").text(textChange);
   })
 
+  // file download
+  $('#file-download').on('change', function(){
+    let fileName = this.files[0].name;
+    $(".btn-download span").html(fileName);
+  });
 })
 

@@ -8,12 +8,12 @@ const gulpif = require('gulp-if');
 // Работа со скриптами
 
 module.exports = function script() {
-  return gulp.src('dev/static/js/*.js')
+  return gulp.src('dev/js/*.js')
     // .pipe(eslint())
     // .pipe(eslint.format())
     .pipe(babel({
       presets: ['@babel/env']
     }))
     .pipe(gulpif(argv.prod, uglify()))
-    .pipe(gulp.dest('dist/static/js/'));
+    .pipe(gulp.dest('dist/js/'));
 };

@@ -12,7 +12,7 @@ html(lang="ru-RU")
 		meta(name="viewport" content="width=375,initial-scale=1")
 		meta(name="keywords" content="")
 		meta(name="description" content="описание, ключевые слова")
-		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+		link(rel="stylesheet" type='text/css' href="css/styles.css")
 	body
 		include ../modules/header/header
 		.content
@@ -35,33 +35,33 @@ html(lang="ru-RU")
             
 		nav.nav-mobile.nav-mobile_menu
 			a.logo.selected-logo(href="#")
-				img.logo-img(src="static/images/logo-shivaki.svg", alt="shivaki")
+				img.logo-img(src="images/logo-shivaki.svg", alt="shivaki")
 			p.fs-16.fw-bold.c-gray.mb-3.px-4 Меню
 			ul.menu
 				li
 					form.menu-search 
 						input.menu-search_input(type="text", placeholder="Поиск продукта", required) 
 						button.btn-search(type="button")
-							img.btn-search_icon(src="static/images/icon-magnifier.svg", alt="magnifier")
+							img.btn-search_icon(src="images/icon-magnifier.svg", alt="magnifier")
 				li.menu-item
 					.logos
 						.logos-item
 							p.fs-16.fw-semi Выбрать производителя
 							button.btn-arrow(type="button")
-								img.btn-arrow_img(src="static/images/arrow-up.svg", alt="arrow")
+								img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
 						ul.logos-dropdown
 							li.logos-dropdown_item.hide
 								a.logos-dropdown_link(href="#")
-									img.logo-img(src="static/images/logo-shivaki.svg", alt="shivaki")
+									img.logo-img(src="images/logo-shivaki.svg", alt="shivaki")
 							li.logos-dropdown_item
 								a.logos-dropdown_link(href="#")
-									img.logo-img(src="static/images/logo-broun.svg", alt="broun")
+									img.logo-img(src="images/logo-broun.svg", alt="broun")
 							li.logos-dropdown_item
 								a.logos-dropdown_link(href="#")
-									img.logo-img(src="static/images/logo-kenwood.svg", alt="kenwood")
+									img.logo-img(src="images/logo-kenwood.svg", alt="kenwood")
 							li.logos-dropdown_item
 								a.logos-dropdown_link(href="#")
-									img.logo-img(src="static/images/logo-suzuki.svg", alt="suzuki")
+									img.logo-img(src="images/logo-suzuki.svg", alt="suzuki")
 				li.menu-item
 					a.menu-link(href="#") Информация
 				li.menu-item
@@ -73,11 +73,11 @@ html(lang="ru-RU")
 
 		nav.nav-mobile.nav-mobile_account
 			a.logo.selected-logo(href="#")
-				img.logo-img(src="static/images/logo-shivaki.svg", alt="shivaki")
+				img.logo-img(src="images/logo-shivaki.svg", alt="shivaki")
 			.flex-center-between.mb-3.px-4
 				p.fs-16.fw-bold.c-gray Ваш аккаунт
 				button.btn-notification(type="button")
-					img.btn-notification_icon(src="static/images/notification.svg", alt="icon notification") 
+					img.btn-notification_icon(src="images/notification.svg", alt="icon notification") 
 					span.btn-notification_point
 			ul.menu
 				li.menu-item
@@ -94,11 +94,11 @@ html(lang="ru-RU")
 						+icon("icon-exit")
 		.notification-popup
 			a.logo.logo-md-mobile(href="#")
-				img.logo-img(src="static/images/logo-shivaki.svg", alt="logo")
+				img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 			.d-flex.align-items-center.back 
 				a.btn-back(href="#")
 				p.fs-16.c-gray.fw-bold Оповещения 
-					img(src="static/images/notification-gray.svg", alt="notification icon")
+					img(src="images/notification-gray.svg", alt="notification icon")
 			ul.notification-list 
 				li.bg-gray_2
 					a(href="#")
@@ -112,6 +112,6 @@ html(lang="ru-RU")
 					a(href="#")
 						span.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
 						span.fs-12.fw-semi.c-gray 4 д			
-		script(src="static/js/jquery.min.js")
-		script(src="static/js/main.js")
+		script(src="js/jquery.min.js")
+		script(src="js/main.js")
 		block script
