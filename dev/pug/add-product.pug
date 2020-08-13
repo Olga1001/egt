@@ -1,0 +1,103 @@
+extends layout/main-logged
+
+block variables
+	-var title = 'Поиск продукта'
+
+block content
+	.bg-gray__search
+		a.logo.logo-md-mobile(href="#")
+			img.logo-img(src="images/logo-shivaki.svg", alt="logo")
+		.d-flex.align-items-center.back.d-none-desktop 
+			button.close.mr-16(type="button")
+			p.fs-16.c-gray.fw-bold Зарегистрировать продукт
+		.container
+			nav 
+				ul.breadcrumbs
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Поиск /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Продукт /
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Регистрация продукта
+			form.section-product(name='name_form')
+				.section-product__left
+					h2.fs-20.c-dark.fw-semi.d-md-hide Добавить продукт
+					.add-product 
+						.add-product__item 
+							.result-link
+								img.result-img(src="images/img-result.jpg", alt="image result") 
+								.result-info 
+									p.fs-16.c-gray Смарт телевизор
+									p.fs-26.fw-semi.c-dark SHIVAKI D24TV4K
+									.flex-wrap
+										p.fs-20.fw-semi.c-gray C02VF0Y1HGE8
+							p.fs-16.fw-bold.d-md-show Зарегистрировать выбраный продукт
+							p.fs-16.c-gray.mt-12.d-md-show 
+								|С добавлением этого продукта вы подтверждатете что вы владелец согласно 
+								a.c-red Политики конфиденциальности.
+							p.fs-20.fw-semi.add-product__title.d-md-hide Данные с чека покупки
+							
+							button.btn-scan.mt-24.d-md-show(type="button")
+								span.fs-14.fw-semi Сканировать QR код
+								span.btn-reload_box
+							.system-message.system__green.system-check.w-100
+								p.fs-16 Данные прошли проверку успешно. Сейчас вы перейдёте на страницу вашего аккаунта.
+							.system-message.system__red.system-check.w-100
+								p.fs-16 Данные не прошли проверку через сканирование. Если вы продалжаете получать это сообщение, попробуйте ввести данные вручную.
+							button.btn__enter-data.d-md-show(type="button") Ввести данные с чека вручную
+							.drop-mobile
+								label.label
+									input.input-form(type="text", placeholder="ФН", name="name", required)
+									span.error-message error-message
+								.flex-wrap 
+									label.label.input-form_half
+										input.input-form(type="text", placeholder="ФД", name="name", required)
+										span.error-message error-message
+									label.label.input-form_half
+										input.input-form(type="text", placeholder="ФПД или ФП", name="name", required)
+										span.error-message error-message
+								.date
+									label.label
+										input.input-form(type="date", placeholder="Дата рождения*", name="name")
+										span.error-message error-message
+									button.btn-date(type="button")
+										img.btn-date_icon(src="images/calendar.svg", alt="calendar")
+								button.btn-red.btn-check.d-md-show(type="submit") Подтвердить и проверить
+								button.btn-reload(type="button")
+									span.btn-reload_flex
+										span.fs-16.fw-semi.c-dark Проверка:
+										span.btn-reload_box
+
+						p.fs-16.c-gray 
+							|Для подтверждения вашей покупки мы хотим знать данные с полученого чека. Незнаете где найти запрашиваемые данные? Здесь вы можете найти 
+							a.c-red информацию о данных с чека. 
+							|Если данные с вашего чека не определяются, вы можете 
+							a.c-red связаться с нами.
+						button.btn-gray.d-md-hide(type="reset") Отмена
+							
+				.section-product__right.d-md-hide
+					.notification__question.bg-gradient.d-md-hide
+						div
+							span.notification__block Рекомендуется
+							p.fs-20.fw-semi.c-white На телефоне еще быстрее!
+								img.notification__icon.d-md-show(src="images/icon_2.svg", alt="question")
+							p.fs-16 Сканируйте QR code чека на телефоне </br> для быстрой регистрации продукта.
+						img.notification__icon.d-md-hide(src="images/icon_2.svg", type="icon")
+					.register-selected.d-md-hide
+						div
+							p.fs-20.fw-semi.c-dark Зарегистрировать выбранный продукт
+							p.fs-16.c-gray.w-100 
+								|С добавлением этого продукта вы подтверждатете что вы владелец согласно 
+								a.c-red Политики конфиденциальности.
+							button.btn-red.btn-check(type="submit") Подтвердить и проверить
+							button.btn-reload(type="button")
+								span.btn-reload_flex
+									span.fs-16.fw-semi.c-dark Проверка:
+									span.btn-reload_box
+					.system-message.system__green.system-check.w-100
+						p.fs-16 Данные прошли проверку успешно. Сейчас вы перейдёте на страницу вашего аккаунта.
+					.system-message.system__red.system-check.w-100
+						p.fs-16 Ведённые данные не прошли проверку, пожалуйста проверьте и повторите попытку еще раз. Если вы продолжите получать эту ошибку, свяжитесь с нашей поддержкой.
+

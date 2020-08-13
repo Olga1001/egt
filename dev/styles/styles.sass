@@ -264,6 +264,8 @@ input[disabled]
 
 .date 
   position: relative
+  .input-form
+    padding-right: 12px
 
 .select 
     position: relative
@@ -352,6 +354,14 @@ input[disabled]
   padding: 0 24px
 .pt-2
   padding-top: 10px
+.mt-16 
+  margin-top: 16px
+.mt-12 
+  margin-top: 12px
+.mt-24 
+  margin-top: 24px
+.mr-16
+  margin-right: 16px
 
 .orange 
   .btn-red, .btn-search
@@ -363,8 +373,15 @@ input[disabled]
     &:hover
       background-color: #fff
       color: #EA9E1C
+  .btn-scan:hover
+    background: #EA9E1C url("../images/icon-qr_v2.svg") no-repeat right 15px bottom / 66px
+    box-shadow: 0px 34px 34px -29px rgba(#EA9E1C,0.12)
+  .menu-search_input
+    background: #EA9E1C
+  .btn-reload_box
+    background-color: #EA9E1C
 
-.purpure
+.purple
   .btn-red, .btn-search 
     background-color: #7C2582
     border-color:#7C2582
@@ -374,6 +391,14 @@ input[disabled]
     &:hover
       background-color: #fff
       color: #7C2582
+  .btn-scan:hover
+    background: #7C2582 url("../images/icon-qr_v2.svg") no-repeat right 15px bottom / 66px
+    box-shadow: 0px 34px 34px -29px rgba(#7C2582,0.12)
+  .menu-search_input
+    background: #7C2582
+  .btn-reload_box
+    background-color: #7C2582
+
 .blue 
   .btn-red, .btn-search
     background-color: #2F2483
@@ -384,6 +409,14 @@ input[disabled]
     &:hover
       background-color: #fff
       color: #2F2483
+  .btn-scan:hover
+    background: #2F2483 url("../images/icon-qr_v2.svg") no-repeat right 15px bottom / 66px
+    box-shadow: 0px 34px 34px -29px rgba(#2F2483,0.12)
+  .menu-search_input
+    background: #2F2483
+  .btn-reload_box
+    background-color: #2F2483
+
 .red 
   .btn-red, .btn-search 
     background-color: #E3270E
@@ -394,5 +427,24 @@ input[disabled]
     &:hover
       background-color: #fff
       color: #E3270E
+  .btn-scan:hover
+    background: #E3270E url("../images/icon-qr_v2.svg") no-repeat right 15px bottom / 66px
+    box-shadow: 0px 34px 34px -29px rgba(#E3270E,0.12)
+  .menu-search_input
+    background: #E3270E
+  .btn-reload_box
+    background-color: #E3270E
+@keyframes reload
+    0% 
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
 
+input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-calendar-picker-indicator
+  opacity: 0
+  -webkit-appearance: none
+  appearance: none
+input[type="date"]::-webkit-datetime-edit-year-field:not([aria-valuenow]), input[type="date"]::-webkit-datetime-edit-month-field:not([aria-valuenow]), input[type="date"]::-webkit-datetime-edit-day-field:not([aria-valuenow])
+  color: transparent
+  
 @import "utils/media";

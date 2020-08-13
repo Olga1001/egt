@@ -135,5 +135,71 @@ $(document).ready(function () {
     let fileName = this.files[0].name;
     $(".btn-download span").html(fileName);
   });
-})
 
+  $(".btn__enter-data").click(function () {
+    $(this).hide()
+    $(".drop-mobile").slideDown(300);
+  })
+
+  //check form product
+  $("form[name='name_form']").submit(function(event, i) {
+    event.preventDefault();
+    let curform = $(this);
+    let goodform = true;
+
+    curform.find('input[required]').each(function () {
+      switch($(this).attr("name")) {
+          case "name":
+              if( $(this).val() == '') {
+                  setTimeout(() => {
+                    $(".btn-reload").addClass('notChecked');
+                    $(".system-check ").hide();
+                    $(".section-product__right .system__red ").show();
+                    }, 1000);
+              }
+      }
+      if (goodform) {
+        $(".btn-check").hide()
+        if (window.matchMedia("(max-width: 767px)").matches) {
+          $(".btn-reload").show();
+        } else {
+          $(".register-selected .btn-reload").show();
+        }
+        setTimeout(() => {
+          $(".btn-reload").addClass('checked');
+          $(".btn-reload .fs-16").text("Проверено");
+          $(".system-check ").hide();
+          $(".section-product__right .system__green").show();
+        }, 1000);
+
+        // !goodform
+        setTimeout(() => {
+          $(".btn-reload").addClass('notChecked');
+          $(".btn-reload .fs-16").text("Ошибка");
+          $(".system-check ").hide();
+          $(".section-product__right .system__red").show();
+        }, 2000);
+      }
+    });
+  })
+
+  // mobile QR btn variants
+  $(".btn-scan").click(function (e) {
+    e.preventDefault();
+    $(this).find(".fs-14").text("Проверка");
+    $(this).addClass('permit');
+
+    setTimeout(() => {
+      $(this).find(".fs-14").text("Проверено");
+      $(this).addClass('checked');
+      $(".system-check.system__green").show();
+    }, 1000);
+    setTimeout(() => {
+      $(this).find(".fs-14").text("Ошибка");
+      $(this).addClass('notChecked');
+      $(".system-check.system__green").hide();
+      $(".system-check.system__red").show();
+    }, 2000);
+  })
+
+});

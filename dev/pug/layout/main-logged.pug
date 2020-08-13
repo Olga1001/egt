@@ -50,16 +50,16 @@ html(lang="ru-RU")
 							button.btn-arrow(type="button")
 								img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
 						ul.logos-dropdown
-							li.logos-dropdown_item.hide
+							li.logos-dropdown_item.hide(data-color="red")
 								a.logos-dropdown_link(href="#")
 									img.logo-img(src="images/logo-shivaki.svg", alt="shivaki")
-							li.logos-dropdown_item
+							li.logos-dropdown_item(data-color="orange")
 								a.logos-dropdown_link(href="#")
 									img.logo-img(src="images/logo-broun.svg", alt="broun")
-							li.logos-dropdown_item
+							li.logos-dropdown_item(data-color="purple")
 								a.logos-dropdown_link(href="#")
 									img.logo-img(src="images/logo-kenwood.svg", alt="kenwood")
-							li.logos-dropdown_item
+							li.logos-dropdown_item(data-color="blue")
 								a.logos-dropdown_link(href="#")
 									img.logo-img(src="images/logo-suzuki.svg", alt="suzuki")
 				li.menu-item
@@ -113,5 +113,6 @@ html(lang="ru-RU")
 						span.fs-16 Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
 						span.fs-12.fw-semi.c-gray 4 д			
 		script(src="js/jquery.min.js")
+		script(src="js/inputmask.min.js")
 		script(src="js/main.js")
 		block script

@@ -63,7 +63,7 @@
     bottom: -30px
     width: 100%
     height: 170px
-    background: url("..images/blur-shadow.svg") no-repeat center / contain
+    background: url("../images/blur-shadow.svg") no-repeat center / contain
     pointer-events: none
   &:last-child
     background: linear-gradient(-245.17deg, #EA5642 0%, #E3270E 100%)
@@ -154,7 +154,7 @@
     line-height: 21px
 
 .bg-content
-  background: linear-gradient(rgba(0, 0, 0, 0.52)), url("..images/img.jpg") no-repeat center / cover
+  background: linear-gradient(rgba(0, 0, 0, 0.52)), url("../images/img.jpg") no-repeat center / cover
   width: 100%
   height: 100vh
   position: fixed
@@ -238,7 +238,7 @@
 .notification
   &__icon
     width: 100px 
-    height: auto
+    height: fit-content
     object-fit: contain
   &__question
     background: #FFFFFF
@@ -259,6 +259,10 @@
       max-width: 380px
       &.c-gray 
         margin-top: 17px
+    .btn-red 
+      margin-top: 40px 
+      width: fit-content
+      padding: 0 24px
   &__block
     background: rgba(255, 255, 255, 0.32)
     border-radius: 2px
@@ -323,7 +327,7 @@
     margin-bottom: 32px
 
 .section-error__img
-  background: url("..images/404.svg") no-repeat center / contain
+  background: url("../images/404.svg") no-repeat center / contain
   margin: 55px auto 0
   width: 680px
   height: 458.58px
@@ -460,6 +464,9 @@
   p 
     color: #FF3B30
 
+.system-check 
+  display: none
+
 .content-product 
   .accordions
     padding-top: 50px
@@ -478,13 +485,16 @@
 
 .d-md-show
   display: none
+
 .tabs 
   display: flex 
   flex-wrap: wrap
+
 .drops__item
   display: none 
   &.active 
     display: block
+
 .tab-item
   background: #EEEEEE
   display: flex 
@@ -677,3 +687,50 @@
 
 #file-download 
   display: none
+
+.section-product
+  display: flex 
+  flex-wrap: wrap 
+  justify-content: space-between
+  padding-bottom: 100px
+  .result-link 
+    margin-bottom: 20px
+  &__left
+    max-width: 565px
+    width: 100%
+  &__right 
+    max-width: 620px
+    width: 100%
+    padding-top: 10px
+
+.add-product__item 
+  background: #FFFFFF
+  box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.08)
+  border-radius: 4px
+  padding: 11px 32px 28px 32px
+  margin: 24px 0
+
+.add-product__title 
+  margin-bottom: 10px
+
+.w-100 
+  max-width: 100%!important
+  width: 100%
+
+.drop-mobile 
+  padding-top: 12px
+  .btn-red 
+    margin-top: 24px
+
+.register-selected
+  background: #FFFFFF
+  border-radius: 4px
+  box-shadow: 0px 34px 34px -29px rgba(#000, 0.12)
+  padding: 24px 32px
+  margin: 40px 0 32px
+  .fs-20 
+    margin-bottom: 16px
+  .btn-red 
+    margin-top: 40px
+    width: fit-content
+    padding: 0 24px

@@ -3,9 +3,9 @@
     .d-none-desktop
         display: none
 @media only screen and (max-width: 1400px)
-    .profile-left, .profile-left_v2, .request-left
+    .profile-left, .profile-left_v2, .request-left, .section-product__left
         max-width: 50%
-    .profile-right, .profile-right_v2, .request-right
+    .profile-right, .profile-right_v2, .request-right, .section-product__right
         max-width: 45%
     .footer__fixed
         position: inherit
@@ -113,7 +113,7 @@
     .btn-next
         margin-right: 0
     .notification__question
-        padding: 16px 20px
+        padding: 20px 16px
         margin: 0 0 30px 0
         div 
             width: 100%
@@ -166,6 +166,13 @@
         padding-top: 24px
     textarea
         padding: 12px 
+    .section-product__right
+        padding-top: 50px
+    .section-product__left, .section-product__right
+        max-width: 100%
+    
+    .btn-date
+        top: 27px    
 @media only screen and (max-width: 767px)
     .bottombar
         display: block
@@ -207,7 +214,7 @@
         justify-content: space-between
         height: 75px
         &:after
-            background: url(/images/blur-shadow-long.svg) no-repeat center bottom/cover
+            background: url(../images/blur-shadow-long.svg) no-repeat center bottom/cover
             height: 99px
             width: 100%
             bottom: -24px
@@ -384,3 +391,15 @@
     .notification__question .fs-16
         max-width: 100% 
         padding-right: 0
+    .drop-mobile
+        display: none
+    .add-product__item 
+        background: none
+        box-shadow: none
+        padding: 0
+        .result-link 
+            background: #fff
+            padding: 11px 15px
+            margin-bottom: 30px
+    .btn-reload
+        width: 100%
