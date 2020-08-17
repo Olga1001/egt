@@ -22,11 +22,11 @@ block content
 			.flex-between.d-md-hide
 				ul.tabs
 					li.tab-item.active
-						img.tab-item__img(src="images/profile.svg", alt="icon user")
-						p.fs-14.fw-semi.c-red Профиль
+						+icon("profile","tab-item__img")
+						p.fs-14.fw-semi Профиль
 				a.logout(href="#")
 					span.fs-14.fw-semi.c-gray Выйти
-					img.logout__icon(src="images/icon-exit.svg", alt="logout icon")
+					+icon("icon-exit","logout__icon")
 			.flex-between.flex-wrap
 				.profile-left 
 					h4.fs-20.fw-semi Данные вашего сервиса
@@ -34,12 +34,12 @@ block content
 						input.input-form(type="text" value="ООО «ВидеоТехника – Сервис»" disabled)
 						input.input-form(type="text" value="Абакан" disabled)
 						input.input-form(type="text" value="Ул. Баумана, д.3" disabled)
-						input.input-form(type="email" placeholder="E-mail" required)
-						input.input-form(type="text" value="+79506597454" required)
+						input.input-form(type="text" name="email" placeholder="E-mail" required)
+						input.input-form(type="text" name="phone" placeholder="Номер телефона" value="+79506597454" required)
 						button.btn-red(type="submit") Сохранить изменения
 				.profile-right.d-md-hide 
 					h4.fs-20.fw-semi Оповещения
-						img(src="images/notification.svg", alt="notification icon")
+						+icon("notification")
 					ul.notification-list 
 						li.bg-gray_2
 							a(href="#")

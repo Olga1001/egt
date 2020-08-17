@@ -202,4 +202,40 @@ $(document).ready(function () {
     }, 2000);
   })
 
+  // popup Error
+  $(".btn-sign-up").click(function() {
+    $(".popup-error").addClass('active');
+  });
+  $(".popup-error, .close").click(function() {
+    $(".popup-error").removeClass('active');
+  });
+  $(".popup-error__container").click(function(e) {
+    e.stopPropagation();
+  });
+
+  // input mask
+  $("input[name='name']").inputmask({
+    regex: String.raw`\D*`,
+    showMaskOnHover: false
+  });
+  $("input[name='email']").inputmask({
+    mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+    greedy: false,
+    showMaskOnHover: false,
+    onBeforePaste: function (pastedValue, opts) {
+        pastedValue = pastedValue.toLowerCase();
+        return pastedValue.replace("mailto:", "");
+    },
+    definitions: {
+        '*': {
+            validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+            casing: "lower"
+        }
+    }
+  });
+
+  $("input[name='phone']").inputmask("+79999999999", { 
+    greedy: false,
+    showMaskOnHover: false
+  });
 });

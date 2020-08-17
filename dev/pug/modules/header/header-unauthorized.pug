@@ -5,7 +5,7 @@ header.header
                 a.logo(href="#")
                     img.logo-img(src="images/logo-shivaki.svg", alt="shivaki")
                 button.btn-arrow(type="button")
-                    img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
+                    +icon("arrow-up","btn-arrow_img")
             ul.logos-dropdown
                 li.logos-dropdown_item.hide(data-color="red")
                     a.logos-dropdown_link(href="#")
@@ -25,6 +25,6 @@ header.header
                     a.menu-link(href="#") Информация
     a.sign-in(href="#") Войти
         .sign-in_icon
-            img(src="images/account-24px.svg", alt="icon sign-in")
+            +icon("account-24px")
         
         

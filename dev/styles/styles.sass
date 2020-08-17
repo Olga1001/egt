@@ -23,7 +23,25 @@ body
   overflow-x: hidden
 
 *, *::before, *::after
-  box-sizing: border-box;
+  box-sizing: border-box
+
+input[type="date"]
+  &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder
+    font-family: "Exo", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 26px
+    color: #909090
+
+input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-calendar-picker-indicator
+  opacity: 0
+  -webkit-appearance: none
+  appearance: none
+
+input[type="date"]::-webkit-datetime-edit-year-field:not([aria-valuenow]), input[type="date"]::-webkit-datetime-edit-month-field:not([aria-valuenow]), input[type="date"]::-webkit-datetime-edit-day-field:not([aria-valuenow])
+  color: #909090
+
 
 *::-webkit-input-placeholder
   font-family: "Exo", sans-serif
@@ -378,8 +396,19 @@ input[disabled]
     box-shadow: 0px 34px 34px -29px rgba(#EA9E1C,0.12)
   .menu-search_input
     background: #EA9E1C
-  .btn-reload_box
+  .btn-reload_box, .btn-notification_point
     background-color: #EA9E1C
+  .box-red
+    background: linear-gradient(256.89deg, #EABB42 0%, #EA9E1C 100%)
+    box-shadow: 0px 34px 24px -29px rgba(#EABB42,0.48)
+  svg 
+    fill: #EABB42!important
+  .section-error__img
+    background-image: url("../images/404_3.svg")
+  .tab-item.active 
+    color: #EABB42
+    border-color: #EABB42
+
 
 .purple
   .btn-red, .btn-search 
@@ -396,8 +425,18 @@ input[disabled]
     box-shadow: 0px 34px 34px -29px rgba(#7C2582,0.12)
   .menu-search_input
     background: #7C2582
-  .btn-reload_box
+  .btn-reload_box, .btn-notification_point
     background-color: #7C2582
+  .box-red
+    background: linear-gradient(256.89deg, #BE42EA 0%, #7C2582 100%)
+    box-shadow: 0px 34px 24px -29px rgba(#7C2582,0.48)
+  svg   
+    fill: #7C2582!important
+  .section-error__img
+    background-image: url("../images/404_2.svg")
+  .tab-item.active 
+    color: #7C2582
+    border-color: #7C2582
 
 .blue 
   .btn-red, .btn-search
@@ -414,8 +453,18 @@ input[disabled]
     box-shadow: 0px 34px 34px -29px rgba(#2F2483,0.12)
   .menu-search_input
     background: #2F2483
-  .btn-reload_box
+  .btn-reload_box, .btn-notification_point
     background-color: #2F2483
+  .box-red
+    background: linear-gradient(256.89deg, #5042EA 0%, #2F2483 100%)
+    box-shadow: 0px 34px 24px -29px rgba(#2F2483,0.48)
+  svg 
+    fill: #2F2483!important
+  .section-error__img
+    background-image: url("../images/404_4.svg")
+  .tab-item.active 
+    color: #2F2483
+    border-color: #2F2483
 
 .red 
   .btn-red, .btn-search 
@@ -432,19 +481,48 @@ input[disabled]
     box-shadow: 0px 34px 34px -29px rgba(#E3270E,0.12)
   .menu-search_input
     background: #E3270E
-  .btn-reload_box
+  .btn-reload_box, .btn-notification_point
     background-color: #E3270E
+  .box-red
+    background: linear-gradient(256.89deg, #EA5642 0%, #E3270E 100%)
+    box-shadow: 0px 34px 24px -29px rgba(#E3270E,0.48)
+  svg
+    fill: #E3270E!important
+  .section-error__img
+    background-image: url("../images/404.svg")
+  .tab-item.active 
+    color: #E3270E
+    border-color: #E3270E
+  
+
 @keyframes reload
     0% 
         transform: rotate(0deg)
     100%
         transform: rotate(360deg)
 
-input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-calendar-picker-indicator
+.popup-error
+  background: rgba(#000,0.6)
+  position: fixed 
+  left: 0 
+  top: 0
+  width: 100% 
+  height: 100%
+  z-index: 9
+  display: flex 
+  justify-content: center 
+  align-items: center
   opacity: 0
-  -webkit-appearance: none
-  appearance: none
-input[type="date"]::-webkit-datetime-edit-year-field:not([aria-valuenow]), input[type="date"]::-webkit-datetime-edit-month-field:not([aria-valuenow]), input[type="date"]::-webkit-datetime-edit-day-field:not([aria-valuenow])
-  color: transparent
-  
+  pointer-events: none
+  transition: all 0.3s ease
+  &.active 
+    opacity: 1
+    pointer-events: auto
+  &__container
+    background: #FFFFFF
+    box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.08)
+    border-radius: 4px
+    padding: 24px
+    max-width: 330px
+
 @import "utils/media";

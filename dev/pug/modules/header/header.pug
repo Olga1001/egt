@@ -5,7 +5,7 @@ header.header
                 a.logo(href="#")
                     img.logo-img(src="images/logo-shivaki.svg", alt="shivaki")
                 button.btn-arrow(type="button")
-                    img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
+                    +icon("arrow-up","btn-arrow_img")
             ul.logos-dropdown
                 li.logos-dropdown_item.hide(data-color="red")
                     a.logos-dropdown_link(href="#")
@@ -27,10 +27,10 @@ header.header
                     a.menu-link(href="#") Поиск
     .d-flex.align-items-center
         button.btn-notification(type="button")
-            img.btn-notification_icon(src="images/notification.svg", alt="icon notification") 
+            +icon("notification","btn-notification_icon")
             span.btn-notification_point
         a.sign-in(href="#") Аккаунт
             .sign-in_icon
-                img(src="images/account-24px.svg", alt="icon sign-in")
+                +icon("account-24px")
         
         

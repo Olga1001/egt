@@ -25,10 +25,10 @@ block content
 					form.form-item.active 
 						.form-content
 							label.label
-								input.input-form(type="text", placeholder="Ваш E-mail*", required)
+								input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
 								span.error-message error-message
 							label.label
-								input.input-form(type="password", placeholder="Пароль*", required)
+								input.input-form(type="password" placeholder="Пароль*" required)
 								span.error-message error-message
 							button.btn-red(type="submit") Войти
 							a.link.link-forgot(href="#") Забыли пароль?
@@ -49,21 +49,21 @@ block content
 					form.form-item 
 						.form-content
 							label.label.error
-								input.input-form(type="text", placeholder="Ваш E-mail*", required)
+								input.input-form(type="text" name="email" placeholder="Ваш E-mail*" required)
 								span.error-message error-message
 							label.label
-								input.input-form(type="password", placeholder="Пароль*", required)
+								input.input-form(type="password" placeholder="Пароль*" required)
 								span.error-message error-message
 							.flex-wrap 
 								label.label.input-form_half
-									input.input-form(type="text", placeholder="Имя*", required)
+									input.input-form(type="text" name="name" placeholder="Имя*" required)
 									span.error-message error-message
 								label.label.input-form_half
-									input.input-form(type="text", placeholder="Фамилия*", required)
+									input.input-form(type="text" name="name" placeholder="Фамилия*" required)
 									span.error-message error-message
 							.date
 								label.label
-									input.input-form(type="text", placeholder="Дата рождения*", required)
+									input.input-form(type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
 									span.error-message error-message
 								button.btn-date(type="button")
 									img.btn-date_icon(src="images/calendar.svg", alt="calendar")
@@ -84,7 +84,7 @@ block content
 									li.select__item Город
 									li.select__item Город
 									li.select__item Город 
-							input.input-form(type="text", placeholder="Номер телефона")
+							input.input-form(type="text" name="phone" placeholder="Номер телефона")
 							p.fs-16.c-gray.form-text 
 								|Нажимая «Создать учетную запись», вы подтверждаете, что прочитали и 
 								span.nowrap согласны с 
@@ -104,10 +104,10 @@ block content
 					p.fs-16.c-gray Выберите новый пароль для вашего аккаунта 
 					a.link.c-red user@google.com
 					label.label
-						input.input-form(type="password", placeholder="Новый пароль*", required)
+						input.input-form(type="password" placeholder="Новый пароль*" required)
 						span.error-message error-message
 					label.label
-						input.input-form(type="password", placeholder="Повторите пароль*", required)
+						input.input-form(type="password" placeholder="Повторите пароль*" required)
 						span.error-message error-message
 					button.btn-red(type="submit") Сохранить
 			.form-contract
@@ -135,7 +135,7 @@ block content
 							li.select__item Компания 5
 							li.select__item Компания 6 
 					label.label
-						input.input-form(type="text", placeholder="Номер контракта*", required)
+						input.input-form(type="text", name="number" placeholder="Номер контракта*", required)
 						span.error-message error-message
 					button.btn-red(type="submit") Войти
 					a.link.c-red.link-forgot_contract(href="#") Незнаете номер контракта?

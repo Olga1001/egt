@@ -23,7 +23,7 @@ nav.nav-mobile.nav-mobile_menu
                 .logos-item
                     p.fs-16.fw-semi Выбрать производителя
                     button.btn-arrow(type="button")
-                        img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
+                        +icon("arrow-up","btn-arrow_img")
                 ul.logos-dropdown
                     li.logos-dropdown_item.hide(data-color="red")
                         a.logos-dropdown_link(href="#")
@@ -52,7 +52,7 @@ nav.nav-mobile.nav-mobile_account
     .flex-center-between.mb-3.px-4
         p.fs-16.fw-bold.c-gray Ваш аккаунт
         button.btn-notification(type="button")
-            img.btn-notification_icon(src="images/notification.svg", alt="icon notification") 
+            +icon("notification","btn-notification_icon")
             span.btn-notification_point
     ul.menu
         li.menu-item
