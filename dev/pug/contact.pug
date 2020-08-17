@@ -1,7 +1,7 @@
 extends layout/main-logged
 
 block variables
-    -var title = 'Главная страница'
+    -var title = 'Контакт'
 
 block content
     .request
@@ -31,9 +31,9 @@ block content
                         ul.select__body
                             li.select__item Проблема при регистрации продукта
                     form.drop-form
-                        textarea.textarea(name="", cols="30", rows="12", placeholder="Пожалуйста опишите детально ваш вопрос.")
+                        textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
                         label.btn-download(for="file-download") 
-                            input#file-download(type="file", name="files[]", multiple="", value="Загрузить файлы")
+                            input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
                             span.fs-14.fw-semi Прикрепить файл
                             img(src="images/attach_file.svg", alt="file download")
                         p.fs-16.c-gray 

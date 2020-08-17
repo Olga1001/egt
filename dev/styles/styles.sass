@@ -408,7 +408,16 @@ input[disabled]
   .tab-item.active 
     color: #EABB42
     border-color: #EABB42
-
+  svg.tab-item__img
+    fill: #909090!important
+  .tab-item.active svg.tab-item__img
+    fill: #EABB42!important
+  .switch
+    background: #EABB42
+  svg.icon-delete 
+    fill: #FFFFFF!important
+  .btn-red:hover svg.icon-delete
+    fill: #EABB42!important
 
 .purple
   .btn-red, .btn-search 
@@ -437,6 +446,16 @@ input[disabled]
   .tab-item.active 
     color: #7C2582
     border-color: #7C2582
+  svg.tab-item__img
+    fill: #909090!important
+  .tab-item.active svg.tab-item__img
+    fill: #7C2582!important
+  .switch
+    background: #7C2582
+  svg.icon-delete 
+    fill: #FFFFFF!important
+  .btn-red:hover svg.icon-delete
+    fill: #7C2582!important
 
 .blue 
   .btn-red, .btn-search
@@ -465,6 +484,16 @@ input[disabled]
   .tab-item.active 
     color: #2F2483
     border-color: #2F2483
+  svg.tab-item__img
+    fill: #909090!important
+  .tab-item.active svg.tab-item__img
+    fill: #2F2483!important
+  .switch
+    background: #2F2483
+  svg.icon-delete 
+    fill: #FFFFFF!important
+  .btn-red:hover svg.icon-delete
+    fill: #2F2483!important
 
 .red 
   .btn-red, .btn-search 
@@ -493,7 +522,16 @@ input[disabled]
   .tab-item.active 
     color: #E3270E
     border-color: #E3270E
-  
+  svg.tab-item__img
+    fill: #909090!important
+  .tab-item.active svg.tab-item__img
+    fill: #E3270E!important
+  .switch
+    background: #E3270E
+  svg.icon-delete 
+    fill: #FFFFFF!important
+  .btn-red:hover svg.icon-delete
+    fill: #E3270E!important
 
 @keyframes reload
     0% 
@@ -501,8 +539,8 @@ input[disabled]
     100%
         transform: rotate(360deg)
 
-.popup-error
-  background: rgba(#000,0.6)
+.popup
+  background: rgba(#000,0.4)
   position: fixed 
   left: 0 
   top: 0
@@ -523,6 +561,31 @@ input[disabled]
     box-shadow: 4px 12px 20px rgba(0, 0, 0, 0.08)
     border-radius: 4px
     padding: 24px
+    width: 100%
+  &-error__container
     max-width: 330px
+  &-delete
+    &__container 
+      padding: 30px 40px 40px 40px
+      max-width: 580px
+    &__btns
+      display: flex 
+      flex-wrap: wrap 
+      margin-top: 35px
+      button 
+        width: calc(50% - 10px)
+        margin-right: 20px 
+        margin-top: 20px
+        &:nth-child(2n+2)
+          margin-right: 0
+  &-margin
+    margin: 21px 0 30px 0    
+
+.icon-delete 
+  fill: #FFFFFF
+  width: 18px 
+  height: 18px
+  margin-left: 15px
+  transition: all 0.3s ease
 
 @import "utils/media";

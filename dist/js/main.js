@@ -1,17 +1,5 @@
 "use strict";
 
-function _templateObject() {
-  var data = _taggedTemplateLiteral(["D*"], ["\\D*"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
 $(document).ready(function () {
   // dropdown logos
   $('.logos-item').click(function (e) {
@@ -138,8 +126,8 @@ $(document).ready(function () {
     var curform = $(this);
     var goodform = true;
     curform.find('input[required]').each(function () {
-      switch ($(this).attr("name")) {
-        case "name":
+      switch ($(this).attr("number")) {
+        case "number":
           if ($(this).val() == '') {
             setTimeout(function () {
               $(".btn-reload").addClass('notChecked');
@@ -198,34 +186,33 @@ $(document).ready(function () {
   $(".btn-sign-up").click(function () {
     $(".popup-error").addClass('active');
   });
-  $(".popup-error, .close").click(function () {
-    $(".popup-error").removeClass('active');
+  $(".popup, .close, .popup-delete__btns .btn-gray").click(function () {
+    $(".popup").removeClass('active');
+    $(".set-product").html('');
   });
   $(".popup-error__container").click(function (e) {
     e.stopPropagation();
-  }); // input mask
+  }); // popup delete
 
-  $("input[name='name']").inputmask({
-    regex: String.raw(_templateObject()),
-    showMaskOnHover: false
-  });
-  $("input[name='email']").inputmask({
-    mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-    greedy: false,
-    showMaskOnHover: false,
-    onBeforePaste: function onBeforePaste(pastedValue, opts) {
-      pastedValue = pastedValue.toLowerCase();
-      return pastedValue.replace("mailto:", "");
-    },
-    definitions: {
-      '*': {
-        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
-        casing: "lower"
-      }
-    }
-  });
-  $("input[name='phone']").inputmask("+79999999999", {
-    greedy: false,
-    showMaskOnHover: false
+  $(".btn-delete").click(function () {
+    var cloneProduct = $(this).closest(".product-item").find(".product-item_row").clone();
+    $(".popup-delete").addClass('active');
+    $(".set-product").append(cloneProduct);
+  }); //number of products
+
+  function lengthProduct() {
+    var lengthProduct = $(".product-item").length;
+    $(".count-product").text(lengthProduct);
+  }
+
+  ;
+  lengthProduct(); // delete product
+
+  $(".popup-delete__btns .btn-red").click(function (e) {
+    e.preventDefault();
+    var i = $(this).closest(".popup-delete__container").find(".product-item_row").attr("data-index");
+    console.log(i);
+    $(".product-item[data-index=" + i + "]").remove();
+    lengthProduct();
   });
 });

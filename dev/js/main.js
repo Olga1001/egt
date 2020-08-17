@@ -148,8 +148,8 @@ $(document).ready(function () {
     let goodform = true;
 
     curform.find('input[required]').each(function () {
-      switch($(this).attr("name")) {
-          case "name":
+      switch($(this).attr("number")) {
+          case "number":
               if( $(this).val() == '') {
                   setTimeout(() => {
                     $(".btn-reload").addClass('notChecked');
@@ -206,36 +206,35 @@ $(document).ready(function () {
   $(".btn-sign-up").click(function() {
     $(".popup-error").addClass('active');
   });
-  $(".popup-error, .close").click(function() {
-    $(".popup-error").removeClass('active');
+  $(".popup, .close, .popup-delete__btns .btn-gray").click(function() {
+    $(".popup").removeClass('active');
+    $(".set-product").html('');
   });
   $(".popup-error__container").click(function(e) {
     e.stopPropagation();
   });
 
-  // input mask
-  $("input[name='name']").inputmask({
-    regex: String.raw`\D*`,
-    showMaskOnHover: false
-  });
-  $("input[name='email']").inputmask({
-    mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
-    greedy: false,
-    showMaskOnHover: false,
-    onBeforePaste: function (pastedValue, opts) {
-        pastedValue = pastedValue.toLowerCase();
-        return pastedValue.replace("mailto:", "");
-    },
-    definitions: {
-        '*': {
-            validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
-            casing: "lower"
-        }
-    }
+  // popup delete
+  $(".btn-delete").click(function() {
+    let cloneProduct = $(this).closest(".product-item").find(".product-item_row").clone();
+    $(".popup-delete").addClass('active');
+    $(".set-product").append(cloneProduct);
   });
 
-  $("input[name='phone']").inputmask("+79999999999", { 
-    greedy: false,
-    showMaskOnHover: false
+   //number of products
+   function lengthProduct() {
+    let lengthProduct = $(".product-item").length;
+    $(".count-product").text(lengthProduct);
+  };
+  lengthProduct();
+
+  // delete product
+  $(".popup-delete__btns .btn-red").click(function(e) {
+    e.preventDefault();
+    let i = $(this).closest(".popup-delete__container").find(".product-item_row").attr("data-index");
+    console.log(i);
+    $(".product-item[data-index=" + i + "]").remove();
+    lengthProduct();
   });
+
 });

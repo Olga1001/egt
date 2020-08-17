@@ -1,4 +1,4 @@
-extends layout/main-logged
+extends layout/main-account-settings
 
 block variables
 	-var title = 'Поиск продукта'
@@ -49,18 +49,18 @@ block content
 							button.btn__enter-data.d-md-show(type="button") Ввести данные с чека вручную
 							.drop-mobile
 								label.label
-									input.input-form(type="text", placeholder="ФН", name="name", required)
+									input.input-form(type="text", placeholder="ФН", name="number", required)
 									span.error-message error-message
 								.flex-wrap 
 									label.label.input-form_half
-										input.input-form(type="text", placeholder="ФД", name="name", required)
+										input.input-form(type="text", placeholder="ФД", name="number", required)
 										span.error-message error-message
 									label.label.input-form_half
-										input.input-form(type="text", placeholder="ФПД или ФП", name="name", required)
+										input.input-form(type="text", placeholder="ФПД или ФП", name="number", required)
 										span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="date", placeholder="Дата рождения*", name="name")
+										input.input-form(type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
 										span.error-message error-message
 									button.btn-date(type="button")
 										img.btn-date_icon(src="images/calendar.svg", alt="calendar")
@@ -75,7 +75,7 @@ block content
 							a.c-red информацию о данных с чека. 
 							|Если данные с вашего чека не определяются, вы можете 
 							a.c-red связаться с нами.
-						button.btn-gray.d-md-hide(type="reset") Отмена
+						button.btn-gray.d-md-hide(type="reset") Очистить поля
 							
 				.section-product__right.d-md-hide
 					.notification__question.bg-gradient.d-md-hide

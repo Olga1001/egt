@@ -37,11 +37,12 @@ block content
 				li.drops__item.active
 					.flex-between.flex-wrap
 						.profile-left_v2 
-							h4.fs-20.fw-semi.d-md-hide Ваши продукты: 2
+							h4.fs-20.fw-semi.d-md-hide Ваши продукты: 
+								span.count-product 2
 							p.fs-16.c-gray.d-md-show Выберите продукт для дополнительных опции взаимодействия.
 							ul.products 
-								li.product-item 
-									.d-flex
+								li.product-item(data-index="1")
+									.product-item_row(data-index="1")
 										img.result-img(src="images/img-result.jpg", alt="image result") 
 										.result-info 
 											p.fs-16.c-gray Смарт телевизор
@@ -51,19 +52,19 @@ block content
 												.system-message.system__green.d-md-hide
 													p.fs-12.fw-semi Гарантия до 24.07.2022
 									.flex-center-between 
-										button.btn-delete.d-md-hide(type="button") 
-											img.btn-delete__icon(src="images/delete.svg", alt="delete icon")
+										button.btn-delete.d-md-hide(type="button")
+											+icon("delete", "btn-delete__icon")
 											span.fs-14.fw-semi Удалить
 										.flex-wrap.align-items-center  
 											button.btn-receipt(type="button")
-												img.btn-receipt__icon(src="images/receipt.svg", alt="receipt icon")
+												+icon("receipt", "btn-receipt__icon")
 											button.btn-transfer.d-md-hide(type="button") 
 												span.fs-14.fw-semi Передать продукт
-												img.btn-transfer__icon(src="images/account-24px.svg", alt="icon sign-in")
+												+icon("account-24px", "btn-transfer__icon")
 											.system-message.system__green.d-md-show
 												p.fs-12.fw-semi Гарантия до 24.07.2022
-								li.product-item 
-									.d-flex
+								li.product-item(data-index="2") 
+									.product-item_row(data-index="2")
 										img.result-img(src="images/product_2.jpg", alt="image result") 
 										.result-info 
 											p.fs-16.c-gray Холодильник
@@ -73,20 +74,20 @@ block content
 												.system-message.system__red.d-md-hide
 													p.fs-12.fw-semi Гарантия Истекла
 									.flex-center-between 
-										button.btn-delete.d-md-hide(type="button") 
-											img.btn-delete__icon(src="images/delete.svg", alt="delete icon")
+										button.btn-delete.d-md-hide(type="button")
+											+icon("delete", "btn-delete__icon")
 											span.fs-14.fw-semi Удалить
 										.flex-wrap.align-items-center  
 											button.btn-receipt(type="button")
-												img.btn-receipt__icon(src="images/receipt.svg", alt="receipt icon")
+												+icon("receipt", "btn-receipt__icon")
 											button.btn-transfer.d-md-hide(type="button") 
 												span.fs-14.fw-semi Передать продукт
-												img.btn-transfer__icon(src="images/account-24px.svg", alt="icon sign-in")
+												+icon("account-24px", "btn-transfer__icon")
 											.system-message.system__red.d-md-show
 												p.fs-12.fw-semi Гарантия Истекла
 						.profile-right_v2.d-md-hide 
 							h4.fs-20.fw-semi Оповещения
-								img(src="images/notification.svg", alt="notification icon")
+								+icon("notification")
 							ul.notification-list 
 								li.bg-gray_2
 									a(href="#")
@@ -130,7 +131,7 @@ block content
 										span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="text", placeholder="Дата рождения*", value="12.03.1978" required)
+										input.input-form(type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
 										span.error-message error-message
 									button.btn-date(type="button")
 										img.btn-date_icon(src="images/calendar.svg", alt="calendar")
@@ -140,7 +141,7 @@ block content
 										.select__current 
 											span.active Москва
 											button.btn-arrow(type="button")
-												img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
+												+icon("arrow-up", "btn-arrow_img")
 									ul.select__body
 										li.select__item Москва
 										li.select__item Город 2
@@ -160,4 +161,17 @@ block content
 									input.checkbox(type="checkbox")
 									span.switch
 								p.fs-16.c-gray.switch__text Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie.
+		.popup.popup-delete
+			.popup__container.popup-delete__container 
+				.flex-center-between 
+					h2.fs-20.fw-semi Удалить продукт 
+					button.close(type="button")
+				p.fs-16.c-gray.popup-margin Вы уверены что хотите удалить данный продукт из вашего аккаунта?
+				.set-product
+					
+				.popup-delete__btns
+					button.btn-gray(type="button") Нет, вернутся
+					button.btn-red(type="button") 
+						|Да, удалить 
+						+icon("delete","icon-delete")
 
