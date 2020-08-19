@@ -1,14 +1,15 @@
-extends layout/not-mobile-header
+extends layout/main-logged
 
 block variables
 	-var title = 'Профиль'
 
 block content
 	.profile.profile-map
-		a.logo.logo-md-mobile(href="#")
+		a.logo.logo-md-mobile(href="http://m99935yr.beget.tech/egt/home.html")
 			img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop
-			a.btn-back.btn-back__products(href="#")
+			a.btn-back.btn-back__products(href="http://m99935yr.beget.tech/egt/home.html")
+				+icon("arrow-back","btn-back__icon")
 			p.fs-16.c-gray.fw-bold Карта сервисов
 		.container
 			.profile-left_v2 

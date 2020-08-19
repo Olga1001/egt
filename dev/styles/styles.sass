@@ -25,6 +25,14 @@ body
 *, *::before, *::after
   box-sizing: border-box
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield
+
 input[type="date"]
   &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder
     font-family: "Exo", sans-serif
@@ -418,6 +426,18 @@ input[disabled]
     fill: #FFFFFF!important
   .btn-red:hover svg.icon-delete
     fill: #EABB42!important
+  .bottombar-item svg
+    fill: none!important
+  .bottombar-item.active svg
+    stroke: #EABB42!important
+  .bottombar-item.active 
+    box-shadow: 0px 11px 23px -15px rgba(#EABB42,1)
+    .bottombar-text
+      color: #EABB42
+  .menu-link svg 
+    fill: #909090!important
+    &.svg-icon-exit
+      fill: #EABB42!important
 
 .purple
   .btn-red, .btn-search 
@@ -456,6 +476,18 @@ input[disabled]
     fill: #FFFFFF!important
   .btn-red:hover svg.icon-delete
     fill: #7C2582!important
+  .bottombar-item svg
+    fill: none!important
+  .bottombar-item.active svg
+    stroke: #7C2582!important
+  .bottombar-item.active 
+    box-shadow: 0px 11px 23px -15px rgba(#7C2582,1)
+    .bottombar-text
+      color: #7C2582
+  .menu-link svg 
+    fill: #909090!important
+    &.svg-icon-exit
+      fill: #7C2582!important
 
 .blue 
   .btn-red, .btn-search
@@ -494,6 +526,18 @@ input[disabled]
     fill: #FFFFFF!important
   .btn-red:hover svg.icon-delete
     fill: #2F2483!important
+  .bottombar-item svg
+    fill: none!important
+  .bottombar-item.active svg
+    stroke: #2F2483!important
+  .bottombar-item.active
+    box-shadow: 0px 11px 23px -15px rgba(#2F2483,1)
+    .bottombar-text
+      color: #2F2483
+  .menu-link svg 
+    fill: #909090!important
+    &.svg-icon-exit
+      fill: #2F2483!important
 
 .red 
   .btn-red, .btn-search 
@@ -532,6 +576,18 @@ input[disabled]
     fill: #FFFFFF!important
   .btn-red:hover svg.icon-delete
     fill: #E3270E!important
+  .bottombar-item svg
+    fill: none!important
+  .bottombar-item.active svg
+    stroke: #E3270E!important
+  .bottombar-item.active
+    box-shadow: 0px 11px 23px -15px rgba(#E3270E,1)
+    .bottombar-text
+      color: #E3270E
+  .menu-link svg 
+    fill: #909090!important
+    &.svg-icon-exit
+      fill: #E3270E!important
 
 @keyframes reload
     0% 

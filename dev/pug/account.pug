@@ -1,4 +1,4 @@
-extends layout/not-mobile-header
+extends layout/main-logged
 
 block variables
 	-var title = 'Профиль'
@@ -9,6 +9,7 @@ block content
 			img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop 
 			a.btn-back.btn-back__products(href="#")
+				+icon("arrow-back","btn-back__icon")
 			p.fs-16.c-gray.fw-bold Ваши продукты: 2
 		.container
 			nav 
@@ -131,7 +132,7 @@ block content
 										span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
+										input.input-form(type="text" max="1979-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
 										span.error-message error-message
 									button.btn-date(type="button")
 										img.btn-date_icon(src="images/calendar.svg", alt="calendar")

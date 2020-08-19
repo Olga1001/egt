@@ -9,6 +9,7 @@ block content
 			img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop 
 			a.btn-back(href="#")
+				+icon("arrow-back","btn-back__icon")
 			p.fs-16.c-gray.fw-bold Поиск продукта
 		.container
 			nav 
@@ -21,7 +22,7 @@ block content
 				.section-search__half
 					h2.fs-32.c-dark.fw-semi.d-md-hide Поиск продукта
 					form.search
-						input.search-input(type="text", placeholder="Серийный номер продукта", value="C02VF0Y1HGE8", required)
+						input.search-input(type="text", placeholder="Серийный номер продукта" required)
 						button.btn-search(type="submit") 
 							span Поиск
 							img.btn-search_icon(src="images/icon-magnifier.svg", alt="magnifier")
@@ -49,8 +50,8 @@ block content
 					a.notification__question(href="#")
 						div
 							p.fs-20.fw-semi.c-dark Нашли свой приобретенный продукт?
-								img.notification__icon.d-md-show(src="images/icon_1.svg", alt="question")
+								+icon("icon_1","notification__icon d-md-show")
 							p.fs-16.c-gray Зарегистрируйте его в свой личный аккаунт и отслеживайте гарантию своего продукта, а также пользуйтесь дополнительными функциями в вашем личном аккаунте.
-						img.notification__icon.d-md-hide(src="images/icon_1.svg", type="icon")
+						+icon("icon_1","notification__icon d-md-hide")
 
 

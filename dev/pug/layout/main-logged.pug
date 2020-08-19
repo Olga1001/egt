@@ -77,7 +77,7 @@ html(lang="ru-RU")
 			.flex-center-between.mb-3.px-4
 				p.fs-16.fw-bold.c-gray Ваш аккаунт
 				button.btn-notification(type="button")
-					img.btn-notification_icon(src="images/notification.svg", alt="icon notification") 
+					+icon("notification","btn-notification_icon")
 					span.btn-notification_point
 			ul.menu
 				li.menu-item
@@ -97,6 +97,7 @@ html(lang="ru-RU")
 				img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 			.d-flex.align-items-center.back 
 				a.btn-back(href="#")
+					+icon("arrow-back","btn-back__icon")
 				p.fs-16.c-gray.fw-bold Оповещения 
 					img(src="images/notification-gray.svg", alt="notification icon")
 			ul.notification-list 

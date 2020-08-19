@@ -1,6 +1,6 @@
 "use strict";
 
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
   // dropdown logos
   $('.logos-item').click(function (e) {
     e.stopPropagation();
@@ -147,6 +147,9 @@ $(document).ready(function () {
           $(".register-selected .btn-reload").show();
         }
 
+        $(".btn-reload").removeClass('notChecked');
+        $(".btn-reload").removeClass('checked');
+        $(".system-check ").hide();
         setTimeout(function () {
           $(".btn-reload").addClass('checked');
           $(".btn-reload .fs-16").text("Проверено");
@@ -160,6 +163,14 @@ $(document).ready(function () {
           $(".system-check ").hide();
           $(".section-product__right .system__red").show();
         }, 2000);
+
+        if ($(".btn-reload.notChecked")) {
+          if (window.matchMedia("(max-width: 767px)").matches) {
+            $(".drop-mobile .btn-check").show();
+          } else {
+            $(".register-selected .btn-check").show();
+          }
+        }
       }
     });
   }); // mobile QR btn variants

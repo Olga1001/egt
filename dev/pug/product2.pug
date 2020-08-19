@@ -9,6 +9,7 @@ block content
 			img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop 
 			a.btn-back(href="#")
+				+icon("arrow-back","btn-back__icon")
 			p.fs-16.c-gray.fw-bold Ваш продукт
 		.container
 			.container-product
@@ -85,8 +86,7 @@ block content
 							p.fs-20.fw-semi Гарантия
 							.plus 
 						ul.accordion-drop.pt-2
-							li.fs-16.c-gray Продукт не зарегистрирован. При покупке действует стандартная гарантия в 3 года от производителя. Вы владелец продукта? Зарегистрируйте его в </br>
-								a.c-red(href="#") личном аккаунте.
+							li.fs-16.c-gray На данный продукт действует стандартная гарантия в 3 года от производителя.
 	.d-md-show
 		.transfer-product
 			button.btn-transfer-product(type="button") 

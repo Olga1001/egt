@@ -1,14 +1,15 @@
-extends layout/not-mobile-header
+extends layout/main-account-settings
 
 block variables
 	-var title = 'Профиль'
 
 block content
 	.profile
-		a.logo.logo-md-mobile(href="#")
+		a.logo.logo-md-mobile(href="http://m99935yr.beget.tech/egt/home.html")
 			img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 		.d-flex.align-items-center.back.d-none-desktop 
-			a.btn-back.btn-back__settings(href="#")
+			a.btn-back.btn-back__settings(href="http://m99935yr.beget.tech/egt/home.html")
+				+icon("arrow-back","btn-back__icon")
 			p.fs-16.c-gray.fw-bold.text-change Настройки
 		.container
 			ul.d-md-show.tabs-mob
@@ -21,21 +22,21 @@ block content
 					h4.fs-20.fw-semi.d-md-hide Ваши данные
 					form
 						label.label
-							input.input-form(type="text", placeholder="Ваш E-mail*", value="user@google.com" required)
+							input.input-form(type="text" placeholder="Ваш E-mail*" name="email" value="user@google.com" required)
 							span.error-message error-message
 						.flex-wrap 
 							label.label.input-form_half
-								input.input-form(type="text", placeholder="Имя*", value="Алексей" required)
+								input.input-form(type="text" placeholder="Имя*" name="name" value="Алексей" required)
 								span.error-message error-message
 							label.label.input-form_half
-								input.input-form(type="text", placeholder="Фамилия*", value="Фамильный" required)
+								input.input-form(type="text" placeholder="Фамилия*" name="name" value="Фамильный" required)
 								span.error-message error-message
 						.date
 							label.label
-								input.input-form(type="text", placeholder="Дата рождения*", value="12.03.1978" required)
+								input.input-form(type="text" max="2020-12-31" placeholder="Дата рождения*" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" value="12.03.1978" required)
 								span.error-message error-message
 							button.btn-date(type="button")
-								img.btn-date_icon(src="images/calendar.svg", alt="calendar")
+								+icon("calendar","btn-date_icon")
 
 						.select
 							.select__header
@@ -53,7 +54,7 @@ block content
 								li.select__item Город
 								li.select__item Город
 								li.select__item Город 
-						input.input-form(type="text", placeholder="Номер телефона" value="8-800-123-45-67")
+						input.input-form(type="text" placeholder="Номер телефона" name="phone" value="8-800-123-45-67")
 						button.btn-red.btn-save-settings(type="submit") Сохранить изменения
 				.profile-right_v2.profile__share(data-settings-dropdown="settings-share")
 					h4.fs-20.fw-semi.d-md-hide Разрешение на рассылку

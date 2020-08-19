@@ -1,7 +1,7 @@
-extends layout/main-account-settings
+extends layout/main-logged
 
 block variables
-	-var title = 'Поиск продукта'
+	-var title = 'Регистрация продукта'
 
 block content
 	.bg-gray__search
@@ -49,26 +49,26 @@ block content
 							button.btn__enter-data.d-md-show(type="button") Ввести данные с чека вручную
 							.drop-mobile
 								label.label
-									input.input-form(type="text", placeholder="ФН", name="number", required)
+									input.input-form(type="number" placeholder="ФН" required)
 									span.error-message error-message
 								.flex-wrap 
 									label.label.input-form_half
-										input.input-form(type="text", placeholder="ФД", name="number", required)
+										input.input-form(type="number" placeholder="ФД" required)
 										span.error-message error-message
 									label.label.input-form_half
-										input.input-form(type="text", placeholder="ФПД или ФП", name="number", required)
+										input.input-form(type="number" placeholder="ФПД или ФП" required)
 										span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
+										input.input-form(type="text" max="2020-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата покупки*" required)
 										span.error-message error-message
 									button.btn-date(type="button")
-										img.btn-date_icon(src="images/calendar.svg", alt="calendar")
-								button.btn-red.btn-check.d-md-show(type="submit") Подтвердить и проверить
+										+icon("calendar","btn-date_icon")
 								button.btn-reload(type="button")
 									span.btn-reload_flex
 										span.fs-16.fw-semi.c-dark Проверка:
 										span.btn-reload_box
+								button.btn-red.btn-check.d-md-show(type="submit") Подтвердить и проверить
 
 						p.fs-16.c-gray 
 							|Для подтверждения вашей покупки мы хотим знать данные с полученого чека. Незнаете где найти запрашиваемые данные? Здесь вы можете найти 
@@ -91,13 +91,13 @@ block content
 							p.fs-16.c-gray.w-100 
 								|С добавлением этого продукта вы подтверждатете что вы владелец согласно 
 								a.c-red Политики конфиденциальности.
-							button.btn-red.btn-check(type="submit") Подтвердить и проверить
-							button.btn-reload(type="button")
-								span.btn-reload_flex
-									span.fs-16.fw-semi.c-dark Проверка:
-									span.btn-reload_box
+							.flex-wrap.flex-center-between
+								button.btn-reload(type="button")
+									span.btn-reload_flex
+										span.fs-16.fw-semi.c-dark Проверка:
+										span.btn-reload_box
+								button.btn-red.btn-check(type="submit") Подтвердить и проверить
 					.system-message.system__green.system-check.w-100
 						p.fs-16 Данные прошли проверку успешно. Сейчас вы перейдёте на страницу вашего аккаунта.
 					.system-message.system__red.system-check.w-100
 						p.fs-16 Ведённые данные не прошли проверку, пожалуйста проверьте и повторите попытку еще раз. Если вы продолжите получать эту ошибку, свяжитесь с нашей поддержкой.
-

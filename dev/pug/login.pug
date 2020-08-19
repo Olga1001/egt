@@ -6,7 +6,7 @@ block variables
 
 block content
 	.bg-content.d-lg-hide 
-	.container.justify-content-end.container__sign_in-up 
+	.container.justify-content-end.align-items-center.container__sign_in-up 
 		div.d-lg-hide.fixed__align-center 
 			a.logo.mb-3(href="#")
 				img.logo-img(src="images/logo-shivaki.svg", alt="logo")
@@ -17,6 +17,7 @@ block content
 					img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 				.flex-between.form-head
 					a.btn-back(href="#")
+						+icon("arrow-back","btn-back__icon")
 					ul.d-flex 
 						li.tab.active Вход
 						li.tab Регистрация
@@ -49,7 +50,7 @@ block content
 					form.form-item 
 						.form-content
 							label.label.error
-								input.input-form(type="text" name="email" placeholder="Ваш E-mail*" required)
+								input.input-form(type="text", name="email" placeholder="Ваш E-mail*" required)
 								span.error-message error-message
 							label.label
 								input.input-form(type="password" placeholder="Пароль*" required)
@@ -63,10 +64,10 @@ block content
 									span.error-message error-message
 							.date
 								label.label
-									input.input-form(type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
+									input.input-form(type="text" max="2020-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
 									span.error-message error-message
 								button.btn-date(type="button")
-									img.btn-date_icon(src="images/calendar.svg", alt="calendar")
+									+icon("calendar","btn-date_icon")
 
 							.select
 								.select__header
@@ -84,7 +85,7 @@ block content
 									li.select__item Город
 									li.select__item Город
 									li.select__item Город 
-							input.input-form(type="text" name="phone" placeholder="Номер телефона")
+							input.input-form(type="text" name="phone" placeholder="Номер телефона" required)
 							p.fs-16.c-gray.form-text 
 								|Нажимая «Создать учетную запись», вы подтверждаете, что прочитали и 
 								span.nowrap согласны с 
@@ -98,24 +99,22 @@ block content
 				.flex-between.form-head
 					.d-flex
 						a.btn-back.back-form(href="#")
+							+icon("arrow-back","btn-back__icon")
 						h4.fs-20.fw-semi Смена пароля
 					button.close.back-form
 				form.form-content
-					p.fs-16.c-gray Выберите новый пароль для вашего аккаунта 
-					a.link.c-red user@google.com
-					label.label
-						input.input-form(type="password" placeholder="Новый пароль*" required)
+					p.fs-16.c-gray Введите ваш E-mail для смены пороля
+					label.label.mt-16
+						input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
 						span.error-message error-message
-					label.label
-						input.input-form(type="password" placeholder="Повторите пароль*" required)
-						span.error-message error-message
-					button.btn-red(type="submit") Сохранить
+					button.btn-red(type="submit") Отправить
 			.form-contract
 				a.logo.mb-3.logo-mobile(href="#")
 					img.logo-img(src="images/logo-shivaki.svg", alt="logo")
 				.flex-between.form-head
 					.d-flex
 						a.btn-back(href="#")
+							+icon("arrow-back","btn-back__icon")
 						h4.tab.active Вход
 					.d-flex
 						button.btn-next(type="button") Пропустить

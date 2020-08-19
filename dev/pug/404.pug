@@ -4,10 +4,11 @@ block variables
 	-var title = '404'
 
 block content
-	a.logo.logo-mobile(href="#")
+	a.logo.logo-md-mobile(href="#")
 		img.logo-img(src="images/logo-shivaki.svg", alt="logo")
-	.d-flex.align-items-center.back 
+	.back.d-md-show
 		a.btn-back(href="#")
+			+icon("arrow-back","btn-back__icon")
 	section.section-error
 		h1.fs-42.fw-bold Упс... Ваша страница 
 			span.nowrap не найдена
