@@ -26,9 +26,44 @@ header.header
                 li.menu-item
                     a.menu-link(href="#") Поиск
     .d-flex.align-items-center
-        button.btn-notification(type="button")
-            +icon("notification","btn-notification_icon")
-            span.btn-notification_point
+        .header__notification
+            button.btn-notification(type="button")
+                +icon("notification","btn-notification_icon")
+                span.btn-notification_point
+            .notification-popup
+                p.fs-16.c-gray.fw-bold Оповещения 
+                .notification-overlay
+                    ul.notification-list 
+                        li.bg-gray_2
+                            a(href="#")
+                                span.fs-12.fw-semi Поздравляем! Ваш продукт был успешно добавлен. Теперь вы можете отслеживать статус на странице профиля
+                                span.fs-12.fw-semi.c-gray Сег	
+                        li 
+                            a(href="#")
+                                span.fs-12.fw-semi Обновление карты гарантийных сервисов. Теперь вы сможете увидеть больше точек обращения
+                                span.fs-12.fw-semi.c-gray 3 д	
+                        li 
+                            a(href="#")
+                                span.fs-12.fw-semi Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+                                span.fs-12.fw-semi.c-gray 4 д
+                        li 
+                            a(href="#")
+                                span.fs-12.fw-semi Обновление карты гарантийных сервисов. Теперь вы сможете увидеть больше точек обращения
+                                span.fs-12.fw-semi.c-gray 3 д	
+                        li 
+                            a(href="#")
+                                span.fs-12.fw-semi Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+                                span.fs-12.fw-semi.c-gray 4 д
+                        li 
+                            a(href="#")
+                                span.fs-12.fw-semi Обновление карты гарантийных сервисов. Теперь вы сможете увидеть больше точек обращения
+                                span.fs-12.fw-semi.c-gray 3 д	
+                        li 
+                            a(href="#")
+                                span.fs-12.fw-semi Ваш запрос через контактную форму был отправлен. В скором времени мы свяжемся с вами
+                                span.fs-12.fw-semi.c-gray 4 д
+                button.btn-red.btn-more(type="button") Посмотреть все
+                
         a.sign-in(href="#") Аккаунт
             .sign-in_icon
                 +icon("account-24px")

@@ -5,10 +5,10 @@ block variables
 
 block content
     .request
-        a.logo.logo-md-mobile(href="#")
+        a.logo.logo-md-mobile(href="http://m99935yr.beget.tech/egt/home.html")
             img.logo-img(src="images/logo-shivaki.svg", alt="logo")
         .d-flex.align-items-center.back.d-none-desktop
-            a.btn-back(href="#")
+            a.btn-back(href="http://m99935yr.beget.tech/egt/home.html")
                 +icon("arrow-back","btn-back__icon")
             p.fs-16.c-gray.fw-bold Отправить запрос
         .container
@@ -47,18 +47,18 @@ block content
                     .notification__question
                         div
                             p.fs-20.fw-semi Часто задаваемые вопросы
-                                img.notification__icon.d-md-show(src="images/question.svg", alt="question")
+                                +icon("question","notification__icon d-md-show")
                             p.fs-16.c-gray 
                                 |Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
                                 a.c-red(href="#") Vestibulum mattis 
                                 |eget neque a molestie. Integer non viverra metus.
-                        img.notification__icon.d-md-hide(src="images/question.svg", alt="question")
+                        +icon("question","notification__icon d-md-hide")
                     .notification__question
                         div
                             p.fs-20.fw-semi Информация о ремонте и гарантии
-                                img.notification__icon.d-md-show(src="images/test.svg", alt="test")
+                                +icon("test","notification__icon d-md-show")
                             p.fs-16.c-gray 
                                 |Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
                                 a.c-red(href="#") Vestibulum mattis 
                                 |eget neque a molestie. Integer non viverra metus.
-                        img.notification__icon.d-md-hide(src="images/test.svg", alt="test")
+                        +icon("test","notification__icon d-md-hide")

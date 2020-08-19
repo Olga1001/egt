@@ -97,10 +97,37 @@ jQuery(document).ready(function($) {
 
   // notification
   $(".btn-notification").click(function () {
-    $(".notification-popup").addClass('active');
+    $(this).toggleClass('active');
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      $(".header__notification .notification-popup").toggleClass('active');
+    } else {
+      $(".notification-popup").toggleClass('active');
+    }
   })
+
   $(".notification-popup .btn-back").click(function () {
+    $(".btn-notification").removeClass('active');
     $(".notification-popup").removeClass('active');
+  })
+
+  // if length list notification in header > 3 - hide
+  let lengthListNotification = $(".header__notification .notification-list li").length;
+  function hideDetail() {
+    if (lengthListNotification > 3) {
+      $(".header__notification .notification-list li").hide();
+      for (var i = 1; i <= 3; i++) {
+        $(".header__notification .notification-list li:nth-child(" + i + ")").show();
+      }
+    }
+  }
+  hideDetail();
+
+  $(".btn-more").click(function(e) {
+    e.preventDefault();
+    let _this = $(this);
+    let text = _this.text();
+    _this.text(text == "Посмотреть все" ? "Скрыть" : "Посмотреть все");
+    _this.text() === "Посмотреть все" ?  hideDetail() : $(".notification-list li").show();
   })
 
   // tabs
@@ -149,14 +176,14 @@ jQuery(document).ready(function($) {
 
     curform.find('input[required]').each(function () {
       switch($(this).attr("number")) {
-          case "number":
-              if( $(this).val() == '') {
-                  setTimeout(() => {
-                    $(".btn-reload").addClass('notChecked');
-                    $(".system-check ").hide();
-                    $(".section-product__right .system__red ").show();
-                    }, 1000);
-              }
+        case "number":
+          if( $(this).val() == '') {
+            setTimeout(() => {
+              $(".btn-reload").addClass('notChecked');
+              $(".system-check ").hide();
+              $(".section-product__right .system__red ").show();
+              }, 1000);
+          }
       }
       if (goodform) {
         $(".btn-check").hide()

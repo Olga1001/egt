@@ -31,6 +31,9 @@ block content
 					li.tab-item
 						+icon("icon-settings", "tab-item__img")
 						p.fs-14.fw-semi Настройки
+					li.tab-item
+						+icon("mail", "tab-item__img")
+						p.fs-14.fw-semi Контакт
 				a.logout(href="#")
 					span.fs-14.fw-semi.c-gray Выйти
 					+icon("icon-exit", "logout__icon")
@@ -132,10 +135,10 @@ block content
 										span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="text" max="1979-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
+										input.input-form(type="text" max="2020-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
 										span.error-message error-message
 									button.btn-date(type="button")
-										img.btn-date_icon(src="images/calendar.svg", alt="calendar")
+										+icon("calendar","btn-date_icon")
 
 								.select
 									.select__header
@@ -162,6 +165,52 @@ block content
 									input.checkbox(type="checkbox")
 									span.switch
 								p.fs-16.c-gray.switch__text Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie.
+				li.drops__item
+					.flex-between.flex-wrap.drops__item__request
+						.request-left
+							h4.fs-20.fw-semi.d-md-hide Отправить запрос
+							.p.fs-16.c-gray Если вы столкнулись с определенными трудностями на платформе, пожалуйста выберите ниже тему обращения и опишите детально вашу проблему.
+							.select
+								.select__header
+									.select__current 
+										span Выберите тему 
+											span.d-md-hide вашего обращения
+										button.btn-arrow(type="button")
+											+icon("arrow-up","btn-arrow_img")
+								ul.select__body
+									li.select__item Проблема при регистрации продукта
+							form.drop-form
+								textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
+								label.btn-download(for="file-download") 
+									input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
+									span.fs-14.fw-semi Прикрепить файл
+									img(src="images/attach_file.svg", alt="file download")
+								p.fs-16.c-gray 
+									|Нажимая «Отправить», Вы подтверждаете, что прочитали и согласны с 
+									a.c-red(href="#") Правилами пользователя 
+									|и 
+									a.c-red(href="#") Политикой конфиденциальности.
+								button.btn-red.btn__drop-form(type="submit") Отправить
+						.request-right
+							.notification__question
+								div
+									p.fs-20.fw-semi Часто задаваемые вопросы
+										+icon("question","notification__icon d-md-show")
+									p.fs-16.c-gray 
+										|Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
+										a.c-red(href="#") Vestibulum mattis 
+										|eget neque a molestie. Integer non viverra metus.
+								+icon("question","notification__icon d-md-hide")
+							.notification__question
+								div
+									p.fs-20.fw-semi Информация о ремонте и гарантии
+										+icon("test","notification__icon d-md-show")
+									p.fs-16.c-gray 
+										|Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. 
+										a.c-red(href="#") Vestibulum mattis 
+										|eget neque a molestie. Integer non viverra metus.
+								+icon("test","notification__icon d-md-hide")
+					
 		.popup.popup-delete
 			.popup__container.popup-delete__container 
 				.flex-center-between 

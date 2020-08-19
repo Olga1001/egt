@@ -84,10 +84,42 @@ jQuery(document).ready(function ($) {
   }); // notification
 
   $(".btn-notification").click(function () {
-    $(".notification-popup").addClass('active');
+    $(this).toggleClass('active');
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      $(".header__notification .notification-popup").toggleClass('active');
+    } else {
+      $(".notification-popup").toggleClass('active');
+    }
   });
   $(".notification-popup .btn-back").click(function () {
+    $(".btn-notification").removeClass('active');
     $(".notification-popup").removeClass('active');
+  }); // if length list notification in header > 3 - hide
+
+  var lengthListNotification = $(".header__notification .notification-list li").length;
+
+  function hideDetail() {
+    if (lengthListNotification > 3) {
+      $(".header__notification .notification-list li").hide();
+
+      for (var i = 1; i <= 3; i++) {
+        $(".header__notification .notification-list li:nth-child(" + i + ")").show();
+      }
+    }
+  }
+
+  hideDetail();
+  $(".btn-more").click(function (e) {
+    e.preventDefault();
+
+    var _this = $(this);
+
+    var text = _this.text();
+
+    _this.text(text == "Посмотреть все" ? "Скрыть" : "Посмотреть все");
+
+    _this.text() === "Посмотреть все" ? hideDetail() : $(".notification-list li").show();
   }); // tabs
 
   $(".tab-item").click(function () {
@@ -176,19 +208,19 @@ jQuery(document).ready(function ($) {
   }); // mobile QR btn variants
 
   $(".btn-scan").click(function (e) {
-    var _this = this;
+    var _this2 = this;
 
     e.preventDefault();
     $(this).find(".fs-14").text("Проверка");
     $(this).addClass('permit');
     setTimeout(function () {
-      $(_this).find(".fs-14").text("Проверено");
-      $(_this).addClass('checked');
+      $(_this2).find(".fs-14").text("Проверено");
+      $(_this2).addClass('checked');
       $(".system-check.system__green").show();
     }, 1000);
     setTimeout(function () {
-      $(_this).find(".fs-14").text("Ошибка");
-      $(_this).addClass('notChecked');
+      $(_this2).find(".fs-14").text("Ошибка");
+      $(_this2).addClass('notChecked');
       $(".system-check.system__green").hide();
       $(".system-check.system__red").show();
     }, 2000);

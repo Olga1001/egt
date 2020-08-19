@@ -170,12 +170,30 @@
         padding-top: 50px
     .section-product__left, .section-product__right
         max-width: 100%
-    
     .btn-date
         top: 27px    
     .section-error
         min-height: calc(100vh - 165px)
+        
 @media only screen and (max-width: 767px)
+    .notification-popup
+        position: fixed 
+        top: 0
+        left: 0 
+        width: 100%
+        height: 100vh
+        opacity: 0
+        pointer-events: none 
+        transform: translateX(100px)
+        transition: all 0.3s ease
+        overflow-y: auto
+        &.active 
+            opacity: 1 
+            pointer-events: auto
+            transform: translateX(0)
+    .notification-list li
+      border: 1px solid #EEEEEE
+      margin-bottom: 8px
     .btn-reload 
         margin-top: 24px
     .bottombar

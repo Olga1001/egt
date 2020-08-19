@@ -25,6 +25,7 @@
     height: 32px
     position: relative
     padding: 0
+    z-index: 10
     &_icon
         width: 16px 
         height: 100%
@@ -39,6 +40,12 @@
         position: absolute
         right: -3px
         top: -3px
+    &.active 
+        border: none
+        .btn-notification_icon
+            fill: #909090
+        .btn-notification_point 
+            display: none
 
 .btn-search
     position: absolute
@@ -315,5 +322,8 @@
         background-image: url("../images/not-checkout.svg")
         animation: none
 
-
+.btn-more
+    line-height: 38px
+    margin-top: 15px
+    border-radius: 0 0 4px 4px
 
