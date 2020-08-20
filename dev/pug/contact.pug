@@ -1,4 +1,4 @@
-extends layout/main-logged
+extends layout/main-account-settings
 
 block variables
     -var title = 'Контакт'
@@ -30,8 +30,15 @@ block content
                                 button.btn-arrow(type="button")
                                     +icon("arrow-up","btn-arrow_img")
                         ul.select__body
-                            li.select__item Проблема при регистрации продукта
-                    form.drop-form
+                            li.select__item(data-name-form="form-1") Проблема при регистрации продукта
+                            li.select__item(data-name-form="form-2") Неопознанный серийный номер
+                            li.select__item(data-name-form="form-3") Неопознанный QR code или чек
+                            li.select__item(data-name-form="form-4") Неопознанный сервис
+                            li.select__item(data-name-form="form-5") Специальная контактная форма о гарантии
+                            li.select__item(data-name-form="form-5") Специальная контактная форма о продукте
+                            li.select__item(data-name-form="form-5") Специальная контактная форма о сервисе 
+                            li.select__item(data-name-form="form-5") Специальная контактная форма о ремонте
+                    form.drop-form(data-name-form="form-1")
                         textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
                         label.btn-download(for="file-download") 
                             input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
@@ -42,6 +49,147 @@ block content
                             a.c-red(href="#") Правилами пользователя 
                             |и 
                             a.c-red(href="#") Политикой конфиденциальности.
+                        button.btn-red.btn__drop-form(type="submit") Отправить
+                    form.drop-form(data-name-form="form-2")
+                        label.label
+                            input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(type="text" maxlength="12" placeholder="Ваш серийный номер*", required)
+                            span.error-message error-message
+                        .select
+                            .select__header
+                                .select__current 
+                                    span Марка/Производитель
+                                    button.btn-arrow(type="button")
+                                        +icon("arrow-up","btn-arrow_img")
+                            ul.select__body
+                                li.select__item Shivaki
+                                li.select__item Suzuki
+                                li.select__item Braun
+                                li.select__item Icetron
+                        label.label
+                            input.input-form(type="text" maxlength="12" placeholder="Модель*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(type="text" maxlength="12" placeholder="Цвет", required)
+                            span.error-message error-message
+                        label.label
+                            textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос.")
+                        .captcha.mt-24
+                            div(class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image")
+                            script(src="https://www.google.com/recaptcha/api.js" async defer)
+                        .d-flex.mt-24  
+                            label 
+                                input.checkbox(type="checkbox")
+                                span.check
+                            span.fs-16.c-gray 
+                                |Я согласен на обработку 
+                                a.c-red(href="#") Персональных данных 
+                                | согласно 
+                                a.c-red(href="#") Политике конфиденциальности
+                        button.btn-red.btn__drop-form(type="submit") Отправить
+                    form.drop-form(data-name-form="form-3")
+                        label.label
+                            input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            span.error-message error-message
+                        .date
+                            label.label
+                                input.input-form(type="text" max="2020-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата покупки*" required)
+                                span.error-message error-message
+                            button.btn-date(type="button")
+                                +icon("calendar","btn-date_icon")
+                    
+                        label.label
+                            input.input-form(oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "16" placeholder="ФН чека*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "10" placeholder="ФД чека*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type = "number" maxlength = "10" placeholder="ФПД или ФП*", required)
+                            span.error-message error-message
+                        label.label
+                            textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос.")
+                        .captcha.mt-24
+                            div(class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image")
+                            script(src="https://www.google.com/recaptcha/api.js" async defer)
+                        .d-flex.mt-24  
+                            label 
+                                input.checkbox(type="checkbox")
+                                span.check
+                            span.fs-16.c-gray 
+                                |Я согласен на обработку 
+                                a.c-red(href="#") Персональных данных 
+                                | согласно 
+                                a.c-red(href="#") Политике конфиденциальности
+                        button.btn-red.btn__drop-form(type="submit") Отправить
+                    form.drop-form(data-name-form="form-4")
+                        label.label
+                            input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(type="text" maxlength="32" placeholder="Название сервиса*", required)
+                            span.error-message error-message
+                        .select
+                            .select__header
+                                .select__current 
+                                    span Адрес сервиса
+                                    button.btn-arrow(type="button")
+                                        +icon("arrow-up","btn-arrow_img")
+                            ul.select__body
+                                li.select__item Shivaki
+                                li.select__item Suzuki
+                                li.select__item Braun
+                                li.select__item Icetron
+                        label.label 
+                            input.input-form(type="text" name="phone" placeholder="Номер телефона" required)
+                            span.error-message error-message
+                        label.label
+                            textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос.")
+                        .captcha.mt-24
+                            div(class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image")
+                            script(src="https://www.google.com/recaptcha/api.js" async defer)
+                        .d-flex.mt-24  
+                            label 
+                                input.checkbox(type="checkbox")
+                                span.check
+                            span.fs-16.c-gray 
+                                |Я согласен на обработку 
+                                a.c-red(href="#") Персональных данных 
+                                | согласно 
+                                a.c-red(href="#") Политике конфиденциальности
+                        button.btn-red.btn__drop-form(type="submit") Отправить
+                    form.drop-form(data-name-form="form-5")
+                        label.label
+                            input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
+                            span.error-message error-message
+                        label.label
+                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            span.error-message error-message
+                        label.label
+                            textarea.textarea(name="" cols="30" rows="12" minlength="20" maxlength="500" placeholder="Пожалуйста опишите детально ваш вопрос.")
+                        .captcha.mt-24
+                            div(class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image")
+                            script(src="https://www.google.com/recaptcha/api.js" async defer)
+                        .d-flex.mt-24  
+                            label 
+                                input.checkbox(type="checkbox")
+                                span.check
+                            span.fs-16.c-gray 
+                                |Я согласен на обработку 
+                                a.c-red(href="#") Персональных данных 
+                                | согласно 
+                                a.c-red(href="#") Политике конфиденциальности
                         button.btn-red.btn__drop-form(type="submit") Отправить
                 .request-right
                     .notification__question

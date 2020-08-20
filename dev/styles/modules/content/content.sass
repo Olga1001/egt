@@ -649,7 +649,21 @@
     background: #EEEEEE
     &:before 
       transform: translate(calc(100% - 4px), -50%)
-    
+  &:checked ~ .check
+    background-image: url("../images/")
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.24)
+
+.check 
+  background: #FFFFFF no-repeat center / 85%
+  border: 1px solid #EEEEEE
+  box-sizing: border-box
+  border-radius: 4px
+  width: 32px 
+  height: 32px 
+  margin-right: 16px
+  display: block
+  cursor: pointer
+
 .switch__text
   max-width: 365px
 
@@ -710,7 +724,6 @@
   padding-top: 60px
 
 .drop-form 
-  margin-top: 16px
   display: none
   .btn-download 
     margin-bottom: 40px
@@ -770,3 +783,6 @@
   height: 62px
   fill: #E3270E
   margin-bottom: 16px
+
+.questions
+  min-height: calc(100vh - 190px)

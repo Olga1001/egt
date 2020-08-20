@@ -68,7 +68,9 @@ jQuery(document).ready(function($) {
     $(this).closest(".select__body").slideUp(300);
     $(".select__header").removeClass('active');
     $(this).closest(".select").find(".select__current span").addClass('active').text(selected);
-    $(".drop-form").slideDown(300); 
+
+    let dataForm = $(this).attr("data-name-form");
+    $(".drop-form[data-name-form='" + dataForm + "']").slideDown(300).siblings(".drop-form").slideUp(); 
   })
 
   // forgot password popup 
