@@ -74,7 +74,7 @@ block content
 									.select__current 
 										span Город проживания*
 										button.btn-arrow(type="button")
-											img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
+											+icon("arrow-up","btn-arrow_img")
 								ul.select__body
 									li.select__item Город 1
 									li.select__item Город 2
@@ -125,7 +125,7 @@ block content
 							.select__current 
 								span Компания сервисного центра*
 								button.btn-arrow(type="button")
-									img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
+									+icon("arrow-up","btn-arrow_img")
 						ul.select__body
 							li.select__item Компания 1
 							li.select__item Компания 2
@@ -141,4 +141,4 @@ block content
 					p.fs-16.c-gray Войдите в аккаунт своей компании, чтобы получить доступ к 
 						a.link.c-red(href="#") информации для специалистов.
 				button.form-bottom.back-form(type="button")
-					p.fs-20.fw-semi.c-dark.text-center Вход для пользователей
+					span.fs-20.fw-semi.c-dark.text-center Вход для пользователей

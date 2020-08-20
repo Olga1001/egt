@@ -84,7 +84,7 @@
         span.c-dark
             font-size: 14px
             line-height: 19px
-            color: #E3270E
+            color: #E3270E!important
     .btn-back 
         display: block
     .input-form
@@ -172,10 +172,12 @@
         max-width: 100%
     .btn-date
         top: 27px    
-    .section-error
+    .section-error, .content-product
         min-height: calc(100vh - 165px)
         
 @media only screen and (max-width: 767px)
+    .btn-search_icon
+        margin-left: 0
     .notification-popup
         position: fixed 
         top: 0
@@ -202,7 +204,7 @@
         display: none
     .header
         display: none
-    .home
+    .home, .content-product
         min-height: calc(100vh - 60px)
     .home-bg
         border-radius: 0 0 60% 60%
@@ -235,11 +237,18 @@
         flex-direction: row
         justify-content: space-between
         height: 75px
+        img 
+            margin-bottom: 0
         &:after
-            background: url(../images/blur-shadow-long.svg) no-repeat center bottom/cover
             height: 99px
             width: 100%
             bottom: -24px
+            border-radius: 4px 60px 4px 4px
+        &:last-child::after
+            bottom: auto 
+            top: -24px
+            transform: matrix(1, 0, 0, -1, 0, 0)
+            
     .box-red img
         margin-top: 0
     .box-red p

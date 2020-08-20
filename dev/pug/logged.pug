@@ -15,21 +15,21 @@ block content
 			input.search-input(type="text" placeholder="Серийный номер продукта" required)
 			button.btn-search(type="submit") 
 				span Поиск
-				img.btn-search_icon(src="images/icon-magnifier.svg" alt="magnifier")
+				+icon("icon-magnifier","btn-search_icon")
 		h4.fw-semi.c-dark.text-center Наша платформа это
 		.flex-wrap.justify-content-center
 			a.box-gray(href="#")
-				img.icon-service(src="images/test.svg" alt="icon test")
+				+icon("test","icon-service")
 				p.fs-16.c-white.text-center  
 					|Электронная гарантия 
 					|без бумаг на будущее
 			a.box-gray(href="#")
-				img.icon-service(src="images/magnifier.svg" alt="icon magnifier")
+				+icon("magnifier","icon-service")
 				p.fs-16.c-white.text-center 
 					|Вся информация по 
 					|продукту в одном месте
 			a.box-gray(href="#")
-				img.icon-service(src="images/speaker.svg" alt="icon speaker")
+				+icon("speaker","icon-service")
 				p.fs-16.c-white.text-center  
 					|Дополнительные 
 					|функции и обновления

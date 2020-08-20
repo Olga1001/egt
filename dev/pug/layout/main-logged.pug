@@ -48,7 +48,7 @@ html(lang="ru-RU")
 						.logos-item
 							p.fs-16.fw-semi Выбрать производителя
 							button.btn-arrow(type="button")
-								img.btn-arrow_img(src="images/arrow-up.svg", alt="arrow")
+								+icon("arrow-up","btn-arrow_img")
 						ul.logos-dropdown
 							li.logos-dropdown_item.hide(data-color="red")
 								a.logos-dropdown_link(href="#")
@@ -99,7 +99,7 @@ html(lang="ru-RU")
 			.d-flex.align-items-center.back 
 				a.btn-back(href="#")
 					+icon("arrow-back","btn-back__icon")
-				p.fs-16.c-gray.fw-bold Оповещения 
+				p.fs-16.c-gray.fw-bold Оповещения
 					img(src="images/notification-gray.svg", alt="notification icon")
 			ul.notification-list 
 				li.bg-gray_2
