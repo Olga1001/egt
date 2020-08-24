@@ -262,6 +262,10 @@ block content
 									span.error-message error-message
 								label.label
 									textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос.")
+								label.btn-download(for="file-download") 
+									input#file-download(type="file" name="files[]" multiple="" accept="image/jpeg,image/jpg,image/png,image/gif" value="Загрузить файлы")
+									span.fs-14.fw-semi Прикрепить файл (Фото чека)
+									img(src="images/attach_file.svg", alt="file download")
 								.captcha.mt-24
 									div(class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image")
 									script(src="https://www.google.com/recaptcha/api.js" async defer)
