@@ -60,7 +60,7 @@ block content
 										span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="text" max="2020-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата покупки*" required)
+										input.input-form.input-date(type="text" placeholder="Дата покупки*" required readonly)
 										span.error-message error-message
 									button.btn-date(type="button")
 										+icon("calendar","btn-date_icon")

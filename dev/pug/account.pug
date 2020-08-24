@@ -124,7 +124,7 @@ block content
 							h4.fs-20.fw-semi.d-md-hide Ваши данные
 							form
 								label.label
-									input.input-form(type="text" placeholder="Ваш E-mail*" name="email" value="user@google.com" required)
+									input.input-form(type="email" placeholder="Ваш E-mail*" value="user@google.com" required)
 									span.error-message error-message
 								.flex-wrap 
 									label.label.input-form_half
@@ -135,7 +135,7 @@ block content
 										span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="text" max="2020-12-31" value="22.12.1995" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата рождения*" required)
+										input.input-form.input-date(type="text" value="22.12.1995"  placeholder="Дата рождения*" required readonly)
 										span.error-message error-message
 									button.btn-date(type="button")
 										+icon("calendar","btn-date_icon")
@@ -178,7 +178,7 @@ block content
 										button.btn-arrow(type="button")
 											+icon("arrow-up","btn-arrow_img")
 								ul.select__body
-									li.select__item(data-name-form="form-1") Проблема при регистрации продукта
+									//- li.select__item(data-name-form="form-1") Проблема при регистрации продукта
 									li.select__item(data-name-form="form-2") Неопознанный серийный номер
 									li.select__item(data-name-form="form-3") Неопознанный QR code или чек
 									li.select__item(data-name-form="form-4") Неопознанный сервис
@@ -186,24 +186,24 @@ block content
 									li.select__item(data-name-form="form-5") Специальная контактная форма о продукте
 									li.select__item(data-name-form="form-5") Специальная контактная форма о сервисе 
 									li.select__item(data-name-form="form-5") Специальная контактная форма о ремонте
-							form.drop-form(data-name-form="form-1")
-								textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
-								label.btn-download(for="file-download") 
-									input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
-									span.fs-14.fw-semi Прикрепить файл
-									img(src="images/attach_file.svg", alt="file download")
-								p.fs-16.c-gray 
-									|Нажимая «Отправить», Вы подтверждаете, что прочитали и согласны с 
-									a.c-red(href="#") Правилами пользователя 
-									|и 
-									a.c-red(href="#") Политикой конфиденциальности.
-								button.btn-red.btn__drop-form(type="submit") Отправить
+							//- form.drop-form(data-name-form="form-1")
+							//- 	textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
+							//- 	label.btn-download(for="file-download") 
+							//- 		input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
+							//- 		span.fs-14.fw-semi Прикрепить файл
+							//- 		img(src="images/attach_file.svg", alt="file download")
+							//- 	p.fs-16.c-gray 
+							//- 		|Нажимая «Отправить», Вы подтверждаете, что прочитали и согласны с 
+							//- 		a.c-red(href="#") Правилами пользователя 
+							//- 		|и 
+							//- 		a.c-red(href="#") Политикой конфиденциальности.
+							//- 	button.btn-red.btn__drop-form(type="submit") Отправить
 							form.drop-form(data-name-form="form-2")
 								label.label
 									input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
 									span.error-message error-message
 								label.label
-									input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+									input.input-form(type="email" placeholder="Ваш E-mail*", required)
 									span.error-message error-message
 								label.label
 									input.input-form(type="text" maxlength="12" placeholder="Ваш серийный номер*", required)
@@ -245,11 +245,11 @@ block content
 									input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
 									span.error-message error-message
 								label.label
-									input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+									input.input-form(type="email" placeholder="Ваш E-mail*", required)
 									span.error-message error-message
 								.date
 									label.label
-										input.input-form(type="text" max="2020-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата покупки*" required)
+										input.input-form.input-date(type="text" placeholder="Дата покупки*" required readonly)
 										span.error-message error-message
 									button.btn-date(type="button")
 										+icon("calendar","btn-date_icon")
@@ -283,7 +283,7 @@ block content
 									input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
 									span.error-message error-message
 								label.label
-									input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+									input.input-form(type="email" placeholder="Ваш E-mail*", required)
 									span.error-message error-message
 								label.label
 									input.input-form(type="text" maxlength="32" placeholder="Название сервиса*", required)
@@ -322,7 +322,7 @@ block content
 									input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
 									span.error-message error-message
 								label.label
-									input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+									input.input-form(type="email" placeholder="Ваш E-mail*", required)
 									span.error-message error-message
 								label.label
 									textarea.textarea(name="" cols="30" rows="12" minlength="20" maxlength="500" placeholder="Пожалуйста опишите детально ваш вопрос.")
@@ -367,9 +367,29 @@ block content
 				p.fs-16.c-gray.popup-margin Вы уверены что хотите удалить данный продукт из вашего аккаунта?
 				.set-product
 					
-				.popup-delete__btns
+				.popup__btns
 					button.btn-gray(type="button") Нет, вернутся
-					button.btn-red(type="button") 
+					button.btn-red.btn-delete_product(type="button") 
 						|Да, удалить 
 						+icon("delete","icon-delete")
+		.popup.popup-convey
+			.popup__container.popup-convey__container 
+				.flex-center-between 
+					h2.fs-20.fw-semi Передать продукт
+					button.close(type="button")
+				p.fs-16.c-gray.popup-margin Для передачи продукта, новый владелец должен быть зарегистрирован на данной платформе. Введите электронную почту нового владельца:
+				form
+					label.label
+						input.input-form.m-0(type="email" placeholder="Ваш E-mail*" required)
+						span.error-message error-message
+					.mt-16.d-flex
+						label 
+							input.checkbox(type="checkbox" required)
+							span.check
+						p.fs-16.c-gray 
+							|Я согласен на передачу товара другому лицу и всех прав покупателя 
+							a.c-red(href="#") прав покупателя
+					.popup__btns
+						button.btn-gray(type="button") Отмена 
+						button.btn-red(type="submit") Передать
 

@@ -30,32 +30,32 @@ block content
                                 button.btn-arrow(type="button")
                                     +icon("arrow-up","btn-arrow_img")
                         ul.select__body
-                            li.select__item(data-name-form="form-1") Проблема при регистрации продукта
+                            //- li.select__item(data-name-form="form-1") Проблема при регистрации продукта
                             li.select__item(data-name-form="form-2") Неопознанный серийный номер
                             li.select__item(data-name-form="form-3") Неопознанный QR code или чек
                             li.select__item(data-name-form="form-4") Неопознанный сервис
-                            li.select__item(data-name-form="form-5") Специальная контактная форма о гарантии
-                            li.select__item(data-name-form="form-5") Специальная контактная форма о продукте
-                            li.select__item(data-name-form="form-5") Специальная контактная форма о сервисе 
-                            li.select__item(data-name-form="form-5") Специальная контактная форма о ремонте
-                    form.drop-form(data-name-form="form-1")
-                        textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
-                        label.btn-download(for="file-download") 
-                            input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
-                            span.fs-14.fw-semi Прикрепить файл
-                            img(src="images/attach_file.svg", alt="file download")
-                        p.fs-16.c-gray 
-                            |Нажимая «Отправить», Вы подтверждаете, что прочитали и согласны с 
-                            a.c-red(href="#") Правилами пользователя 
-                            |и 
-                            a.c-red(href="#") Политикой конфиденциальности.
-                        button.btn-red.btn__drop-form(type="submit") Отправить
+                            li.select__item(data-name-form="form-5") Запрос о гарантии
+                            li.select__item(data-name-form="form-5") Запрос о продукте
+                            li.select__item(data-name-form="form-5") Запрос о сервисе 
+                            li.select__item(data-name-form="form-5") Запрос о ремонте
+                    //- form.drop-form(data-name-form="form-1")
+                    //-     textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
+                    //-     label.btn-download(for="file-download") 
+                    //-         input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
+                    //-         span.fs-14.fw-semi Прикрепить файл
+                    //-         img(src="images/attach_file.svg", alt="file download")
+                    //-     p.fs-16.c-gray 
+                    //-         |Нажимая «Отправить», Вы подтверждаете, что прочитали и согласны с 
+                    //-         a.c-red(href="#") Правилами пользователя 
+                    //-         |и 
+                    //-         a.c-red(href="#") Политикой конфиденциальности.
+                    //-     button.btn-red.btn__drop-form(type="submit") Отправить
                     form.drop-form(data-name-form="form-2")
                         label.label
                             input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
                             span.error-message error-message
                         label.label
-                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            input.input-form(type="email" placeholder="Ваш E-mail*", required)
                             span.error-message error-message
                         label.label
                             input.input-form(type="text" maxlength="12" placeholder="Ваш серийный номер*", required)
@@ -75,9 +75,6 @@ block content
                             input.input-form(type="text" maxlength="12" placeholder="Модель*", required)
                             span.error-message error-message
                         label.label
-                            input.input-form(type="text" maxlength="12" placeholder="Цвет", required)
-                            span.error-message error-message
-                        label.label
                             textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос.")
                         .captcha.mt-24
                             div(class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image")
@@ -86,7 +83,7 @@ block content
                             label 
                                 input.checkbox(type="checkbox")
                                 span.check
-                            span.fs-16.c-gray 
+                            p.fs-16.c-gray 
                                 |Я согласен на обработку 
                                 a.c-red(href="#") Персональных данных 
                                 | согласно 
@@ -97,11 +94,11 @@ block content
                             input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
                             span.error-message error-message
                         label.label
-                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            input.input-form(type="email" placeholder="Ваш E-mail*", required)
                             span.error-message error-message
                         .date
                             label.label
-                                input.input-form(type="text" max="2020-12-31" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" placeholder="Дата покупки*" required)
+                                input.input-form.input-date(type="text"  placeholder="Дата покупки*" required readonly)
                                 span.error-message error-message
                             button.btn-date(type="button")
                                 +icon("calendar","btn-date_icon")
@@ -117,12 +114,16 @@ block content
                             span.error-message error-message
                         label.label
                             textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос.")
+                        label.btn-download(for="file-download") 
+                            input#file-download(type="file" name="files[]" multiple="" value="Загрузить файлы")
+                            span.fs-14.fw-semi Прикрепить файл (фото чека)
+                            img(src="images/attach_file.svg", alt="file download")
                         .captcha.mt-24
                             div(class="g-recaptcha" data-sitekey="WEBSITEKEYHERE" data-theme="light" data-size="normal" data-image="image")
                             script(src="https://www.google.com/recaptcha/api.js" async defer)
                         .d-flex.mt-24  
                             label 
-                                input.checkbox(type="checkbox")
+                                input.checkbox(type="checkbox" required)
                                 span.check
                             span.fs-16.c-gray 
                                 |Я согласен на обработку 
@@ -135,7 +136,7 @@ block content
                             input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
                             span.error-message error-message
                         label.label
-                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            input.input-form(type="email" placeholder="Ваш E-mail*", required)
                             span.error-message error-message
                         label.label
                             input.input-form(type="text" maxlength="32" placeholder="Название сервиса*", required)
@@ -174,7 +175,7 @@ block content
                             input.input-form(type="text" name="name" maxlength="32" placeholder="Имя*", required)
                             span.error-message error-message
                         label.label
-                            input.input-form(type="text" name="email" placeholder="Ваш E-mail*", required)
+                            input.input-form(type="email" placeholder="Ваш E-mail*", required)
                             span.error-message error-message
                         label.label
                             textarea.textarea(name="" cols="30" rows="12" minlength="20" maxlength="500" placeholder="Пожалуйста опишите детально ваш вопрос.")

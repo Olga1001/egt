@@ -1,0 +1,33 @@
+extends layout/main-sign-in
+
+block variables
+	-var title = 'Смена пароля'
+	-var colorElements = "blue"
+
+block content
+	.bg-content.d-lg-hide 
+	.container.justify-content-end.align-items-center.container__sign_in-up 
+		div.d-lg-hide.fixed__align-center 
+			a.logo.mb-3(href="#")
+				img.logo-img(src="images/logo-suzuki.svg", alt="logo")
+			p.c-white.fs-20.fw-semi Гарантийная платформа
+		.form
+			.form-forgot.active
+				a.logo.mb-3.logo-mobile(href="#")
+					img.logo-img(src="images/logo-suzuki.svg", alt="logo")
+				.flex-between.form-head
+					.d-flex
+						a.btn-back(href="http://m99935yr.beget.tech/egt/login.html")
+							+icon("arrow-back","btn-back__icon")
+						h4.fs-20.fw-semi Смена пароля
+					a.close(href="http://m99935yr.beget.tech/egt/login.html")
+				form.form-content
+					p.fs-16.c-gray Выберите новый пароль для вашего аккаунта 
+					a.link.c-red user@google.com
+					label.label
+						input.input-form(type="password" placeholder="Новый пароль*" required)
+						span.error-message error-message
+					label.label
+						input.input-form(type="password" placeholder="Повторите пароль*" required)
+						span.error-message error-message
+					button.btn-red(type="submit") Сохранить

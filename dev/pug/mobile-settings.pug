@@ -22,7 +22,7 @@ block content
 					h4.fs-20.fw-semi.d-md-hide Ваши данные
 					form
 						label.label
-							input.input-form(type="text" placeholder="Ваш E-mail*" name="email" value="user@google.com" required)
+							input.input-form(type="email" placeholder="Ваш E-mail*" value="user@google.com" required)
 							span.error-message error-message
 						.flex-wrap 
 							label.label.input-form_half
@@ -33,7 +33,7 @@ block content
 								span.error-message error-message
 						.date
 							label.label
-								input.input-form(type="text" max="2020-12-31" placeholder="Дата рождения*" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" value="12.03.1978" required)
+								input.input-form.input-date(type="text" placeholder="Дата рождения*" value="12.03.1978" required readonly)
 								span.error-message error-message
 							button.btn-date(type="button")
 								+icon("calendar","btn-date_icon")

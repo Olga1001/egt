@@ -2,19 +2,19 @@ extends layout/main-sign-in
 
 block variables
 	-var title = 'Вход'
-
+	-var colorElements = "orange"
 
 block content
 	.bg-content.d-lg-hide 
 	.container.justify-content-end.align-items-center.container__sign_in-up 
 		div.d-lg-hide.fixed__align-center 
 			a.logo.mb-3(href="#")
-				img.logo-img(src="images/logo-shivaki.svg", alt="logo")
+				img.logo-img(src="images/logo-broun.svg", alt="logo")
 			p.c-white.fs-20.fw-semi Гарантийная платформа
 		.form
 			.form-sing_in-up
 				a.logo.mb-3.logo-mobile(href="#")
-					img.logo-img(src="images/logo-shivaki.svg", alt="logo")
+					img.logo-img(src="images/logo-broun.svg", alt="logo")
 				.flex-between.form-head
 					a.btn-back(href="#")
 						+icon("arrow-back","btn-back__icon")
@@ -95,7 +95,7 @@ block content
 							button.btn-red.btn-sign-up(type="submit") Создать учётную запись
 			.form-forgot
 				a.logo.mb-3.logo-mobile(href="#")
-					img.logo-img(src="images/logo-shivaki.svg", alt="logo")
+					img.logo-img(src="images/logo-broun.svg", alt="logo")
 				.flex-between.form-head
 					.d-flex
 						a.btn-back.back-form(href="#")
@@ -110,7 +110,7 @@ block content
 					button.btn-red(type="submit") Отправить
 			.form-contract
 				a.logo.mb-3.logo-mobile(href="#")
-					img.logo-img(src="images/logo-shivaki.svg", alt="logo")
+					img.logo-img(src="images/logo-broun.svg", alt="logo")
 				.flex-between.form-head
 					.d-flex
 						a.btn-back(href="#")

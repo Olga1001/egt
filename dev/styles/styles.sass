@@ -151,6 +151,9 @@ input[disabled]
   color: #202020
   opacity: 1
   
+.input-date 
+  cursor: pointer
+  
 .container 
   max-width: 1488px
   width: 100%
@@ -394,11 +397,13 @@ input[disabled]
   margin-top: 24px
 .mr-16
   margin-right: 16px
+.m-0
+  margin: 0
 
 .type-decimal
   list-style-type: decimal
-  padding-left: 15px
-  margin-left: 15px
+  padding-left: 10px
+  margin-left: 20px
 
 .orange 
   .btn-red, .btn-search
@@ -449,6 +454,10 @@ input[disabled]
     fill: #909090!important
     &.svg-icon-exit
       fill: #EABB42!important
+  .notification__question.bg-gradient
+    box-shadow: 0px 34px 24px -29px rgba(#EABB42, 0.48)
+  .tab.active
+    border-color: #EABB42
 
 
 .purple
@@ -500,6 +509,10 @@ input[disabled]
     fill: #909090!important
     &.svg-icon-exit
       fill: #7C2582!important
+  .notification__question.bg-gradient
+    box-shadow: 0px 34px 24px -29px rgba(#7C2582, 0.48)
+  .tab.active
+    border-color: #7C2582
 
 .blue 
   .btn-red, .btn-search
@@ -550,6 +563,10 @@ input[disabled]
     fill: #909090!important
     &.svg-icon-exit
       fill: #2F2483!important
+  .notification__question.bg-gradient
+    box-shadow: 0px 34px 24px -29px rgba(#2F2483, 0.48)
+  .tab.active
+    border-color: #2F2483
 
 .red 
   .btn-red, .btn-search 
@@ -600,7 +617,10 @@ input[disabled]
     fill: #909090!important
     &.svg-icon-exit
       fill: #E3270E!important
-    
+  .notification__question.bg-gradient
+    box-shadow: 0px 34px 24px -29px rgba(#E3270E, 0.48)
+  .tab.active
+    border-color: #E3270E
 
 @keyframes reload
     0% 
@@ -633,22 +653,22 @@ input[disabled]
     width: 100%
   &-error__container
     max-width: 330px
-  &-delete
+  &-delete, &-convey
     &__container 
       padding: 30px 40px 40px 40px
       max-width: 580px
-    &__btns
-      display: flex 
-      flex-wrap: wrap 
-      margin-top: 35px
-      button 
-        width: calc(50% - 10px)
-        margin-right: 20px 
-        margin-top: 20px
-        &:nth-child(2n+2)
-          margin-right: 0
   &-margin
     margin: 21px 0 30px 0    
+  &__btns
+    display: flex 
+    flex-wrap: wrap 
+    margin-top: 35px
+    button 
+      width: calc(50% - 10px)
+      margin-right: 20px 
+      margin-top: 20px
+      &:nth-child(2n+2)
+        margin-right: 0
 
 .icon-delete 
   fill: #FFFFFF
