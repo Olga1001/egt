@@ -37,23 +37,13 @@ block content
 								span.error-message error-message
 							button.btn-date(type="button")
 								+icon("calendar","btn-date_icon")
-
-						.select
-							.select__header
-								.select__current 
-									span.active Москва
-									button.btn-arrow(type="button")
-										+icon("arrow-up","btn-arrow_img")
-							ul.select__body
-								li.select__item Москва
-								li.select__item Город 2
-								li.select__item Город 3
-								li.select__item Город 4
-								li.select__item Город 5
-								li.select__item Город 6 
-								li.select__item Город
-								li.select__item Город
-								li.select__item Город 
+						label.label.mt-16
+							select.select2(data-placeholder="Город проживания*" required)
+								option
+								option(value="Москва" selected) Москва
+								option(value="Город 2") Город 2
+								option(value="Город 3") Город 3
+							span.error-message error-message
 						input.input-form(type="text" placeholder="Номер телефона" name="phone" value="8-800-123-45-67")
 						button.btn-red.btn-save-settings(type="submit") Сохранить изменения
 				.profile-right_v2.profile__share(data-settings-dropdown="settings-share")
@@ -63,5 +53,5 @@ block content
 							input.checkbox(type="checkbox")
 							span.switch
 						p.fs-16.c-gray.switch__text Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie.
-
-
+block script
+	script(src="js/select2.min.js")

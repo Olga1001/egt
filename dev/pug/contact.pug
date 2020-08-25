@@ -60,17 +60,14 @@ block content
                         label.label
                             input.input-form(type="text" maxlength="12" placeholder="Ваш серийный номер*", required)
                             span.error-message error-message
-                        .select
-                            .select__header
-                                .select__current 
-                                    span Марка/Производитель
-                                    button.btn-arrow(type="button")
-                                        +icon("arrow-up","btn-arrow_img")
-                            ul.select__body
-                                li.select__item Shivaki
-                                li.select__item Suzuki
-                                li.select__item Braun
-                                li.select__item Icetron
+                        label.label.mt-16
+                            select.select2(data-placeholder="Марка/Производитель" required)
+                                option
+                                option(value="Shivaki") Shivaki
+                                option(value="Suzuki") Suzuki
+                                option(value="Braun") Braun
+                                option(value="Icetron") Icetron
+                            span.error-message error-message
                         label.label
                             input.input-form(type="text" maxlength="12" placeholder="Модель*", required)
                             span.error-message error-message
@@ -81,7 +78,7 @@ block content
                             script(src="https://www.google.com/recaptcha/api.js" async defer)
                         .d-flex.mt-24  
                             label 
-                                input.checkbox(type="checkbox")
+                                input.checkbox(type="checkbox" required)
                                 span.check
                             p.fs-16.c-gray 
                                 |Я согласен на обработку 
@@ -141,17 +138,14 @@ block content
                         label.label
                             input.input-form(type="text" maxlength="32" placeholder="Название сервиса*", required)
                             span.error-message error-message
-                        .select
-                            .select__header
-                                .select__current 
-                                    span Адрес сервиса
-                                    button.btn-arrow(type="button")
-                                        +icon("arrow-up","btn-arrow_img")
-                            ul.select__body
-                                li.select__item Shivaki
-                                li.select__item Suzuki
-                                li.select__item Braun
-                                li.select__item Icetron
+                        label.label.mt-16
+                            select.select2(data-placeholder="Адрес сервиса" required)
+                                option
+                                option(value="Shivaki") Shivaki
+                                option(value="Suzuki") Suzuki
+                                option(value="Braun") Braun
+                                option(value="Icetron") Icetron
+                            span.error-message error-message
                         label.label 
                             input.input-form(type="text" name="phone" placeholder="Номер телефона" required)
                             span.error-message error-message
@@ -162,7 +156,7 @@ block content
                             script(src="https://www.google.com/recaptcha/api.js" async defer)
                         .d-flex.mt-24  
                             label 
-                                input.checkbox(type="checkbox")
+                                input.checkbox(type="checkbox" required)
                                 span.check
                             span.fs-16.c-gray 
                                 |Я согласен на обработку 
@@ -184,7 +178,7 @@ block content
                             script(src="https://www.google.com/recaptcha/api.js" async defer)
                         .d-flex.mt-24  
                             label 
-                                input.checkbox(type="checkbox")
+                                input.checkbox(type="checkbox" required)
                                 span.check
                             span.fs-16.c-gray 
                                 |Я согласен на обработку 
@@ -211,3 +205,5 @@ block content
                                 a.c-red(href="#") Vestibulum mattis 
                                 |eget neque a molestie. Integer non viverra metus.
                         +icon("test","notification__icon d-md-hide")
+block script
+    script(src="js/select2.min.js")

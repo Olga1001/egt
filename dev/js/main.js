@@ -301,4 +301,9 @@ jQuery(document).ready(function($) {
     dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
   });
 
+  $('.select2').select2({
+    minimumResultsForSearch: -1
+  });
+
+  $("span.select2-selection__arrow").append('<button class="btn-arrow" type="button"><svg class="svg-arrow-up btn-arrow_img"><use xlink:href="images/sprite/symbol/sprite.svg#arrow-up"></use></svg></button>')
 });

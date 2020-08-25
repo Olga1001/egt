@@ -68,23 +68,20 @@ block content
 									span.error-message error-message
 								button.btn-date(type="button")
 									+icon("calendar","btn-date_icon")
-
-							.select
-								.select__header
-									.select__current 
-										span Город проживания*
-										button.btn-arrow(type="button")
-											+icon("arrow-up","btn-arrow_img")
-								ul.select__body
-									li.select__item Город 1
-									li.select__item Город 2
-									li.select__item Город 3
-									li.select__item Город 4
-									li.select__item Город 5
-									li.select__item Город 6 
-									li.select__item Город
-									li.select__item Город
-									li.select__item Город 
+							label.label.mt-16
+								select.select2(data-placeholder="Город проживания*" required)
+									option
+									option(value="Город 1") Город 1
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+									option(value="Город 2") Город 2
+								span.error-message error-message
 							input.input-form(type="text" name="phone" placeholder="Номер телефона" required)
 							p.fs-16.c-gray.form-text 
 								|Нажимая «Создать учетную запись», вы подтверждаете, что прочитали и 
@@ -120,21 +117,15 @@ block content
 						button.btn-next(type="button") Пропустить
 						button.close#close__forgot.back-form(type="button")
 				form.form-content
-					.select
-						.select__header
-							.select__current 
-								span Компания сервисного центра*
-								button.btn-arrow(type="button")
-									+icon("arrow-up","btn-arrow_img")
-						ul.select__body
-							li.select__item Компания 1
-							li.select__item Компания 2
-							li.select__item Компания 3
-							li.select__item Компания 4
-							li.select__item Компания 5
-							li.select__item Компания 6 
 					label.label
-						input.input-form(type="number" placeholder="Номер контракта*", required)
+						select.select2(data-placeholder="Компания сервисного центра*" required)
+							option
+							option(value="Город 1") Компания 1
+							option(value="Город 2") Компания 2
+							option(value="Город 3") Компания 3
+						span.error-message error-message
+					label.label
+						input.input-form(type="number" placeholder="Номер контракта*" required)
 						span.error-message error-message
 					button.btn-red(type="submit") Войти
 					a.link.c-red.link-forgot_contract(href="#") Незнаете номер контракта?
@@ -142,3 +133,5 @@ block content
 						a.link.c-red(href="#") информации для специалистов.
 				button.form-bottom.back-form(type="button")
 					span.fs-20.fw-semi.c-dark.text-center Вход для пользователей
+block script
+	script(src="js/select2.min.js")

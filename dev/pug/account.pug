@@ -139,30 +139,19 @@ block content
 										span.error-message error-message
 									button.btn-date(type="button")
 										+icon("calendar","btn-date_icon")
-
-								.select
-									.select__header
-										.select__current 
-											span.active Москва
-											button.btn-arrow(type="button")
-												+icon("arrow-up", "btn-arrow_img")
-									ul.select__body
-										li.select__item Москва
-										li.select__item Город 2
-										li.select__item Город 3
-										li.select__item Город 4
-										li.select__item Город 5
-										li.select__item Город 6 
-										li.select__item Город
-										li.select__item Город
-										li.select__item Город 
+								label.label.mt-16
+									select.select(data-placeholder="Город проживания*" required)
+										option
+										option(value="Город 1" selected) Москва
+										option(value="Город 2") Город 2
+										option(value="Город 3") Город 3
 								input.input-form(type="text", placeholder="Номер телефона" name="phone" value="8-800-123-45-67")
 								button.btn-red.btn-save-settings(type="submit") Сохранить изменения
 						.profile-right_v2.profile__share
 							h4.fs-20.fw-semi.d-md-hide Разрешение на рассылку
 							.d-flex 
 								label 
-									input.checkbox(type="checkbox")
+									input.checkbox(type="checkbox" )
 									span.switch
 								p.fs-16.c-gray.switch__text Morbi sodales aliquam dolor, vel iaculis nisl volutpat suscipit. Nam sit amet tortor ac lectus laoreet mattis sit amet in ipsum. Vestibulum mattis eget neque a molestie.
 				li.drops__item
@@ -170,6 +159,7 @@ block content
 						.request-left
 							h4.fs-20.fw-semi.d-md-hide Отправить запрос
 							.p.fs-16.c-gray Если вы столкнулись с определенными трудностями на платформе, пожалуйста выберите ниже тему обращения и опишите детально вашу проблему.
+							
 							.select
 								.select__header
 									.select__current 
@@ -182,10 +172,10 @@ block content
 									li.select__item(data-name-form="form-2") Неопознанный серийный номер
 									li.select__item(data-name-form="form-3") Неопознанный QR code или чек
 									li.select__item(data-name-form="form-4") Неопознанный сервис
-									li.select__item(data-name-form="form-5") Специальная контактная форма о гарантии
-									li.select__item(data-name-form="form-5") Специальная контактная форма о продукте
-									li.select__item(data-name-form="form-5") Специальная контактная форма о сервисе 
-									li.select__item(data-name-form="form-5") Специальная контактная форма о ремонте
+									li.select__item(data-name-form="form-5") Запрос о гарантии
+									li.select__item(data-name-form="form-5") Запрос о продукте
+									li.select__item(data-name-form="form-5") Запрос о сервисе 
+									li.select__item(data-name-form="form-5") Запрос о ремонте
 							//- form.drop-form(data-name-form="form-1")
 							//- 	textarea.textarea(name="" cols="30" rows="12" minlength="20" placeholder="Пожалуйста опишите детально ваш вопрос." required)
 							//- 	label.btn-download(for="file-download") 
@@ -208,17 +198,14 @@ block content
 								label.label
 									input.input-form(type="text" maxlength="12" placeholder="Ваш серийный номер*", required)
 									span.error-message error-message
-								.select
-									.select__header
-										.select__current 
-											span Марка/Производитель
-											button.btn-arrow(type="button")
-												+icon("arrow-up","btn-arrow_img")
-									ul.select__body
-										li.select__item Shivaki
-										li.select__item Suzuki
-										li.select__item Braun
-										li.select__item Icetron
+								label.label.mt-16
+									select.select2(data-placeholder="Марка/Производитель" required)
+										option
+										option(value="Shivaki") Shivaki
+										option(value="Suzuki") Suzuki
+										option(value="Braun") Braun
+										option(value="Icetron") Icetron
+									span.error-message error-message
 								label.label
 									input.input-form(type="text" maxlength="12" placeholder="Модель*", required)
 									span.error-message error-message
@@ -229,7 +216,7 @@ block content
 									script(src="https://www.google.com/recaptcha/api.js" async defer)
 								.d-flex.mt-24  
 									label 
-										input.checkbox(type="checkbox")
+										input.checkbox(type="checkbox" required)
 										span.check
 									span.fs-16.c-gray 
 										|Я согласен на обработку 
@@ -271,7 +258,7 @@ block content
 									script(src="https://www.google.com/recaptcha/api.js" async defer)
 								.d-flex.mt-24  
 									label 
-										input.checkbox(type="checkbox")
+										input.checkbox(type="checkbox" required)
 										span.check
 									span.fs-16.c-gray 
 										|Я согласен на обработку 
@@ -289,17 +276,14 @@ block content
 								label.label
 									input.input-form(type="text" maxlength="32" placeholder="Название сервиса*", required)
 									span.error-message error-message
-								.select
-									.select__header
-										.select__current 
-											span Адрес сервиса
-											button.btn-arrow(type="button")
-												+icon("arrow-up","btn-arrow_img")
-									ul.select__body
-										li.select__item Shivaki
-										li.select__item Suzuki
-										li.select__item Braun
-										li.select__item Icetron
+								label.label.mt-16
+									select.select2(data-placeholder="Адрес сервиса" required)
+										option
+										option(value="Shivaki") Shivaki
+										option(value="Suzuki") Suzuki
+										option(value="Braun") Braun
+										option(value="Icetron") Icetron
+									span.error-message error-message
 								label.label 
 									input.input-form(type="text" name="phone" placeholder="Номер телефона" required)
 									span.error-message error-message
@@ -310,7 +294,7 @@ block content
 									script(src="https://www.google.com/recaptcha/api.js" async defer)
 								.d-flex.mt-24  
 									label 
-										input.checkbox(type="checkbox")
+										input.checkbox(type="checkbox" required)
 										span.check
 									span.fs-16.c-gray 
 										|Я согласен на обработку 
@@ -332,7 +316,7 @@ block content
 									script(src="https://www.google.com/recaptcha/api.js" async defer)
 								.d-flex.mt-24  
 									label 
-										input.checkbox(type="checkbox")
+										input.checkbox(type="checkbox" required)
 										span.check
 									span.fs-16.c-gray 
 										|Я согласен на обработку 
@@ -393,4 +377,5 @@ block content
 					.popup__btns
 						button.btn-gray(type="button") Отмена 
 						button.btn-red(type="submit") Передать
-
+block script
+	script(src="js/select2.min.js")
