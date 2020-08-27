@@ -21,7 +21,4 @@ $(document).ready(function () {
     greedy: false,
     showMaskOnHover: false
   });
-  $(".input-date").inputmask("99.99.9999", {
-    showMaskOnHover: false
-  });
 });

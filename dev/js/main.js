@@ -247,9 +247,9 @@ jQuery(document).ready(function($) {
   });
 
   // popup Error
-  $(".btn-sign-up").click(function() {
-    $(".popup-error").addClass('active');
-  });
+  // $(".btn-sign-up").click(function() {
+  //   $(".popup-error").addClass('active');
+  // });
 
   $(".popup, .close, .popup__btns .btn-gray").click(function() {
     $(".popup").removeClass('active');
@@ -296,7 +296,7 @@ jQuery(document).ready(function($) {
 
   $(".input-date").datepicker({
     maxDate: '0',
-    dateFormat: "dd.mm.yyy",
+    dateFormat: 'dd.mm.yy',
     monthNames : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
     dayNamesMin : ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
   });
