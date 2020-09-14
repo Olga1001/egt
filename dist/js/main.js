@@ -82,8 +82,15 @@ jQuery(document).ready(function ($) {
     $(".form-sing_in-up").show();
   });
   $(".accordion-item").click(function () {
-    $(this).closest(".accordion").toggleClass('active').siblings().removeClass('active');
-    $(this).siblings(".accordion-drop").slideToggle(300).closest(".accordion").siblings().find(".accordion-drop").slideUp(300);
+    var _this = $(this);
+
+    _this.closest(".accordion").toggleClass('active').siblings().removeClass('active');
+
+    if ($(".accordion-item.smooth-600")) {
+      _this.siblings(".accordion-drop").slideToggle(600).closest(".accordion").siblings().find(".accordion-drop").slideUp(600);
+    } else {
+      _this.siblings(".accordion-drop").slideToggle(300).closest(".accordion").siblings().find(".accordion-drop").slideUp(300);
+    }
   });
   $(".header__notification").click(function (e) {
     e.stopPropagation();

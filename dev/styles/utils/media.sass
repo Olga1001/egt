@@ -454,6 +454,27 @@
         background-image: url(../images/404-mobile-2.svg)
     .logos-company_img 
         height: 20px
+    .main-content
+        padding-top: 50px
+        .fs-42 
+            font-size: 20px
+            margin-bottom: 8px 
+        .fs-20 
+            font-size: 14px 
+            margin-bottom: 18px
+    .link-manufacturer
+        height: 112px
+        width: 320px
+        margin: 6px
+
+@media only screen and (max-width: 575px)
+    .link-manufacturer
+        width: 100% 
+        margin: 6px 0
+    .main-content
+        .fs-42, .fs-20 
+            text-align: left
+            
 @media only screen and (max-width: 480px)
     .popup__container
         width: calc(100% - 48px)
@@ -462,3 +483,4 @@
         margin: 20px 0 0 0
     .popup__btns 
         flex-direction: column-reverse
+        margin: 6px

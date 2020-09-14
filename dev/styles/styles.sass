@@ -526,9 +526,12 @@ span.select2.select2-container.select2-container--default
     box-shadow: 0px 34px 24px -29px rgba(#EABB42, 0.48)
   .tab.active
     border-color: #EABB42
-
+  a.c-red, .link-forgot 
+    color: #EABB42
 
 .purple
+  a.c-red, .link-forgot
+    color: #7C2582
   .btn-red, .btn-search 
     background-color: #7C2582
     border-color:#7C2582
@@ -583,6 +586,8 @@ span.select2.select2-container.select2-container--default
     border-color: #7C2582
 
 .blue 
+  a.c-red, .link-forgot 
+    color: #2F2483
   .btn-red, .btn-search
     background-color: #2F2483
     border-color:#2F2483
@@ -637,6 +642,8 @@ span.select2.select2-container.select2-container--default
     border-color: #2F2483
 
 .red 
+  a.c-red, .link-forgot
+    color: #E3270E
   .btn-red, .btn-search 
     background-color: #E3270E
     border-color:#E3270E
@@ -745,4 +752,35 @@ span.select2.select2-container.select2-container--default
   margin-left: 15px
   transition: all 0.3s ease
 
+.b-red 
+  border-color: #e3270e
+.b-orange
+  border-color: #EA9E1C
+.b-purple
+  border-color: #7C2582 
+.b-blue
+  border-color: #2F2483 
+
+.link-manufacturer 
+  background: #FFFFFF
+  border-radius: 4px
+  width: 345px
+  height: 195px 
+  display: flex 
+  align-items: center 
+  justify-content: center 
+  margin: 10px
+  border-width: 4px 0 0 0 
+  border-style: solid
+  img 
+    height: 26px
+  &__broun img
+    height: 38px
+
+.main-content
+  padding: 18.3vh 24px
+  .fs-42 
+    margin-bottom: 2.7vh
+  .fs-20
+    margin-bottom: 11vh
 @import "utils/media";

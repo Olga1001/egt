@@ -107,7 +107,9 @@
     width: 42px
     height: 288.81px
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
-
+  .svg-magnifier, .svg-speaker
+    transform: scale(-1,1)
+    
 .search 
   margin-top: 92px
   margin-bottom: 226px
@@ -663,6 +665,18 @@
       transform: translate(calc(100% - 4px), -50%)
   &:checked ~ .check
     background-image: url("../images/check_box-24px.svg")
+
+.red .checkbox:checked ~ .check 
+  background-image: url("../images/check_box-24px.svg")
+
+.purple .checkbox:checked ~ .check 
+  background-image: url("../images/check_box-24px-purple.svg")
+
+.blue .checkbox:checked ~ .check 
+  background-image: url("../images/check_box-24px-blue.svg")
+
+.orange .checkbox:checked ~ .check 
+  background-image: url("../images/check_box-24px-orange.svg")
 
 .check 
   background: #FFFFFF no-repeat center / 30px

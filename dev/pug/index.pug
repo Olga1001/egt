@@ -1,0 +1,19 @@
+extends layout/main_v2 
+
+block variables
+    -var title = "Гарантийная платформа"
+
+block content 
+    .bg-content 
+    .main-content
+        h1.fs-42.c-white.fw-bold.text-center Гарантийная платформа
+        p.fs-20.c-white.fw-semi.text-center Выберите производителя
+        .justify-content-center.flex-wrap 
+            a.link-manufacturer.b-red(href="#")
+                img(src="images/logo-shivaki.svg", alt="logo shivaki")
+            a.link-manufacturer.link-manufacturer__broun.b-orange(href="#")
+                img(src="images/logo-broun.svg", alt="logo broun")
+            a.link-manufacturer.b-purple(href="#")
+                img(src="images/logo-kenwood.svg", alt="logokenwood")
+            a.link-manufacturer.b-blue(href="#")
+                img(src="images/logo-suzuki.svg", alt="logo suzuki")
